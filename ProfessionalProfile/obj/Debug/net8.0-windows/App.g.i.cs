@@ -36,16 +36,16 @@ using System.Windows.Shell;
 namespace ProfessionalProfile {
     
     
-    /// <summary>
+    /// <_summary>
     /// App
-    /// </summary>
+    /// </_summary>
     public partial class App : System.Windows.Application {
         
-        /// <summary>
+        /// <_summary>
         /// InitializeComponent
-        /// </summary>
+        /// </_summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "8.0.3.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "8.0.2.0")]
         public void InitializeComponent() {
             
             #line 5 "..\..\..\App.xaml"
@@ -55,12 +55,12 @@ namespace ProfessionalProfile {
             #line hidden
         }
         
-        /// <summary>
+        /// <_summary>
         /// Application Entry Point.
-        /// </summary>
+        /// </_summary>
         [System.STAThreadAttribute()]
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "8.0.3.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "8.0.2.0")]
         public static void Main() {
             ProfessionalProfile.App app = new ProfessionalProfile.App();
             app.InitializeComponent();
