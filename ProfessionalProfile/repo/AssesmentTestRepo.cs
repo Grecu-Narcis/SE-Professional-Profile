@@ -1,6 +1,7 @@
 ﻿using ProfessionalProfile.domain;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,11 +10,11 @@ namespace ProfessionalProfile.repo
 {
     public class AssesmentTestRepo : RepoInterface<AssesmentTest>
     {
-       
+        private string _connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
+
         public AssesmentTest Get(int id)
         {
-            AssesmentTest assesmentTest = new AssesmentTest();
-            return assesmentTest;
+            throw new NotImplementedException();
         }
 
         public List<AssesmentTest> GetAll()

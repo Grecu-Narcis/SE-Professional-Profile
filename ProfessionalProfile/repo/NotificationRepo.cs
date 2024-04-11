@@ -1,6 +1,7 @@
 ﻿using ProfessionalProfile.domain;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,14 +10,13 @@ namespace ProfessionalProfile.repo
 {
     public class NotificationRepo : RepoInterface<Notification>
     {
+        private string _connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
         public void Add(Notification item)
         {
-            throw new NotImplementedException();
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
         }
 
         public Notification Get(int id)
@@ -26,12 +26,12 @@ namespace ProfessionalProfile.repo
 
         public List<Notification> GetAll()
         {
-            throw new NotImplementedException();
+            List<Notification> notifications= new List<Notification>();
+            return notifications;
         }
 
         public void Update(Notification entity)
         {
-            throw new NotImplementedException();
         }
     }
 }

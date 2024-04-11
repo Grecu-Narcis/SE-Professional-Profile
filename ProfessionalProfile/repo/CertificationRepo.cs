@@ -1,6 +1,7 @@
 ﻿using ProfessionalProfile.domain;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,9 +10,10 @@ namespace ProfessionalProfile.repo
 {
     public class CertificationRepo : RepoInterface<Certification>
     {
+        private string _connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
+
         public void Add(Certification item)
         {
-            throw new NotImplementedException();
         }
 
         public void Delete(int id)
@@ -20,18 +22,17 @@ namespace ProfessionalProfile.repo
 
         public Certification Get(int id)
         {
-            Certification certification = new Certification();
-            return certification;
+            throw new NotImplementedException();
         }
 
         public List<Certification> GetAll()
         {
-            throw new NotImplementedException();
+            List<Certification> certifications = new List<Certification>();
+            return certifications;
         }
 
         public void Update(Certification entity)
         {
-            throw new NotImplementedException();
         }
     }
 }

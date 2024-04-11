@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace ProfessionalProfile.repo
 {
-    public class SectionRepo : RepoInterface<Section>
+    //NOT USED
+    public class zNotUsedSectionRepo : RepoInterface<zNotUsedSection>
     {
-        public void Add(Section item)
+        public void Add(zNotUsedSection item)
         {
             throw new NotImplementedException();
         }
@@ -19,17 +20,17 @@ namespace ProfessionalProfile.repo
             throw new NotImplementedException();
         }
 
-        public Section Get(int id)
+        public zNotUsedSection Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public List<Section> GetAll()
+        public List<zNotUsedSection> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Section entity)
+        public void Update(zNotUsedSection entity)
         {
             throw new NotImplementedException();
         }

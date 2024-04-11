@@ -1,6 +1,7 @@
 ﻿using ProfessionalProfile.domain;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,14 +10,15 @@ namespace ProfessionalProfile.repo
 {
     public class VolunteeringRepo : RepoInterface<Volunteering>
     {
+        private string _connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
         public void Add(Volunteering item)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            
         }
 
         public Volunteering Get(int id)
@@ -26,12 +28,14 @@ namespace ProfessionalProfile.repo
 
         public List<Volunteering> GetAll()
         {
-            throw new NotImplementedException();
+            List<Volunteering> volunteerings
+                = new List<Volunteering>();
+            return volunteerings
         }
 
         public void Update(Volunteering entity)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

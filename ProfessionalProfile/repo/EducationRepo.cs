@@ -1,6 +1,7 @@
 ﻿using ProfessionalProfile.domain;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,8 @@ namespace ProfessionalProfile.repo
 {
     public class EducationRepo : RepoInterface<Education>
     {
+        private string _connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
+
         public void Add(Education item)
         {
         }
@@ -19,8 +22,7 @@ namespace ProfessionalProfile.repo
 
         public Education Get(int id)
         {
-            Education education = new Education();
-            return education;
+            throw new NotImplementedException();
         }
 
         public List<Education> GetAll()

@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace ProfessionalProfile.domain
 {
     // NOT USED
-    public class SkillLevel
+    public class zNotUsedSkillLevel
     {
         private int _skillLevel_id;
         private string _level; // beginner, intermediate, advanced
 
-        public SkillLevel(int skillLevel_id, string level)
+        public zNotUsedSkillLevel(int skillLevel_id, string level)
         {
             this._skillLevel_id = skillLevel_id;
             this._level = level;

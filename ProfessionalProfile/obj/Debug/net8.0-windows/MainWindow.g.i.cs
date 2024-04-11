@@ -36,16 +36,16 @@ using System.Windows.Shell;
 namespace ProfessionalProfile {
     
     
-    /// <_summary>
+    /// <summary>
     /// MainWindow
-    /// </_summary>
+    /// </summary>
     public partial class MainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         private bool _contentLoaded;
         
-        /// <_summary>
+        /// <summary>
         /// InitializeComponent
-        /// </_summary>
+        /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "8.0.2.0")]
         public void InitializeComponent() {

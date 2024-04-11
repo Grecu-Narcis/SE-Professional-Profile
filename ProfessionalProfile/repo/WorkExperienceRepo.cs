@@ -1,6 +1,7 @@
 ﻿using ProfessionalProfile.domain;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,14 +10,13 @@ namespace ProfessionalProfile.repo
 {
     public class WorkExperienceRepo : RepoInterface<WorkExperience>
     {
+        private string _connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
         public void Add(WorkExperience item)
         {
-            throw new NotImplementedException();
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
         }
 
         public WorkExperience Get(int id)
@@ -26,12 +26,12 @@ namespace ProfessionalProfile.repo
 
         public List<WorkExperience> GetAll()
         {
-            throw new NotImplementedException();
+            List<WorkExperience> workExperiences = new List<WorkExperience>();
+            return workExperiences;
         }
 
         public void Update(WorkExperience entity)
         {
-            throw new NotImplementedException();
         }
     }
 }
