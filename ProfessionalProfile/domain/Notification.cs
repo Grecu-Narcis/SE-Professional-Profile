@@ -1,6 +1,6 @@
 ﻿namespace ProfessionalProfile.domain
 {
-    class Notification
+    public class Notification
     {
         private int _notification_id;
         private int _user_id;

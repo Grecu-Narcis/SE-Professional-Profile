@@ -1,12 +1,241 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\codes\\se-professional-profile\\professionalprofile\\repo\\skillrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\skillrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\codes\\se-professional-profile\\professionalprofile\\repo\\repointerface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\repointerface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\codes\\se-professional-profile\\professionalprofile\\repo\\projectrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\projectrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\codes\\se-professional-profile\\professionalprofile\\repo\\endorsementrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\endorsementrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\codes\\se-professional-profile\\professionalprofile\\repo\\volunteeringrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\volunteeringrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\codes\\se-professional-profile\\professionalprofile\\repo\\workexperiencerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\workexperiencerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\codes\\se-professional-profile\\professionalprofile\\repo\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\codes\\se-professional-profile\\professionalprofile\\repo\\notificationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\notificationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\codes\\se-professional-profile\\professionalprofile\\repo\\educationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\educationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\codes\\se-professional-profile\\professionalprofile\\repo\\certificationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\certificationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\codes\\se-professional-profile\\professionalprofile\\repo\\assesmenttestrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\assesmenttestrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\codes\\se-professional-profile\\professionalprofile\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\codes\\se-professional-profile\\professionalprofile\\repo\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EndorsementRepo.cs",
+              "DocumentMoniker": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\EndorsementRepo.cs",
+              "RelativeDocumentMoniker": "repo\\EndorsementRepo.cs",
+              "ToolTip": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\EndorsementRepo.cs",
+              "RelativeToolTip": "repo\\EndorsementRepo.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T15:57:39.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NotificationRepo.cs",
+              "DocumentMoniker": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\NotificationRepo.cs",
+              "RelativeDocumentMoniker": "repo\\NotificationRepo.cs",
+              "ToolTip": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\NotificationRepo.cs",
+              "RelativeToolTip": "repo\\NotificationRepo.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T15:57:41.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProjectRepo.cs",
+              "DocumentMoniker": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\ProjectRepo.cs",
+              "RelativeDocumentMoniker": "repo\\ProjectRepo.cs",
+              "ToolTip": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\ProjectRepo.cs",
+              "RelativeToolTip": "repo\\ProjectRepo.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB0AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T15:57:43.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RepoInterface.cs",
+              "DocumentMoniker": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\RepoInterface.cs",
+              "RelativeDocumentMoniker": "repo\\RepoInterface.cs",
+              "ToolTip": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\RepoInterface.cs",
+              "RelativeToolTip": "repo\\RepoInterface.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T15:57:44.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SkillRepo.cs",
+              "DocumentMoniker": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\SkillRepo.cs",
+              "RelativeDocumentMoniker": "repo\\SkillRepo.cs",
+              "ToolTip": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\SkillRepo.cs",
+              "RelativeToolTip": "repo\\SkillRepo.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB0AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T15:57:47.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VolunteeringRepo.cs",
+              "DocumentMoniker": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\VolunteeringRepo.cs",
+              "RelativeDocumentMoniker": "repo\\VolunteeringRepo.cs",
+              "ToolTip": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\VolunteeringRepo.cs",
+              "RelativeToolTip": "repo\\VolunteeringRepo.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACAAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T15:57:54.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserRepo.cs",
+              "DocumentMoniker": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\UserRepo.cs",
+              "RelativeDocumentMoniker": "repo\\UserRepo.cs",
+              "ToolTip": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\UserRepo.cs",
+              "RelativeToolTip": "repo\\UserRepo.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAmwBsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T15:57:51.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WorkExperienceRepo.cs",
+              "DocumentMoniker": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\WorkExperienceRepo.cs",
+              "RelativeDocumentMoniker": "repo\\WorkExperienceRepo.cs",
+              "ToolTip": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\WorkExperienceRepo.cs",
+              "RelativeToolTip": "repo\\WorkExperienceRepo.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB0AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T15:57:55.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EducationRepo.cs",
+              "DocumentMoniker": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\EducationRepo.cs",
+              "RelativeDocumentMoniker": "repo\\EducationRepo.cs",
+              "ToolTip": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\EducationRepo.cs",
+              "RelativeToolTip": "repo\\EducationRepo.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T15:57:37.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CertificationRepo.cs",
+              "DocumentMoniker": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\CertificationRepo.cs",
+              "RelativeDocumentMoniker": "repo\\CertificationRepo.cs",
+              "ToolTip": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\CertificationRepo.cs",
+              "RelativeToolTip": "repo\\CertificationRepo.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAB2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T15:57:34.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AssesmentTestRepo.cs",
+              "DocumentMoniker": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\AssesmentTestRepo.cs",
+              "RelativeDocumentMoniker": "repo\\AssesmentTestRepo.cs",
+              "ToolTip": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\AssesmentTestRepo.cs",
+              "RelativeToolTip": "repo\\AssesmentTestRepo.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T15:57:23.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\domain\\User.cs",
+              "RelativeDocumentMoniker": "domain\\User.cs",
+              "ToolTip": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\domain\\User.cs",
+              "RelativeToolTip": "domain\\User.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAWwAoAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T16:03:55.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "app.config",
+              "DocumentMoniker": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\app.config",
+              "RelativeDocumentMoniker": "repo\\app.config",
+              "ToolTip": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\app.config",
+              "RelativeToolTip": "repo\\app.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-04-11T15:59:12.998Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

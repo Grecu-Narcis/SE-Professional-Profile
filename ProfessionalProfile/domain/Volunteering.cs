@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProfessionalProfile.domain
 {
-    class Volunteering
+    public class Volunteering
     {
         private int _volunteering_id;
         private string _organisation;

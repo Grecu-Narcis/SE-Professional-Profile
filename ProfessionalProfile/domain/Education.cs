@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProfessionalProfile.domain
 {
-    class Education
+    public class Education
     {
         private int _education_id;
         private string _degree;

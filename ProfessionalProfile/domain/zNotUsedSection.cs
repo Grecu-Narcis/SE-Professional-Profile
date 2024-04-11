@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace ProfessionalProfile.domain
 {
-    class Section
+    //not used
+    public class zNotUsedSection
     {
         private int _section_id;
         private string _status;
 
-        public Section(int section_id, string status) { 
+        public zNotUsedSection(int section_id, string status) { 
             this._section_id = section_id;
             this._status = status;
         }
@@ -30,7 +31,7 @@ namespace ProfessionalProfile.domain
 
         public override bool Equals(object? obj)
         {
-            return obj is Section section &&
+            return obj is zNotUsedSection section &&
                    _section_id == section._section_id &&
                    _status == section._status &&
                    Section_id == section.Section_id &&

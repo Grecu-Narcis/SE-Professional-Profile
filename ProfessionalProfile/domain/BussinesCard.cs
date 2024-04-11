@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProfessionalProfile.domain
 {
-    class BussinesCard
+    public class BussinesCard
     {
         private int _bc_id;
         private string _summary;

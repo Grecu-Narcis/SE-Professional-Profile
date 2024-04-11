@@ -6,20 +6,21 @@ using System.Threading.Tasks;
 
 namespace ProfessionalProfile.domain
 {
-    class Project
+    public class Project
     {
         private int _project_id;
         private string _projectName;
         private string _description;
-        private List<string> _tehnologies;
+        private string _tehnologies;
+        private int _user_id;
         
-
-        public Project(int id, string name, string desc, List<string> tech)
+        public Project(int id, string name, string desc, string tech, int user_id)
         {
             this._project_id = id;
             this._projectName = name;
             this._description = desc;
             this._tehnologies = tech;
+            this._user_id = user_id;
         }
 
         public int Proj_id
@@ -40,10 +41,16 @@ namespace ProfessionalProfile.domain
             set { this._description = value; }
         }
 
-        public List<string> Tehnologies
+        public string Tehnologies
         {
             get { return this._tehnologies; }
             set { this._tehnologies = value; }
+        }
+
+        public int User_id
+        {
+            get { return this._user_id; }
+            set { this._user_id = value;}
         }
 
         public override bool Equals(object? obj)
@@ -52,11 +59,13 @@ namespace ProfessionalProfile.domain
                    _project_id == project._project_id &&
                    _projectName == project._projectName &&
                    _description == project._description &&
-                   EqualityComparer<List<string>>.Default.Equals(_tehnologies, project._tehnologies) &&
+                   _tehnologies == project._tehnologies &&
+                   _user_id == project._user_id &&
+                   User_id == project.User_id &&
                    Proj_id == project.Proj_id &&
                    ProjectName == project.ProjectName &&
                    Description == project.Description &&
-                   EqualityComparer<List<string>>.Default.Equals(Tehnologies, project.Tehnologies);
+                   Tehnologies == project.Tehnologies;
         }
     }
 }

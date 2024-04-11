@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace ProfessionalProfile.domain
 {
     // NOT USED
-    class StatusType
+    public class zNotUsedStatusType
     {
         private int _status_id;
         private string _status;
 
-        public StatusType(int status_id, string status)
+        public zNotUsedStatusType(int status_id, string status)
         {
             this._status_id = status_id;
             this._status = status;
@@ -32,7 +32,7 @@ namespace ProfessionalProfile.domain
 
         public override bool Equals(object? obj)
         {
-            return obj is StatusType type &&
+            return obj is zNotUsedStatusType type &&
                    _status_id == type._status_id &&
                    _status == type._status &&
                    Status_id == type.Status_id &&

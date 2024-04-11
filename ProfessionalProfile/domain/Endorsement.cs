@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProfessionalProfile.domain
 {
-    class Endorsement
+    public class Endorsement
     {
         private int _endorsement_id;
         private int _endorser_id;
