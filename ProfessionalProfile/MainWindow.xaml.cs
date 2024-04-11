@@ -11,9 +11,9 @@ using System.Windows.Shapes;
 
 namespace ProfessionalProfile
 {
-    /// <summary>
+    /// <_summary>
     /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    /// </_summary>
     public partial class MainWindow : Window
     {
         public MainWindow()

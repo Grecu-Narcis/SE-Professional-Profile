@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\ProfessionalProfile.csproj": {}
+    "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\ProfessionalProfile.csproj": {}
   },
   "projects": {
-    "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\ProfessionalProfile.csproj": {
+    "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\ProfessionalProfile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\ProfessionalProfile.csproj",
+        "projectUniqueName": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\ProfessionalProfile.csproj",
         "projectName": "ProfessionalProfile",
-        "projectPath": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\ProfessionalProfile.csproj",
-        "packagesPath": "C:\\Users\\narci\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\obj\\",
+        "projectPath": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\ProfessionalProfile.csproj",
+        "packagesPath": "C:\\Users\\gulin\\.nuget\\packages\\",
+        "outputPath": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\narci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gulin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

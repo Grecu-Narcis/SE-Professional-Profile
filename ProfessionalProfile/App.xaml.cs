@@ -4,9 +4,9 @@ using System.Windows;
 
 namespace ProfessionalProfile
 {
-    /// <summary>
+    /// <_summary>
     /// Interaction logic for App.xaml
-    /// </summary>
+    /// </_summary>
     public partial class App : Application
     {
     }
