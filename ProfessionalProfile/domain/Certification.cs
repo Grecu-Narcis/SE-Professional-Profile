@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProfessionalProfile.domain
 {
-    class Certification
+    public class Certification
     {
         private int _cert_id;
         private string _name;

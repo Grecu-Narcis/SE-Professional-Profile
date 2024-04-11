@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProfessionalProfile.domain
 {
-    class AssesmentResult
+    public class AssesmentResult
     {
         private int _assesr_id;
         private int _overallScore;

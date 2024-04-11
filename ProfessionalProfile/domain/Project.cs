@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProfessionalProfile.domain
 {
-    class Project
+    public class Project
     {
         private int _project_id;
         private string _projectName;
