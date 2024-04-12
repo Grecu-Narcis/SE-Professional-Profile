@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\codes\\se-professional-profile\\professionalprofile\\repo\\assesmenttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\assesmenttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\codes\\se-professional-profile\\professionalprofile\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
@@ -18,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-04-12T09:01:40.124Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,22 +45,22 @@
               "RelativeDocumentMoniker": "repo\\UserRepo.cs",
               "ToolTip": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\UserRepo.cs",
               "RelativeToolTip": "repo\\UserRepo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAEQAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T07:56:51.037Z",
+              "WhenOpened": "2024-04-12T08:57:41.742Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\App.config",
-              "RelativeDocumentMoniker": "App.config",
-              "ToolTip": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\App.config",
-              "RelativeToolTip": "App.config",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAAAAMAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-04-12T07:57:16.9Z",
+              "Title": "AssesmentTest.cs",
+              "DocumentMoniker": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\AssesmentTest.cs",
+              "RelativeDocumentMoniker": "repo\\AssesmentTest.cs",
+              "ToolTip": "C:\\Codes\\SE-Professional-Profile\\ProfessionalProfile\\repo\\AssesmentTest.cs",
+              "RelativeToolTip": "repo\\AssesmentTest.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T08:57:37.405Z",
               "EditorCaption": ""
             }
           ]

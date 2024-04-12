@@ -104,7 +104,7 @@ namespace ProfessionalProfile.repo
                 connection.Open();
 
                 // Consider using parameterized queries to prevent SQL injection
-                string sql = "SELECT * FROM Users WHERE User_id = @id";
+                string sql = "EXEC GetUserById @UserId=";
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 command.Parameters.AddWithValue("@id", id);

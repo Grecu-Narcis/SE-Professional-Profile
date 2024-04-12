@@ -62,7 +62,7 @@ namespace ProfessionalProfile.domain
             set { this._gpa = value; }
         }
 
-        public int User_id { get { return this._user_id} set {  this._user_id = value; } }
+        public int User_id { get { return this._user_id; } set {  this._user_id = value; } }
 
         public override bool Equals(object? obj)
         {

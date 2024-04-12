@@ -116,7 +116,7 @@ namespace ProfessionalProfile.domain
                    _address == user._address &&
                    _websiteURL == user._websiteURL &&
                    _picture == user._picture &&
-                   Picutre == user.Picture &&
+                   Picture == user.Picture &&
                    User_id == user.User_id &&
                    FirstName == user.FirstName &&
                    LastName == user.LastName &&

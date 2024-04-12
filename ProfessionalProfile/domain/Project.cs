@@ -64,7 +64,7 @@ namespace ProfessionalProfile.domain
                    Proj_id == project.Proj_id &&
                    ProjectName == project.ProjectName &&
                    Description == project.Description &&
-                   EqualityComparer<List<string>>.Default.Equals(Tehnologies, project.Tehnologies);
+                   Tehnologies == project.Tehnologies;
         }
     }
 }
