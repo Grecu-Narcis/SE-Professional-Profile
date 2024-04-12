@@ -16,7 +16,7 @@ namespace ProfessionalProfile.repo
         public UserRepo()
         {
             // Read connection string from app.config
-            _connectionString = ConfigurationManager.ConnectionStrings["connectionSString"].ConnectionString;
+            _connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
         }
         public void Add(User item)
         {
@@ -49,7 +49,7 @@ namespace ProfessionalProfile.repo
             {
                 connection.Open();
 
-                string sql = "DELETE FROM Users WHERE User_id = @id";
+                string sql = "DELETE FROM Users WHERE UserId = @id";
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 command.Parameters.AddWithValue("@id", id);
@@ -73,7 +73,7 @@ namespace ProfessionalProfile.repo
                 {
                     while (reader.Read())
                     {
-                        int userId = (int)reader["User_id"];
+                        int userId = (int)reader["UserId"];
                         string firstName = (string)reader["FirstName"];
                         string lastName = (string)reader["LastName"];
                         string email = (string)reader["Email"];
@@ -104,7 +104,7 @@ namespace ProfessionalProfile.repo
                 connection.Open();
 
                 // Consider using parameterized queries to prevent SQL injection
-                string sql = "SELECT * FROM Users WHERE User_id = @id";
+                string sql = "SELECT * FROM Users WHERE UserId = @id";
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 command.Parameters.AddWithValue("@id", id);
@@ -115,7 +115,7 @@ namespace ProfessionalProfile.repo
                     {
                         try
                         {
-                            int userId = (int)reader["User_id"];
+                            int userId = (int)reader["UserId"];
                             string firstName = (string)reader["FirstName"];
                             string lastName = (string)reader["LastName"];
                             string email = (string)reader["Email"];
@@ -161,7 +161,7 @@ namespace ProfessionalProfile.repo
                            Address = @Address,
                            WebsiteURL = @WebsiteURL,
                            Picture = @Picture
-                       WHERE User_id = @UserId";
+                       WHERE UserId = @UserId";
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 command.Parameters.AddWithValue("@UserId", user.User_id);

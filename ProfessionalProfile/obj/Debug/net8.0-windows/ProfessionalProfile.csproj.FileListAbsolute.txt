@@ -40,3 +40,12 @@ C:\Codes\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\re
 C:\Codes\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.pdb
 C:\Codes\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.genruntimeconfig.cache
 C:\Codes\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ref\ProfessionalProfile.dll
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.csproj.AssemblyReference.cache
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.dll.config
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\Professi.045B007E.Up2Date

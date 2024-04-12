@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using ProfessionalProfile.domain;
+using ProfessionalProfile.repo;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,9 +18,14 @@ namespace ProfessionalProfile
     /// </_summary>
     public partial class MainWindow : Window
     {
+        UserRepo repo;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

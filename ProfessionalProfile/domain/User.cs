@@ -77,8 +77,8 @@ namespace ProfessionalProfile.domain
         }
         public DateTime DateOfBirth
         {
-            get { return this.DateOfBirth; }
-            set { this.DateOfBirth = value; }
+            get { return this._dateOfBirth; }
+            set { this._dateOfBirth = value; }
         }
         public bool DarkTheme
         {
@@ -116,7 +116,7 @@ namespace ProfessionalProfile.domain
                    _address == user._address &&
                    _websiteURL == user._websiteURL &&
                    _picture == user._picture &&
-                   Picutre == user.Picture &&
+                   Picture == user.Picture &&
                    User_id == user.User_id &&
                    FirstName == user.FirstName &&
                    LastName == user.LastName &&
