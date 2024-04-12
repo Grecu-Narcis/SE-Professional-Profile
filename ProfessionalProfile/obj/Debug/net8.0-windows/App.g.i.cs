@@ -36,14 +36,14 @@ using System.Windows.Shell;
 namespace ProfessionalProfile {
     
     
-    /// <_summary>
+    /// <summary>
     /// App
-    /// </_summary>
+    /// </summary>
     public partial class App : System.Windows.Application {
         
-        /// <_summary>
+        /// <summary>
         /// InitializeComponent
-        /// </_summary>
+        /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "8.0.2.0")]
         public void InitializeComponent() {
@@ -55,9 +55,9 @@ namespace ProfessionalProfile {
             #line hidden
         }
         
-        /// <_summary>
+        /// <summary>
         /// Application Entry Point.
-        /// </_summary>
+        /// </summary>
         [System.STAThreadAttribute()]
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "8.0.2.0")]

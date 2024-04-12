@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ProfessionalProfile.domain
 {
     // NOT USED
-    class StatusType
+    public class StatusType
     {
         private int _status_id;
         private string _status;

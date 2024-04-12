@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ProfessionalProfile.domain
 {
     // NOT USED
-    class SkillLevel
+    public class SkillLevel
     {
         private int _skillLevel_id;
         private string _level; // beginner, intermediate, advanced

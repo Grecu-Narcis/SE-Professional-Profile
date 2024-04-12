@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProfessionalProfile.domain
 {
-    class User
+    public class User
     {
         private int user_id;
         private string _firstName;
@@ -19,8 +19,9 @@ namespace ProfessionalProfile.domain
         private bool _darkTheme;
         private string _address;
         private string _websiteURL;
+        private string _picture;
 
-        public User(int user_id, string firstName, string lastName, string email, string password, string phone, string summary, DateTime dateOfBirth, bool darkTheme, string address, string websiteURL)
+        public User(int user_id, string firstName, string lastName, string email, string password, string phone, string summary, DateTime dateOfBirth, bool darkTheme, string address, string websiteURL, string picture)
         {
             this.user_id = user_id;
             this._firstName = firstName;
@@ -33,6 +34,7 @@ namespace ProfessionalProfile.domain
             this._darkTheme = darkTheme;
             this._address = address;
             this._websiteURL = websiteURL;
+            this._picture = picture;
         }
 
         public int User_id
@@ -94,6 +96,11 @@ namespace ProfessionalProfile.domain
             set { this._websiteURL = value; }
         }
 
+        public string Picture{
+            get { return this._picture; }
+            set { this._picture = value; }
+        }
+
         public override bool Equals(object? obj)
         {
             return obj is User user &&
@@ -108,6 +115,8 @@ namespace ProfessionalProfile.domain
                    _darkTheme == user._darkTheme &&
                    _address == user._address &&
                    _websiteURL == user._websiteURL &&
+                   _picture == user._picture &&
+                   Picutre == user.Picture &&
                    User_id == user.User_id &&
                    FirstName == user.FirstName &&
                    LastName == user.LastName &&
