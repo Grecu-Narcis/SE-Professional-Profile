@@ -20,7 +20,7 @@ namespace ProfessionalProfile.repo
         public List<Education> GetAll()
         {
             List<Education> educations = new List<Education>();
-            return educations
+            return educations;
         }
 
         public Education GetById(int id)
