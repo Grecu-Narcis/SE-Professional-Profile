@@ -15,7 +15,7 @@ namespace ProfessionalProfile.domain
         private string _description;
         
 
-        public Volunteering(int volunteeringId, int userId, string organisation, string role, string description,)
+        public Volunteering(int volunteeringId, int userId, string organisation, string role, string description)
         {
             _volunteeringId = volunteeringId;
             _organisation = organisation;

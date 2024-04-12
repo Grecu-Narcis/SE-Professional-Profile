@@ -24,7 +24,7 @@ namespace ProfessionalProfile.repo
             {
                 connection.Open();
 
-                string sql = "EXEC InsertCertificate @Name, @Description, @IssuedBy, @IssuedDate, @ExpirationDate, @UserId";
+                string sql = "EXEC InsertCertificate @UserId, @Name, @Description, @IssuedBy, @IssuedDate, @ExpirationDate";
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 command.Parameters.AddWithValue("@Name", item.Name);
