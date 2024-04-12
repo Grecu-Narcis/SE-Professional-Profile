@@ -9,19 +9,19 @@ namespace ProfessionalProfile.domain
     // NOT USED
     public class StatusType
     {
-        private int _status_id;
+        private int _statusId;
         private string _status;
 
-        public StatusType(int status_id, string status)
+        public StatusType(int statusId, string status)
         {
-            this._status_id = status_id;
+            this._statusId = statusId;
             this._status = status;
         }
 
-        public int Status_id
+        public int StatusId
         {
-            get { return _status_id; }
-            set { _status_id = value; }
+            get { return _statusId; }
+            set { _statusId = value; }
         }
 
         public string Status
@@ -33,9 +33,9 @@ namespace ProfessionalProfile.domain
         public override bool Equals(object? obj)
         {
             return obj is StatusType type &&
-                   _status_id == type._status_id &&
+                   _statusId == type._statusId &&
                    _status == type._status &&
-                   Status_id == type.Status_id &&
+                   StatusId == type.StatusId &&
                    Status == type.Status;
         }
     }

@@ -8,7 +8,7 @@ namespace ProfessionalProfile.domain
 {
     public class User
     {
-        private int user_id;
+        private int _userId;
         private string _firstName;
         private string _lastName;
         private string _email;
@@ -21,9 +21,9 @@ namespace ProfessionalProfile.domain
         private string _websiteURL;
         private string _picture;
 
-        public User(int user_id, string firstName, string lastName, string email, string password, string phone, string summary, DateTime dateOfBirth, bool darkTheme, string address, string websiteURL, string picture)
+        public User(int userId, string firstName, string lastName, string email, string password, string phone, string summary, DateTime dateOfBirth, bool darkTheme, string address, string websiteURL, string picture)
         {
-            this.user_id = user_id;
+            this._userId = userId;
             this._firstName = firstName;
             this._lastName = lastName;
             this._email = email;
@@ -37,17 +37,9 @@ namespace ProfessionalProfile.domain
             this._picture = picture;
         }
 
-        public int User_id
-        {
-            get { return this.user_id; }
-            set { this.user_id = value; }
-        }
+        public int UserId   {  get { return this._userId; } set { this._userId = value; }   }
 
-        public string FirstName
-        {
-            get { return this._firstName; }
-            set { this._firstName = value; }
-        }
+        public string FirstName{ get { return this._firstName; }set { this._firstName = value; } }
 
         public string LastName
         {
@@ -104,7 +96,7 @@ namespace ProfessionalProfile.domain
         public override bool Equals(object? obj)
         {
             return obj is User user &&
-                   user_id == user.user_id &&
+                   _userId == user._userId &&
                    _firstName == user._firstName &&
                    _lastName == user._lastName &&
                    _email == user._email &&
@@ -117,7 +109,7 @@ namespace ProfessionalProfile.domain
                    _websiteURL == user._websiteURL &&
                    _picture == user._picture &&
                    Picture == user.Picture &&
-                   User_id == user.User_id &&
+                   UserId == user.UserId &&
                    FirstName == user.FirstName &&
                    LastName == user.LastName &&
                    Email == user.Email &&

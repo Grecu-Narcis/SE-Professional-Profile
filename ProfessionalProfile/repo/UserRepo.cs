@@ -15,7 +15,7 @@ namespace ProfessionalProfile.repo
 
         public UserRepo()
         {
-            // Read connection string from app.config
+            // IsRead connection string from app.config
             _connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
         }
         public void Add(User item)
@@ -49,7 +49,7 @@ namespace ProfessionalProfile.repo
             {
                 connection.Open();
 
-                string sql = "DELETE FROM Users WHERE UserId = @id";
+                string sql = "EXEC DeleteUser UserId = @id";
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 command.Parameters.AddWithValue("@id", id);
@@ -104,7 +104,7 @@ namespace ProfessionalProfile.repo
                 connection.Open();
 
                 // Consider using parameterized queries to prevent SQL injection
-                string sql = "SELECT * FROM Users WHERE UserId = @id";
+                string sql = "EXEC GetUserById UserId = @id";
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 command.Parameters.AddWithValue("@id", id);
@@ -150,21 +150,21 @@ namespace ProfessionalProfile.repo
                 connection.Open();
 
                 // Consider using parameterized queries to prevent SQL injection
-                string sql = @"UPDATE Users
-                       SET FirstName = @FirstName,
-                           LastName = @LastName,
-                           Email = @Email,
-                           Phone = @Phone,
-                           Summary = @Summary,
-                           DateOfBirth = @DateOfBirth,
-                           DarkTheme = @DarkTheme,
-                           Address = @Address,
-                           WebsiteURL = @WebsiteURL,
-                           Picture = @Picture
-                       WHERE UserId = @UserId";
+                string sql = @"EXEC UpdateUser
+                            UserId = @UserId
+                            FirstName = @FirstName,
+                            LastName = @LastName,
+                            Email = @Email,
+                            Phone = @Phone,
+                            Summary = @Summary,
+                            DateOfBirth = @DateOfBirth,
+                            DarkTheme = @DarkTheme,
+                            Address = @Address,
+                            WebsiteURL = @WebsiteURL,
+                            Picture = @Picture";
                 SqlCommand command = new SqlCommand(sql, connection);
 
-                command.Parameters.AddWithValue("@UserId", user.User_id);
+                command.Parameters.AddWithValue("@UserId", user.UserId);
                 command.Parameters.AddWithValue("@FirstName", user.FirstName);
                 command.Parameters.AddWithValue("@LastName", user.LastName);
                 command.Parameters.AddWithValue("@Email", user.Email);

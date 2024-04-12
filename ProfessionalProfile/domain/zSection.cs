@@ -9,18 +9,18 @@ namespace ProfessionalProfile.domain
     //NOT USED
     public class zSection
     {
-        private int _section_id;
+        private int _sectionId;
         private string _status;
 
-        public zSection(int section_id, string status) { 
-            this._section_id = section_id;
+        public zSection(int sectionId, string status) { 
+            this._sectionId = sectionId;
             this._status = status;
         }
 
-        public int Section_id
+        public int SectionId
         {
-            get { return _section_id; }
-            set { _section_id = value; }
+            get { return _sectionId; }
+            set { _sectionId = value; }
         }
 
         public string Status
@@ -32,9 +32,9 @@ namespace ProfessionalProfile.domain
         public override bool Equals(object? obj)
         {
             return obj is zSection section &&
-                   _section_id == section._section_id &&
+                   _sectionId == section._sectionId &&
                    _status == section._status &&
-                   Section_id == section.Section_id &&
+                   SectionId == section.SectionId &&
                    Status == section.Status;
         }
     }

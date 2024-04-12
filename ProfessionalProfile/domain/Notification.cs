@@ -2,30 +2,30 @@
 {
     public class Notification
     {
-        private int _notification_id;
-        private int _user_id;
+        private int _notificationId;
+        private int _userId;
         private string _activity;
         private DateTime _timestamp;
         private string _details;
-        private bool _read;
+        private bool _isRead;
 
-        public Notification(int notif_id, int user_id, string activity, DateTime timestamp, string details, bool read)
+        public Notification(int notificationId, int userId, string activity, DateTime timestamp, string details, bool isRead)
         {
-            this._notification_id = notif_id;
-            this._user_id = user_id;
+            this._notificationId = notificationId;
+            this._userId = userId;
             this._activity = activity;
             this._timestamp = timestamp;
             this._details = details;
-            this._read = read;
+            this._isRead = isRead;
         }
 
-        public int Notif_id{
-            get { return _notification_id; }
-            set {  _notification_id = value; }
+        public int NotificationId{
+            get { return _notificationId; }
+            set {  _notificationId = value; }
         }
 
-        public int User_id { get { return _user_id; }
-        set { _user_id = value; }
+        public int UserId { get { return _userId; }
+        set { _userId = value; }
         }
 
         public string Activity { 
@@ -45,27 +45,27 @@
             set { _details = value; }
         }
 
-        public bool Read
+        public bool IsRead
         {
-            get { return this._read; }
-            set { this._read = value; }
+            get { return this._isRead; }
+            set { this._isRead = value; }
         }
 
         public override bool Equals(object? obj)
         {
             return obj is Notification notification &&
-                   _notification_id == notification._notification_id &&
-                   _user_id == notification._user_id &&
+                   _notificationId == notification._notificationId &&
+                   _userId == notification._userId &&
                    _activity == notification._activity &&
                    _timestamp == notification._timestamp &&
                    _details == notification._details &&
-                   _read == notification._read &&
-                   Notif_id == notification.Notif_id &&
-                   User_id == notification.User_id &&
+                   _isRead == notification._isRead &&
+                   NotificationId == notification.NotificationId &&
+                   UserId == notification.UserId &&
                    Activity == notification.Activity &&
                    Timestamp == notification.Timestamp &&
                    Details == notification.Details &&
-                   Read == notification.Read;
+                   IsRead == notification.IsRead;
         }
     }
 }

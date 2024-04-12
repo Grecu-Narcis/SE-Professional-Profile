@@ -8,55 +8,55 @@ namespace ProfessionalProfile.domain
 {
     public class Endorsement
     {
-        private int _endorsement_id;
-        private int _endorser_id;
+        private int _endorsementId;
+        private int _endorserId;
         private int _recipient_id;
-        private int _skill_id;
+        private int _skillId;
 
-        public Endorsement(int endorsement_id, int endorser_id, int recipient_id, int skill_id)
+        public Endorsement(int endorsementId, int endorser_id, int recipient_id, int skillId)
         {
-            this._endorsement_id = endorsement_id;
-            this._endorser_id = endorser_id;
+            this._endorsementId = endorsementId;
+            this._endorserId = endorser_id;
             this._recipient_id = recipient_id;
-            this._skill_id = skill_id;
+            this._skillId = skillId;
         }
 
-        public int Endorsement_id
+        public int EndorsementId
         {
-            get { return _endorsement_id; }
+            get { return _endorsementId; }
 
-            set { _endorsement_id = value; }
+            set { _endorsementId = value; }
         }
 
-        public int Edorser_id
+        public int EdorserId
         {
-            get { return _endorser_id; }
-            set { _endorser_id = value;}
+            get { return _endorserId; }
+            set { _endorserId = value;}
         }
 
-        public int Recipient_id
+        public int RecipientId
         {
             get { return _recipient_id; }
             set { this._recipient_id = value; }
         }
 
-        public int Skill_id
+        public int SkillId
         {
-            get { return _skill_id; }
-            set { _skill_id = value; }
+            get { return _skillId; }
+            set { _skillId = value; }
         }
 
         public override bool Equals(object? obj)
         {
             return obj is Endorsement endorsement &&
-                   _endorsement_id == endorsement._endorsement_id &&
-                   _endorser_id == endorsement._endorser_id &&
+                   _endorsementId == endorsement._endorsementId &&
+                   _endorserId == endorsement._endorserId &&
                    _recipient_id == endorsement._recipient_id &&
-                   _skill_id == endorsement._skill_id &&
-                   Endorsement_id == endorsement.Endorsement_id &&
-                   Edorser_id == endorsement.Edorser_id &&
-                   Recipient_id == endorsement.Recipient_id &&
-                   Skill_id == endorsement.Skill_id;
+                   _skillId == endorsement._skillId &&
+                   EndorsementId == endorsement.EndorsementId &&
+                   EdorserId == endorsement.EdorserId &&
+                   RecipientId == endorsement.RecipientId &&
+                   SkillId == endorsement.SkillId;
         }
     }
 }

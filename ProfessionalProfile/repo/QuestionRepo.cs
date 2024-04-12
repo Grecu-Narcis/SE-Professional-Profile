@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ProfessionalProfile.repo
 {
-    public class CertificationRepo : RepoInterface<Certification>
+    internal class QuestionRepo : RepoInterface<Question>
     {
-        public void Add(Certification item)
+        public void Add(Question item)
         {
         }
 
@@ -17,18 +17,17 @@ namespace ProfessionalProfile.repo
         {
         }
 
-        public List<Certification> GetAll()
-        {
-            List<Certification> certifications = new List<Certification>();
-            return certifications;
-        }
-
-        public Certification GetById(int id)
+        public List<Question> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Certification item)
+        public Question GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Question item)
         {
         }
     }

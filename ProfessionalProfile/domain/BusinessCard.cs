@@ -8,25 +8,25 @@ namespace ProfessionalProfile.domain
 {
     public class BussinesCard
     {
-        private int _bc_id;
+        private int _bcId;
+        private int _userId;
         private string _summary;
-        private List<Skill> _keySkills;
         private string _uniqueUrl;
-        private int _user_id;
+        private List<Skill> _keySkills;
 
-        public BussinesCard(int bc_id, string summary, List<Skill> keySkills, string uniqueUrl, int user_id)
+        public BussinesCard(int bcId, string summary, string uniqueUrl, int userId, List<Skill> keySkills,)
         {
-            this._bc_id = bc_id;
+            this._bcId = bcId;
             this._summary = summary;
             this._keySkills = keySkills;
             this._uniqueUrl = uniqueUrl;
-            _user_id = user_id;
+            _userId = userId;
         }
 
-        public int Bc_id
+        public int BcId
         {
-            get { return _bc_id; }
-            set { _bc_id = value; }
+            get { return _bcId; }
+            set { _bcId = value; }
         }
 
         public string Summary
@@ -46,20 +46,20 @@ namespace ProfessionalProfile.domain
             set { _uniqueUrl = value; }
         }
 
-        public int User_id
+        public int UserId
         {
-            get { return _user_id; }
-            set { this._user_id = value; }
+            get { return _userId; }
+            set { this._userId = value; }
         }
 
         public override bool Equals(object? obj)
         {
             return obj is BussinesCard card &&
-                   _bc_id == card._bc_id &&
+                   _bcId == card._bcId &&
                    _summary == card._summary &&
                    EqualityComparer<List<Skill>>.Default.Equals(_keySkills, card._keySkills) &&
                    _uniqueUrl == card._uniqueUrl &&
-                   Bc_id == card.Bc_id &&
+                   BcId == card.BcId &&
                    Summary == card.Summary &&
                    EqualityComparer<List<Skill>>.Default.Equals(KeySkills, card.KeySkills) &&
                    UniqueUrl == card.UniqueUrl;
