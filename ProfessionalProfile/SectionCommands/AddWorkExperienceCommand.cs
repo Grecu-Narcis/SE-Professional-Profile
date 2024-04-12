@@ -1,0 +1,62 @@
+﻿using ProfessionalProfile.domain;
+using ProfessionalProfile.repo;
+using ProfessionalProfile.SectionViewModels;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+
+namespace ProfessionalProfile.SectionCommands
+{
+    public class AddWorkExperienceCommand : SectionCommandBase
+    {
+        private readonly WorkExperienceRepo _workExperienceRepo;
+        private readonly WorkExperienceViewModel _workExperienceViewModel;
+
+        public AddWorkExperienceCommand(WorkExperienceViewModel workExperienceViewModel, WorkExperienceRepo workExperienceRepo)
+        {
+            _workExperienceRepo = workExperienceRepo;
+            _workExperienceViewModel = workExperienceViewModel;
+
+            _workExperienceViewModel.PropertyChanged += OnViewModelPropertyChanged;
+        }
+
+        public override void Execute(object parameter)
+        {
+            WorkExperience workExperience = new WorkExperience(4, 4, _workExperienceViewModel.JobTitle, _workExperienceViewModel.Company, _workExperienceViewModel.Location, _workExperienceViewModel.EmployementPeriod, _workExperienceViewModel.Responsibilities, _workExperienceViewModel.Achievements, _workExperienceViewModel.Description);
+            
+            //try catch block
+            _workExperienceRepo.Add(workExperience);
+            MessageBox.Show("Work Experience added successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        public override bool CanExecute(object parameter)
+        {
+            return !string.IsNullOrEmpty(_workExperienceViewModel.JobTitle) &&
+                !string.IsNullOrEmpty(_workExperienceViewModel.Company) &&
+                !string.IsNullOrEmpty(_workExperienceViewModel.Location) &&
+                !string.IsNullOrEmpty(_workExperienceViewModel.EmployementPeriod) &&
+                !string.IsNullOrEmpty(_workExperienceViewModel.Responsibilities) &&
+                !string.IsNullOrEmpty(_workExperienceViewModel.Achievements) &&
+                !string.IsNullOrEmpty(_workExperienceViewModel.Description) &&
+                base.CanExecute(parameter);
+        }
+
+        private void OnViewModelPropertyChanged(object? sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(WorkExperienceViewModel.JobTitle) ||
+                               e.PropertyName == nameof(WorkExperienceViewModel.Company) ||
+                                              e.PropertyName == nameof(WorkExperienceViewModel.Location) ||
+                                                             e.PropertyName == nameof(WorkExperienceViewModel.EmployementPeriod) ||
+                                                                            e.PropertyName == nameof(WorkExperienceViewModel.Responsibilities) ||
+                                                                                           e.PropertyName == nameof(WorkExperienceViewModel.Achievements) ||
+                                                                                                          e.PropertyName == nameof(WorkExperienceViewModel.Description))
+            {
+                OnCanExecuteChanged();
+            }
+        }
+    }
+}
