@@ -1,26 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\",
+  "WorkspaceRootPath": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\repo\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\drago\\desktop\\anul 2\\sem 4\\soft\\professional-profile\\professionalprofile\\profile page\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:profile page\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\profile page\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:profile page\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\repo\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\domain\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\domain\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:domain\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\repo\\educationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\educationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\domain\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:domain\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\domain\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:domain\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\repo\\educationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\educationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,67 +39,74 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserRepo.cs",
-              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\repo\\UserRepo.cs",
-              "RelativeDocumentMoniker": "repo\\UserRepo.cs",
-              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\repo\\UserRepo.cs",
-              "RelativeToolTip": "repo\\UserRepo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKYAAABHAAAA",
+              "Title": "ProfilePage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\profile page\\ProfilePage.xaml.cs",
+              "RelativeDocumentMoniker": "profile page\\ProfilePage.xaml.cs",
+              "ToolTip": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\profile page\\ProfilePage.xaml.cs",
+              "RelativeToolTip": "profile page\\ProfilePage.xaml.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB8AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T08:53:07.995Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Project.cs",
-              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\domain\\Project.cs",
-              "RelativeDocumentMoniker": "domain\\Project.cs",
-              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\domain\\Project.cs",
-              "RelativeToolTip": "domain\\Project.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAIAwwEEAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T08:50:41.327Z",
+              "WhenOpened": "2024-04-12T14:55:12.923Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\domain\\User.cs",
-              "RelativeDocumentMoniker": "domain\\User.cs",
-              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\domain\\User.cs",
-              "RelativeToolTip": "domain\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFIAAAAdAAAA",
+              "Title": "ProfilePage.xaml",
+              "DocumentMoniker": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\profile page\\ProfilePage.xaml",
+              "RelativeDocumentMoniker": "profile page\\ProfilePage.xaml",
+              "ToolTip": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\profile page\\ProfilePage.xaml",
+              "RelativeToolTip": "profile page\\ProfilePage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-12T14:55:03.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserRepo.cs",
+              "DocumentMoniker": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\repo\\UserRepo.cs",
+              "RelativeDocumentMoniker": "repo\\UserRepo.cs",
+              "ToolTip": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\repo\\UserRepo.cs",
+              "RelativeToolTip": "repo\\UserRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKYAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T08:50:33.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-12T08:53:07.995Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\domain\\Project.cs",
+              "RelativeDocumentMoniker": "domain\\Project.cs",
+              "ToolTip": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\domain\\Project.cs",
+              "RelativeToolTip": "domain\\Project.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T08:50:41.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "EducationRepo.cs",
-              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\repo\\EducationRepo.cs",
+              "DocumentMoniker": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\repo\\EducationRepo.cs",
               "RelativeDocumentMoniker": "repo\\EducationRepo.cs",
-              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\repo\\EducationRepo.cs",
+              "ToolTip": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\repo\\EducationRepo.cs",
               "RelativeToolTip": "repo\\EducationRepo.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T08:50:20.71Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-12T08:50:20.71Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Education.cs",
-              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\domain\\Education.cs",
+              "DocumentMoniker": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\domain\\Education.cs",
               "RelativeDocumentMoniker": "domain\\Education.cs",
-              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\domain\\Education.cs",
+              "ToolTip": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\domain\\Education.cs",
               "RelativeToolTip": "domain\\Education.cs",
               "ViewState": "AQIAADAAAAAAAAAAAAD4v0AAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T08:50:02.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-12T08:50:02.342Z"
             }
           ]
         },
