@@ -18,7 +18,8 @@ namespace ProfessionalProfile.domain
             this._name = name;
         }
 
-        public int SkillId{
+        public int SkillId
+        {
             get { return _skillId; }
             set { _skillId = value; }
         }

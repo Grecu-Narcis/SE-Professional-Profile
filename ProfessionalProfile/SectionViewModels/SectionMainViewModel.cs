@@ -11,9 +11,9 @@ namespace ProfessionalProfile.SectionViewModels
     {
         public SectionViewModelBase CurrentViewModel { get; }
 
-        public SectionMainViewModel(VolunteeringRepo volunteeringRepo)
+        public SectionMainViewModel(SkillRepo skillRepo)
         {
-            CurrentViewModel = new VolunteeringViewModel(volunteeringRepo);
+            CurrentViewModel = new SkillViewModel(skillRepo);
         }
     }
 }
