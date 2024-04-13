@@ -105,7 +105,7 @@ namespace ProfessionalProfile.repo
 
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    while (reader.Read())
+                    if (reader.Read())
                     {
                         try
                         {
@@ -120,12 +120,12 @@ namespace ProfessionalProfile.repo
                             int userId = (int)reader["UserId"];
 
                             workExperience = new WorkExperience(workId, userId, jobTitle, company, location, employementPeriod, responsibilities, achievements, description);
-                        } 
+                        }
                         catch (Exception ex)
                         {
                             Console.WriteLine($"Error getting work experience by id: {ex.Message}");
                         }
-                        
+
                     }
                 }
             }
