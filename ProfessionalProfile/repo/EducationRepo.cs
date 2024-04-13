@@ -1,4 +1,5 @@
 ﻿using ProfessionalProfile.domain;
+using ProfessionalProfile.SectionValidators;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -20,6 +21,7 @@ namespace ProfessionalProfile.repo
 
         public void Add(Education item)
         {
+            SectionValidator.validateEducation(item);
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();

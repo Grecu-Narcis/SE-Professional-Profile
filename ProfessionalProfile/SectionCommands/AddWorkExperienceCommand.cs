@@ -1,5 +1,6 @@
 ﻿using ProfessionalProfile.domain;
 using ProfessionalProfile.repo;
+using ProfessionalProfile.SectionExceptions;
 using ProfessionalProfile.SectionViewModels;
 using System;
 using System.Collections.Generic;
@@ -27,11 +28,19 @@ namespace ProfessionalProfile.SectionCommands
         public override void Execute(object parameter)
         {
             WorkExperience workExperience = new WorkExperience(4, 4, _workExperienceViewModel.JobTitle, _workExperienceViewModel.Company, _workExperienceViewModel.Location, _workExperienceViewModel.EmployementPeriod, _workExperienceViewModel.Responsibilities, _workExperienceViewModel.Achievements, _workExperienceViewModel.Description);
-            
-            //try catch block
-            _workExperienceRepo.Add(workExperience);
-            MessageBox.Show("Work Experience added successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            try
+            {
+                _workExperienceRepo.Add(workExperience);
+                MessageBox.Show("Work Experience added successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (CustomSectionException ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
+
+
 
         public override bool CanExecute(object parameter)
         {

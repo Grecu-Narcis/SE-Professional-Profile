@@ -1,5 +1,6 @@
 ﻿using ProfessionalProfile.domain;
 using ProfessionalProfile.repo;
+using ProfessionalProfile.SectionExceptions;
 using ProfessionalProfile.SectionViewModels;
 using System;
 using System.Collections.Generic;
@@ -39,9 +40,15 @@ namespace ProfessionalProfile.SectionCommands
                     _certificateViewModel.ExpirationDate
                 );
 
-            //add try catch block
-            _certificateRepo.Add(certificate);
-            MessageBox.Show("Certificate added successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            try
+            {
+                _certificateRepo.Add(certificate);
+                MessageBox.Show("Certificate added successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (CustomSectionException ex)
+            {
+               MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         public override bool CanExecute(object parameter)

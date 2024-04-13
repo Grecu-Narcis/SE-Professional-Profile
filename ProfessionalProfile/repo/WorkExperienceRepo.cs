@@ -1,4 +1,5 @@
 ﻿using ProfessionalProfile.domain;
+using ProfessionalProfile.SectionValidators;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -21,6 +22,7 @@ namespace ProfessionalProfile.repo
 
         public void Add(WorkExperience item)
         {
+            SectionValidator.validateWorkExperience(item);
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();

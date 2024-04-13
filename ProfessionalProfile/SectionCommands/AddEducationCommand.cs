@@ -1,5 +1,6 @@
 ﻿using ProfessionalProfile.domain;
 using ProfessionalProfile.repo;
+using ProfessionalProfile.SectionExceptions;
 using ProfessionalProfile.SectionViewModels;
 using System;
 using System.Collections.Generic;
@@ -39,9 +40,15 @@ namespace ProfessionalProfile.SectionCommands
                                                 gpa
                 );
 
-                //add try catch block
-                _educationRepo.Add(education);
-                MessageBox.Show("Education added successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                try
+                {
+                    _educationRepo.Add(education);
+                    MessageBox.Show("Education added successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                } 
+                catch (CustomSectionException ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             } else
                 MessageBox.Show("Invalid GPA value. Please enter a numerical value.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
