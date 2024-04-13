@@ -69,9 +69,9 @@ namespace ProfessionalProfile.repo
                     {
                         int educationId = (int)reader["EducationId"];
                         int userId = (int)reader["UserId"];
-                        string degree = reader["Degree"].ToString();
-                        string institution = reader["Institution"].ToString();
-                        string fieldOfStudy = reader["FieldOfStudy"].ToString();
+                        string degree = (string)reader["Degree"];
+                        string institution = (string)reader["Institution"];
+                        string fieldOfStudy = (string)reader["FieldOfStudy"];
                         DateTime graduationDate = (DateTime)reader["GraduationDate"];
                         double GPA = (double)reader["GPA"];
 
@@ -106,9 +106,9 @@ namespace ProfessionalProfile.repo
                         {
                             int educationId = (int)reader["EducationId"];
                             int userId = (int)reader["UserId"];
-                            string degree = reader["Degree"].ToString();
-                            string institution = reader["Institution"].ToString();
-                            string fieldOfStudy = reader["FieldOfStudy"].ToString();
+                            string degree = (string)reader["Degree"];
+                            string institution = (string)reader["Institution"];
+                            string fieldOfStudy = (string)reader["FieldOfStudy"];
                             DateTime graduationDate = (DateTime)reader["GraduationDate"];
                             double GPA = (double)reader["GPA"];
 

@@ -72,13 +72,13 @@ namespace ProfessionalProfile.repo
                     while (reader.Read())
                     {
                         int workId = (int)reader["WorkId"];
-                        string jobTitle = (string)reader["JobTitle"].ToString();
-                        string company = (string)reader["Company"].ToString();
-                        string location = (string)reader["Location"].ToString();
-                        string employementPeriod = (string)reader["EmployementPeriod"].ToString();
-                        string responsibilities = (string)reader["Responsibilities"].ToString();
-                        string achievements = (string)reader["Achievements"].ToString();
-                        string description = (string)reader["Description"].ToString();
+                        string jobTitle = (string)reader["JobTitle"];
+                        string company = (string)reader["Company"];
+                        string location = (string)reader["Location"];
+                        string employementPeriod = (string)reader["EmployementPeriod"];
+                        string responsibilities = (string)reader["Responsibilities"];
+                        string achievements = (string)reader["Achievements"];
+                        string description = (string)reader["Description"];
                         int userId = (int)reader["UserId"];
 
                         WorkExperience workExperience = new WorkExperience(workId, userId, jobTitle, company, location, employementPeriod, responsibilities, achievements, description);
@@ -110,13 +110,13 @@ namespace ProfessionalProfile.repo
                         try
                         {
                             int workId = (int)reader["WorkId"];
-                            string jobTitle = (string)reader["JobTitle"].ToString();
-                            string company = (string)reader["Company"].ToString();
-                            string location = (string)reader["Location"].ToString();
-                            string employementPeriod = (string)reader["EmployementPeriod"].ToString();
-                            string responsibilities = (string)reader["Responsibilities"].ToString();
-                            string achievements = (string)reader["Achievements"].ToString();
-                            string description = (string)reader["Description"].ToString();
+                            string jobTitle = (string)reader["JobTitle"];
+                            string company = (string)reader["Company"];
+                            string location = (string)reader["Location"];
+                            string employementPeriod = (string)reader["EmployementPeriod"]  ;
+                            string responsibilities = (string)reader["Responsibilities"];
+                            string achievements = (string)reader["Achievements"];
+                            string description = (string)reader["Description"];
                             int userId = (int)reader["UserId"];
 
                             workExperience = new WorkExperience(workId, userId, jobTitle, company, location, employementPeriod, responsibilities, achievements, description);
