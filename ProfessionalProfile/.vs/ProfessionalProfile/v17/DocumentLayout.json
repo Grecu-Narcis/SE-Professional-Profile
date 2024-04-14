@@ -11,12 +11,16 @@
       "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:profile page\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\drago\\desktop\\anul 2\\sem 4\\soft\\professional-profile\\professionalprofile\\domain\\volunteering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\domain\\volunteering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:domain\\volunteering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\drago\\desktop\\anul 2\\sem 4\\soft\\professional-profile\\professionalprofile\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1144,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-04-13T20:49:17.962Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -38,8 +58,7 @@
               "RelativeToolTip": "domain\\Volunteering.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T15:44:33.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-12T15:44:33.849Z"
             },
             {
               "$type": "Document",
@@ -51,8 +70,7 @@
               "RelativeToolTip": "domain\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T15:42:00.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-12T15:42:00.996Z"
             },
             {
               "$type": "Document",
@@ -62,7 +80,7 @@
               "RelativeDocumentMoniker": "profile page\\ProfilePage.xaml.cs",
               "ToolTip": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\profile page\\ProfilePage.xaml.cs",
               "RelativeToolTip": "profile page\\ProfilePage.xaml.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAgwCoAAAAoAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-12T14:55:12.923Z",
               "EditorCaption": ""
@@ -76,8 +94,7 @@
               "ToolTip": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\profile page\\ProfilePage.xaml",
               "RelativeToolTip": "profile page\\ProfilePage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-12T14:55:03.064Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-12T14:55:03.064Z"
             }
           ]
         },
