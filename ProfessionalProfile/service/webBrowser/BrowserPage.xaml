@@ -1,0 +1,22 @@
+﻿<Window x:Class="ProfessionalProfile.service.webBrowser.BrowserPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProfessionalProfile.service.webBrowser"
+        mc:Ignorable="d"
+        Title="BrowserPage" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- For the errorLabel -->
+            <RowDefinition Height="*"/>
+            <!-- For the WebBrowser (takes up remaining space) -->
+        </Grid.RowDefinitions>
+
+        
+            <Label Name="errorLabel" Grid.Row ="0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Red"/>
+        <WebBrowser x:Name="webBrowser"  Navigating="webBrowser_Navigating" Grid.Row="1"/>
+        
+    </Grid>
+</Window>

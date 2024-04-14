@@ -1,0 +1,56 @@
+﻿<Window x:Class="ProfessionalProfile.service.signUp.SignUpPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProfessionalProfile.service.signUp"
+        mc:Ignorable="d"
+        Title="SignUpPage" Height="450" Width="800">
+    <Grid>
+        <!--<StackPanel Margin="50,10,10,10" Orientation="Horizontal">-->
+            <StackPanel Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Professional Profile" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+                <TextBlock Name ="titleBox" Text="Sign up" FontSize="18" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+
+                <StackPanel Margin="40,0,40,0">
+                    <Label Content="Email:"/>
+                    <TextBox Name="emailBox" Text="Enter your email" Foreground="Gray" Margin="0,5,0,5" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+
+                    <Label Content="Name:"/>
+                    <TextBox Name="nameBox" Text="Enter your name" Foreground="Gray" Margin="0,5,0,5" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+
+                    <Label Content="Password:"/>
+                    <Grid>
+                        <PasswordBox x:Name="passwordBox" PasswordChanged="PasswordBox_PasswordChanged"/>
+                        <TextBox x:Name="passwordPlaceholder" Text="Enter your password" Foreground="Gray"  GotFocus="PasswordPlaceholder_GotFocus"/>
+                    </Grid>
+                    <Label Content="Birth date:"/>
+                    <TextBox Name="dateBox" Text="YYYY-MM-DD" Foreground="Gray" Margin="0,5,0,0" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+                    <Label Content="*Optional" FontSize="8"/>
+                </StackPanel>
+
+                <Button Content="Sign up" Click="handleSignUp" HorizontalAlignment="Center" Margin="5 2 5 0" Padding="40 5"/>
+                <Label Name="errorLabel" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Red"/>
+                <TextBlock Text="Or sign up with one of these:" HorizontalAlignment="Center" Margin="0,15,0,0"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="facebookBtn" Content="" Width="32" Height="32" Click="facebookSignUp" Margin="0,10,20,10">
+                        <Button.Background>
+                            <ImageBrush ImageSource="../loginAssets/facebook.png" />
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="linkedInBtn" Content="" Width="32" Height="32" Click="LinkedInLogin" Margin="0,10,20,10">
+                        <Button.Background>
+                            <ImageBrush ImageSource="../loginAssets/Linkedin.png" />
+                        </Button.Background>
+                    </Button>
+
+                </StackPanel>
+
+            </StackPanel>
+            <!--<WebBrowser x:Name="webBrowser" Grid.Row="1" Width="400" Height="400" Navigating="webBrowser_Navigating"/>-->
+
+        <!--</StackPanel>-->
+
+
+    </Grid>
+</Window>
