@@ -23,7 +23,6 @@ namespace ProfessionalProfile.SectionViewModels
         }
 
         public ICommand AddSkillButton { get; }
-        public ICommand NextSectionButton { get; }
 
         public SkillViewModel(SkillRepo skillRepo)
         {

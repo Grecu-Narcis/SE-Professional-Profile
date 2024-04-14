@@ -67,7 +67,6 @@ namespace ProfessionalProfile.SectionViewModels
         }
 
         public ICommand AddCertificateButton { get; }
-        public ICommand NextSectionButton { get; }
 
         public CertificateViewModel(CertificateRepo certificateRepo)
         {

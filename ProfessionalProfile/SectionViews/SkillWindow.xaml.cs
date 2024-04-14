@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProfessionalProfile.repo;
+using ProfessionalProfile.SectionViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,19 +12,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ProfessionalProfile.SectionViews
 {
     /// <summary>
-    /// Interaction logic for EducationView.xaml
+    /// Interaction logic for SkillWindow.xaml
     /// </summary>
-    public partial class EducationView : UserControl
+    public partial class SkillWindow : Window
     {
-        public EducationView()
+        public SkillWindow()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
+
+            SkillViewModel viewModel = new SkillViewModel(new SkillRepo());
+            DataContext = viewModel;
         }
     }
 }

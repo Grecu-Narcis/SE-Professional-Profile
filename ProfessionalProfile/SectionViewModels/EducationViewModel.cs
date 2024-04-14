@@ -67,7 +67,6 @@ namespace ProfessionalProfile.SectionViewModels
         }
 
         public ICommand AddEducationButton { get; }
-        public ICommand NextSectionButton { get; }
 
         public EducationViewModel(EducationRepo educationRepo)
         {

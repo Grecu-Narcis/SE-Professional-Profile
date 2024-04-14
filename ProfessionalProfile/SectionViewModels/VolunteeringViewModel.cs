@@ -45,7 +45,6 @@ namespace ProfessionalProfile.SectionViewModels
         }
 
         public ICommand AddVolunteeringButton { get; }
-        public ICommand NextSectionButton { get; }
 
         public VolunteeringViewModel(VolunteeringRepo volunteeringRepo)
         {

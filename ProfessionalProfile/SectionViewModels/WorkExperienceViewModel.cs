@@ -89,7 +89,6 @@ namespace ProfessionalProfile.SectionViewModels
         }
 
         public ICommand AddWorkExperienceButton { get; }
-        public ICommand NextSectionButton { get; }
 
         public WorkExperienceViewModel(WorkExperienceRepo workExperienceRepo)
         {
