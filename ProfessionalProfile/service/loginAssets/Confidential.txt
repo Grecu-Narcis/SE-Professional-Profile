@@ -1,0 +1,14 @@
+﻿FACEBOOK OAUTH 
+----------------------------
+ID: 968501770998125  
+SECRET: 9e46f4bab93249c84fa750eb6284c784
+
+
+LinkedIn OAUTH 
+----------------------------
+ID: 77gmhbc7jwhfuu
+SECRET: 3acj7wfj3kQDiHoB
+
+
+
+API ENDPOINT WORKING: /v2/userinfo
