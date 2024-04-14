@@ -1,0 +1,48 @@
+<Window x:Class="ProfessionalProfile.profile_page.BusinessCardPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BUSINESS CARD" Height="400" Width="499">
+    <Grid Margin="0,0,10,0">
+        <Border BorderBrush="Black" BorderThickness="1" Margin="20,20,10,122" Padding="10">
+            <Grid Margin="0,-1,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Labels -->
+                <StackPanel Grid.Column="0" VerticalAlignment="Top">
+                    <TextBlock Text="Name:" FontWeight="Bold" Margin="0,0,0,5" />
+                    <TextBlock Text="Phone Number:" FontWeight="Bold" Margin="0,5,0,5" />
+                    <TextBlock Text="Job Title:" FontWeight="Bold" Margin="0,5,0,5" />
+                    <TextBlock Text="Company:" FontWeight="Bold" Margin="0,5,0,5" />
+                    <TextBlock Text="Email:" FontWeight="Bold" Margin="0,5,0,5" />
+                    <TextBlock Text="Website URL:" FontWeight="Bold" Margin="0,5,0,5" />
+                    <TextBlock Text="Key Skills:" FontWeight="Bold" Margin="0,5,0,5" />
+                    <TextBlock Text="Description:" FontWeight="Bold" Margin="0,5,0,5" />
+                    <TextBlock Text="Achievement:" FontWeight="Bold" Margin="0,5,0,0" />
+                </StackPanel>
+
+                <!-- Values -->
+                <StackPanel VerticalAlignment="Top" Grid.ColumnSpan="2" Height="224" Margin="89,0,0,0">
+                    <TextBlock Text="{Binding Name}" Margin="5,0,0,5" />
+                    <TextBlock Text="{Binding PhoneNumber}" Margin="5,0,0,5" />
+                    <TextBlock Text="{Binding JobTitle}" Margin="5,0,0,5" />
+                    <TextBlock Text="{Binding Company}" Margin="5,0,0,5" />
+                    <TextBlock Text="{Binding Email}" Margin="5,0,0,5" />
+                    <TextBlock Text="{Binding WebsiteURL}" Margin="5,0,0,5" />
+                    <TextBlock Text="{Binding KeySkills}" Margin="5,0,0,5" />
+                    <TextBlock Text="{Binding Description}" Margin="5,0,0,5" />
+                    <TextBlock Text="{Binding Achievement}" />
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Buttons -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20">
+            <Button Content="Generate QR Code" Command="{Binding GenerateQRCodeCommand}" Margin="0,0,10,0" />
+            <Button Content="Go to Your Profile" Command="{Binding GoToProfileCommand}"  Margin="0,0,10,0"  />
+            <Button Content="Download Card" Command="{Binding DownloadCardCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>
