@@ -9,7 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="service\loginAssets\facebook.png" />
+    <None Remove="service\loginAssets\Linkedin.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="service\loginAssets\facebook.png" />
+    <Resource Include="service\loginAssets\Linkedin.png" />
   </ItemGroup>
 
 </Project>

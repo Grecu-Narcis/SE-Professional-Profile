@@ -53,7 +53,7 @@ namespace ProfessionalProfile.profile_page {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ProfessionalProfile;V1.0.0.0;component/profile%20page/profilepage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ProfessionalProfile;component/profile%20page/profilepage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\profile page\ProfilePage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

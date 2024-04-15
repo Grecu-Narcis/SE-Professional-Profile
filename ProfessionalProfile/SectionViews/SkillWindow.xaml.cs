@@ -1,4 +1,5 @@
-﻿using ProfessionalProfile.repo;
+﻿using ProfessionalProfile.profile_page;
+using ProfessionalProfile.repo;
 using ProfessionalProfile.SectionViewModels;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,13 @@ namespace ProfessionalProfile.SectionViews
             SkillViewModel viewModel = new SkillViewModel(new SkillRepo());
             DataContext = viewModel;
             this.userId = userId;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            WorkExperienceWindow workExperienceWindow = new WorkExperienceWindow(userId);
+            this.Hide();
+            workExperienceWindow.Show();
         }
     }
 }

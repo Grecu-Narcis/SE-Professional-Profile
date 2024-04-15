@@ -34,9 +34,9 @@ namespace ProfessionalProfile.SectionViews
 
         private void OpenCertificateWindow(object sender, RoutedEventArgs e)
         {
-            CertificateWindow certificateWindow = new CertificateWindow(userId);
+            EducationWindow educationWindow = new EducationWindow(userId);
             this.Visibility = Visibility.Hidden;
-            certificateWindow.Show();
+            educationWindow.Show();
         }
     }
 }

@@ -20,12 +20,12 @@ namespace ProfessionalProfile.profile_page
     {
         
 
-        public ProfilePage(string UserId)
+        public ProfilePage(int UserId)
         {
             InitializeComponent();
 
             // Populate sample data we will fetch this from the user object later
-            CurrentUserId = "123456"; // this will be fetched from the logged in user
+            CurrentUserId = 123; // this will be fetched from the logged in user
             this.UserId = UserId;
             ProfilePic = "profile.jpg";
             Name = "John Doe";
@@ -190,8 +190,8 @@ namespace ProfessionalProfile.profile_page
 
         // Define properties for profile information
         public string MyUrl { get; set; }
-        public string CurrentUserId { get; set; }
-        public string UserId { get; set; }
+        public int CurrentUserId { get; set; }
+        public int UserId { get; set; }
         public string ProfilePic { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }

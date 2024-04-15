@@ -1,4 +1,5 @@
-﻿using ProfessionalProfile.repo;
+﻿using ProfessionalProfile.profile_page;
+using ProfessionalProfile.repo;
 using ProfessionalProfile.SectionViewModels;
 using System;
 using System.Collections.Generic;
@@ -34,9 +35,9 @@ namespace ProfessionalProfile.SectionViews
 
         private void OpenWorkExperienceWindow(object sender, RoutedEventArgs e)
         {
-            WorkExperienceWindow workExperienceWindow = new WorkExperienceWindow(userId);
+            ProfilePage profilePage = new ProfilePage(userId);
             this.Visibility = Visibility.Hidden;
-            workExperienceWindow.Show();
+            profilePage.Show();
         }
     }
 }
