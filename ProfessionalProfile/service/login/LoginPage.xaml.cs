@@ -23,6 +23,8 @@ using System.Runtime.CompilerServices;
 using System.Text.Json;
 using static System.Formats.Asn1.AsnWriter;
 using ProfessionalProfile.service.webBrowser;
+using ProfessionalProfile.SectionViews;
+using ProfessionalProfile.profile_page;
 
 namespace ProfessionalProfile.service.login
 {
@@ -59,7 +61,7 @@ namespace ProfessionalProfile.service.login
         private void goToSignup(object sender, RoutedEventArgs e)
         {
             SignUpPage signUpPage = new SignUpPage();
-            this.Hide();
+            //this.Hide();
             signUpPage.Show();
         }
 
@@ -144,7 +146,12 @@ namespace ProfessionalProfile.service.login
                 }
                 else
                 {
-                    this.titleBox.Text = "Welcome back " + loggedInUser.FirstName;
+                    //this.titleBox.Text = "Welcome back " + loggedInUser.FirstName;
+                    //CertificateWindow window = new CertificateWindow(loggedInUser.UserId);
+                    ProfilePage window = new ProfilePage(loggedInUser.UserId);
+                    this.Hide();
+                    window.Show();
+
                 }
 
 
@@ -165,7 +172,7 @@ namespace ProfessionalProfile.service.login
             browserPage.Show();
             browserPage.webBrowser.Navigate("about:blank");
             browserPage.webBrowser.Navigate(authorizationUrl);
-            browserPage.Show();
+            //browserPage.Show();
 
 
 
@@ -174,8 +181,6 @@ namespace ProfessionalProfile.service.login
         {
             // Construct the OAuth authorization URL for LinkedIn
             string authorizationUrl = "https://www.linkedin.com/oauth/v2/authorization";
-            string clientId = "77gmhbc7jwhfuu"; // Replace with your LinkedIn Client ID
-            string redirectUri = "http://localhost:8000"; // Replace with your LinkedIn Redirect URI
             string scope = "profile openid email"; // Add any additional LinkedIn scopes as needed
 
             // Construct the full authorization URL with parameters
@@ -187,7 +192,7 @@ namespace ProfessionalProfile.service.login
             browserPage.Show();
             browserPage.webBrowser.Navigate("about:blank");
             browserPage.webBrowser.Navigate(fullAuthorizationUrl);
-            browserPage.Show();
+            //browserPage.Show();
 
 
 
