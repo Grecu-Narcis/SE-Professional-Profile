@@ -111,3 +111,29 @@ C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net
 C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SearchUserPage.baml
 C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SelectTestWindow.baml
 C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\TakeTestWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\CertificateWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\EducationWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\ProfilePictureWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\SkillWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\VolunteeringWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\WorkExperienceWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\login\LoginPage.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\signUp\SignUpPage.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\webBrowser\BrowserPage.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\CreateAssessmentWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SearchUserPage.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SelectTestWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\TakeTestWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\CertificateWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\EducationWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\ProfilePictureWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\SkillWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\VolunteeringWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\WorkExperienceWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\login\LoginPage.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\signUp\SignUpPage.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\webBrowser\BrowserPage.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\CreateAssessmentWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SearchUserPage.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SelectTestWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\TakeTestWindow.baml

@@ -80,6 +80,24 @@ namespace ProfessionalProfile.repo
             return volunteerings;
         }
 
+        public List<Volunteering> GetByUserId(int userId)
+        {
+            List<Volunteering> volunteering = new List<Volunteering>();
+
+            volunteering = GetAll();
+
+            for (int i = 0; i < volunteering.Count; i++)
+            {
+                if (volunteering[i].UserId != userId)
+                {
+                    volunteering.RemoveAt(i);
+                    i--;
+                }
+            }
+
+            return volunteering;
+        }
+
         public Volunteering GetById(int id)
         {
             Volunteering volunteering = null;

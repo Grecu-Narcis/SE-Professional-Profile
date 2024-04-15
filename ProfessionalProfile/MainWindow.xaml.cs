@@ -1,4 +1,5 @@
 ﻿using ProfessionalProfile.domain;
+using ProfessionalProfile.profile_page;
 using ProfessionalProfile.repo;
 using ProfessionalProfile.service.login;
 using System.Text;
@@ -24,8 +25,9 @@ namespace ProfessionalProfile
         {
             InitializeComponent();
             this.Hide();
-            LoginPage login =   new LoginPage();
-            login.Show();
+            
+            ProfilePage profile = new ProfilePage(4);
+            profile.Show();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
