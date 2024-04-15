@@ -129,6 +129,7 @@ namespace ProfessionalProfile.repo
 
         public void Update(Certificate item)
         {
+            SectionValidator.validateCertificate(item);
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
