@@ -7,7 +7,33 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="view\CreateAssessmentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\SearchUserPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\SelectTestWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\TakeTestWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="view\CreateAssessmentWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="view\SearchUserPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="view\SelectTestWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="view\TakeTestWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

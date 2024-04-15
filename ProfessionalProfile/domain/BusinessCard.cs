@@ -14,7 +14,7 @@ namespace ProfessionalProfile.domain
         private string _uniqueUrl;
         private List<Skill> _keySkills;
 
-        public BussinesCard(int bcId, string summary, string uniqueUrl, int userId, List<Skill> keySkills,)
+        public BussinesCard(int bcId, string summary, string uniqueUrl, int userId, List<Skill> keySkills)
         {
             this._bcId = bcId;
             this._summary = summary;

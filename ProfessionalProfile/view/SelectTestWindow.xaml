@@ -1,0 +1,28 @@
+﻿<Window x:Class="ProfessionalProfile.view.SelectTestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProfessionalProfile.view"
+        mc:Ignorable="d"
+        Title="SelectTestWindow" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <Label Content="Choose the assessment you want to take" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+            <ListBox x:Name="assessmentNames" Margin="10,46,465,60" SelectionChanged="assessmentNames_SelectionChanged"/>
+            <Label x:Name="skillTestedLabel" Content="Skill tested:" HorizontalAlignment="Left" Margin="400,41,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="assessmentDescriptionBox" HorizontalAlignment="Left" Margin="400,82,0,0" TextWrapping="Wrap" Text="Test description..." VerticalAlignment="Top" Width="358" Height="268" RenderTransformOrigin="0.5,0.5" IsEnabled="False">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.347"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.394"/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+            <Button x:Name="SelectTestButton" Content="Select" HorizontalAlignment="Left" Margin="350,381,0,0" VerticalAlignment="Top" Click="SelectTestButton_Click" Width="50"/>
+        </Grid>
+
+    </Grid>
+</Window>
