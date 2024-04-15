@@ -21,13 +21,15 @@ namespace ProfessionalProfile.SectionViews
     /// </summary>
     public partial class SkillWindow : Window
     {
-        public SkillWindow()
+        int userId;
+        public SkillWindow(int userId)
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
 
             SkillViewModel viewModel = new SkillViewModel(new SkillRepo());
             DataContext = viewModel;
+            this.userId = userId;
         }
     }
 }

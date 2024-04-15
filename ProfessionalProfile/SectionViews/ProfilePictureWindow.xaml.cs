@@ -19,15 +19,17 @@ namespace ProfessionalProfile.SectionViews
     /// </summary>
     public partial class ProfilePictureWindow : Window
     {
-        public ProfilePictureWindow()
+        int userId;
+        public ProfilePictureWindow(int userId)
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
+            this.userId = userId;
         }
 
         private void OpenEducationWindow(object sender, RoutedEventArgs e)
         {
-            EducationWindow educationWindow = new EducationWindow();
+            EducationWindow educationWindow = new EducationWindow(userId);
             this.Visibility = Visibility.Hidden;
             educationWindow.Show();
         }

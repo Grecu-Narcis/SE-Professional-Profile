@@ -16,12 +16,13 @@ namespace ProfessionalProfile.SectionCommands
     {
         private readonly CertificateRepo _certificateRepo;
         private readonly CertificateViewModel _certificateViewModel;
+        private readonly int _userId;
 
-        public AddCertificateCommand(SectionViewModels.CertificateViewModel certificateViewModel, CertificateRepo certificateRepo)
+        public AddCertificateCommand(SectionViewModels.CertificateViewModel certificateViewModel, CertificateRepo certificateRepo, int userId)
         {
             _certificateRepo = certificateRepo;
             _certificateViewModel = certificateViewModel;
-
+            _userId = userId;
             _certificateViewModel.PropertyChanged += OnViewModelPropertyChanged;
         }
 
@@ -32,7 +33,7 @@ namespace ProfessionalProfile.SectionCommands
             //user id 4 always
             Certificate certificate = new Certificate(
                     4,
-                    4,
+                    _userId,
                     _certificateViewModel.CertificateName,
                     _certificateViewModel.IssuedBy,
                     _certificateViewModel.Description,
