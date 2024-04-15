@@ -470,19 +470,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\higye\\.nuget\\packages\\": {}
+    "C:\\Users\\narci\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\higye\\OneDrive\\Desktop\\UBB Anul 2\\Sem2\\ISSP\\SE-Professional-Profile\\ProfessionalProfile\\ProfessionalProfile.csproj",
+      "projectUniqueName": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\ProfessionalProfile.csproj",
       "projectName": "ProfessionalProfile",
-      "projectPath": "C:\\Users\\higye\\OneDrive\\Desktop\\UBB Anul 2\\Sem2\\ISSP\\SE-Professional-Profile\\ProfessionalProfile\\ProfessionalProfile.csproj",
-      "packagesPath": "C:\\Users\\higye\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\higye\\OneDrive\\Desktop\\UBB Anul 2\\Sem2\\ISSP\\SE-Professional-Profile\\ProfessionalProfile\\obj\\",
+      "projectPath": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\ProfessionalProfile.csproj",
+      "packagesPath": "C:\\Users\\narci\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\higye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\narci\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -537,7 +537,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
