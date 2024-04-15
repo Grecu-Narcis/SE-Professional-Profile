@@ -1,4 +1,5 @@
 ﻿using ProfessionalProfile.domain;
+using ProfessionalProfile.SectionValidators;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -20,11 +21,12 @@ namespace ProfessionalProfile.repo
         }
         public void Add(Certificate item)
         {
+            SectionValidator.validateCertificate(item);
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
 
-                string sql = "EXEC InsertCertificate @Name, @Description, @IssuedBy, @IssuedDate, @ExpirationDate, @UserId";
+                string sql = "EXEC InsertCertificate @UserId, @Name, @Description, @IssuedBy, @IssuedDate, @ExpirationDate";
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 command.Parameters.AddWithValue("@Name", item.Name);

@@ -49,11 +49,36 @@ C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net
 C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\Professi.045B007E.Up2Date
-C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\CreateAssessmentWindow.g.cs
-C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\CreateAssessmentWindow.baml
-C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SelectTestWindow.g.cs
-C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SelectTestWindow.baml
-C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\TakeTestWindow.g.cs
-C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\TakeTestWindow.baml
-C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SearchUserPage.g.cs
-C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SearchUserPage.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.exe
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.dll.config
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.deps.json
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.runtimeconfig.json
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.pdb
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.csproj.AssemblyReference.cache
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\profile page\ProfilePage.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\profile page\ProfilePage.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile_MarkupCompile.cache
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile_MarkupCompile.lref
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.g.resources
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.AssemblyInfoInputs.cache
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.AssemblyInfo.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.csproj.CoreCompileInputs.cache
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.sourcelink.json
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\Professi.045B007E.Up2Date
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\refint\ProfessionalProfile.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.pdb
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.genruntimeconfig.cache
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ref\ProfessionalProfile.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs

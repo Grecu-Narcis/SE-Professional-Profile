@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\
 ProfessionalProfile
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\App.xaml
-51007527651
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\App.xaml
+11-550190583
 
-50875612293
-199-546198748
-MainWindow.xaml;view\CreateAssessmentWindow.xaml;view\SearchUserPage.xaml;view\SelectTestWindow.xaml;view\TakeTestWindow.xaml;
+63-167397695
+198155382431
+MainWindow.xaml;profile page\ProfilePage.xaml;SectionViews\CertificateWindow.xaml;SectionViews\EducationWindow.xaml;SectionViews\ProfilePictureWindow.xaml;SectionViews\SkillWindow.xaml;SectionViews\VolunteeringWindow.xaml;SectionViews\WorkExperienceWindow.xaml;service\login\LoginPage.xaml;service\signUp\SignUpPage.xaml;service\webBrowser\BrowserPage.xaml;
 
-True
+False
 
