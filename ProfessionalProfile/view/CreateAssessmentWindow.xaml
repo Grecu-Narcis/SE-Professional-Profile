@@ -1,0 +1,23 @@
+﻿<Window x:Class="ProfessionalProfile.view.CreateAssessmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProfessionalProfile.view"
+        mc:Ignorable="d"
+        Title="CreateAssessmentWindow" Height="480" Width="800">
+    <Grid Margin="0,10,0,10">
+        <Label Content="Create your own assessment" HorizontalAlignment="Center" Margin="0,10,0,405" FontSize="14" FontWeight="Bold"/>
+        <StackPanel Margin="10,44,422,56">
+            <Label Content="Describe the assessment" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <TextBox x:Name="assessmentName" TextWrapping="Wrap" Text="Enter a creative name:" Width="227" GotFocus="assessmentName_GotFocus"/>
+            <ComboBox x:Name="SkillsList" Width="120" Margin="0,10,0,0"/>
+            <TextBox x:Name="assessmentDescription" TextWrapping="Wrap" Text="Enter a brief description of the assessment:" Width="228" Height="228" Margin="0,10,0,24" GotFocus="assessmentDescription_GotFocus"/>
+        </StackPanel>
+        <ScrollViewer Margin="419,44,10,24">
+            <StackPanel x:Name="questionsListLayout" Margin="5,5,5,5"/>
+        </ScrollViewer>
+        <Button x:Name="AddQuestionButton" Content="Add Question" HorizontalAlignment="Left" Margin="194,390,0,0" VerticalAlignment="Top" Click="AddQuestionButton_Click"/>
+        <Button x:Name="SubmitAssessmentButton" Content="Submit" HorizontalAlignment="Left" Margin="121,391,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.641,0.393" Click="SubmitAssessmentButton_Click"/>
+    </Grid>
+</Window>

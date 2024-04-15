@@ -80,26 +80,48 @@ namespace ProfessionalProfile.repo
             {
                 connection.Open();
 
-                string sql = "EXEC GetSkillById @SkillId = @id";
+                string sql = "SELECT * FROM Skills WHERE SkillId = @Id";
                 SqlCommand command = new SqlCommand(sql, connection);
+                command.Parameters.AddWithValue("@Id", id);
 
-                command.Parameters.AddWithValue("@id", id);
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.Read())
+                using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    try
+                    if (reader.Read())
                     {
-                        skill = new Skill(reader.GetInt32(0), reader.GetString(1));
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e.Message);
+
+                        int SkillId = (int)reader["SkillId"];
+                        string Name = (string)reader["Name"];
+
+
+                        skill = new Skill(SkillId, Name);
                     }
                 }
             }
+
             return skill;
+        }
+
+
+        public int GetIdByName(string name)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string sql = "SELECT SkillId FROM Skills WHERE Name = @Name";
+                SqlCommand command = new SqlCommand(sql, connection);
+                command.Parameters.AddWithValue("@Name", name);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return Convert.ToInt32(reader["SkillId"]);
+                    }
+                }
+            }
+
+            return 0;
         }
 
         public void Update(Skill item)
