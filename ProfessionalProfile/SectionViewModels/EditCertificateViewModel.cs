@@ -12,6 +12,12 @@ namespace ProfessionalProfile.SectionViewModels
 {
     class EditCertificateViewModel: SectionViewModelBase
     {
+        public EditCertificateViewModel(CertificateRepo certificateRepo, int userId, int certificateId)
+        {
+            certificate = certificateRepo.GetById(certificateId);
+            EditCertificateButton = new EditCertificateCommand(this, certificateRepo, userId, certificateId);
+        }
+
         private static Certificate certificate;
 
         private string _certificateName = certificate.Name;
@@ -71,10 +77,6 @@ namespace ProfessionalProfile.SectionViewModels
 
         public ICommand EditCertificateButton { get; }
 
-        public EditCertificateViewModel(CertificateRepo certificateRepo, int userId, int certificateId) 
-        {
-            certificate = certificateRepo.GetById(certificateId);
-            EditCertificateButton = new EditCertificateCommand(this, certificateRepo, userId, certificateId);
-        }
+        
     }
 }

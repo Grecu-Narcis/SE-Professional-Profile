@@ -25,8 +25,9 @@ namespace ProfessionalProfile
         {
             InitializeComponent();
             this.Hide();
-            
+
             ProfilePage profile = new ProfilePage(4);
+            profile.WindowState = WindowState.Maximized; // Set the WindowState to Maximized
             profile.Show();
         }
 
