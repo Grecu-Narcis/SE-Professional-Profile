@@ -21,6 +21,7 @@ using System.Text.Json;
 using System.Web;
 using System.Windows.Navigation;
 using ProfessionalProfile.service.webBrowser;
+using ProfessionalProfile.SectionViews;
 
 namespace ProfessionalProfile.service.signUp
 {
@@ -117,9 +118,25 @@ namespace ProfessionalProfile.service.signUp
 
                 this.usersRepo.Add(newUser);
 
+                User loggedInUser = null;
+                List<User> users = this.usersRepo.GetAll();
+                foreach (User user in users)
+                {
+                    if(user.Email == newUser.Email) 
+                    {
+                        loggedInUser = user;
+                        break;
+                    }
+                }
+
+                CertificateWindow window = new CertificateWindow(loggedInUser.UserId);
                 this.Hide();
-                LoginPage loginPage = new LoginPage();
-                loginPage.Show();
+                window.Show();
+
+                //this.Hide();
+                //LoginPage loginPage = new LoginPage();
+                //loginPage.Show();
+
 
                 //this.titleBox.Text = String.Join(" - ", usersRepo.GetAll().Select(e => e.FirstName + " " + e.LastName + " " + e.Email + " " + e.Password + " " + e.DateOfBirth + "\n").ToList());
             }

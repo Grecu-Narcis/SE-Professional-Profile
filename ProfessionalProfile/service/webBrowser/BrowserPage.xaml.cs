@@ -190,7 +190,8 @@ namespace ProfessionalProfile.service.webBrowser
                     }
                 }
 
-                CertificateWindow window = new CertificateWindow(loggedInUser.UserId);
+                //CertificateWindow window = new CertificateWindow(loggedInUser.UserId);
+                ProfilePage window = new ProfilePage(loggedInUser.UserId);
                 this.Hide();
                 window.Show();
 
@@ -255,7 +256,8 @@ namespace ProfessionalProfile.service.webBrowser
                     }
                 }
 
-                CertificateWindow window = new CertificateWindow(loggedInUser.UserId);
+                //CertificateWindow window = new CertificateWindow(loggedInUser.UserId);
+                ProfilePage window = new ProfilePage(loggedInUser.UserId);
                 this.Hide();
                 window.Show();
 
