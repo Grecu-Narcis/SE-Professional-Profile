@@ -3,6 +3,7 @@ using ProfessionalProfile.repo;
 using ProfessionalProfile.SectionViews;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -226,6 +228,22 @@ namespace ProfessionalProfile.profile_page
             profilePage.WindowState = WindowState.Maximized;
             profilePage.Show();
             this.Hide();
+        }
+
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            // Get the URL from the Hyperlink
+            string url = e.Uri.AbsoluteUri;
+
+            // Open the URL in the default web browser
+            System.Diagnostics.Process.Start(new ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
+            });
+
+            // Mark the event as handled
+            e.Handled = true;
         }
 
 

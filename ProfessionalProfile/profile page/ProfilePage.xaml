@@ -21,10 +21,10 @@
             <!-- Add more rows for additional elements if needed -->
         </Grid.RowDefinitions>
 
-        
+
 
         <!-- Profile Picture -->
-        <Image Source="dude.png" Margin="13,23,856,10" Grid.Row="0" />
+        <Image Source="dude.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="13,23,0,0" Grid.Row="0" Width="121" Height="121" />
 
         <!-- Name -->
         <TextBlock Text="{Binding UserName}" FontWeight="Bold" FontSize="24" Margin="147,16,581,89" Grid.Row="0"/>
@@ -35,14 +35,14 @@
         <!-- Contact -->
         <TextBlock Text="+40 (756) 883 187" Margin="147,91,581,29" Grid.Row="0" />
 
-        <TextBlock HorizontalAlignment="Left" Width="26" Margin="147,114,0,2" >
-            <Hyperlink NavigateUri="https://www.linkedin.com/" TextDecorations="None" >
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"  Width="26" Margin="147,114,0,2" >
+            <Hyperlink NavigateUri="https://www.linkedin.com/" TextDecorations="None"  RequestNavigate="Hyperlink_RequestNavigate">
                 <Image Source="linkdin.png" Height="30" Width="25"/>
             </Hyperlink>
         </TextBlock>
 
-        <TextBlock HorizontalAlignment="Left" Width="26" Margin="200,114,0,2" >
-            <Hyperlink NavigateUri="https://github.com/" TextDecorations="None" >
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"  Width="26" Margin="200,114,0,2" >
+            <Hyperlink NavigateUri="https://github.com/" TextDecorations="None" RequestNavigate="Hyperlink_RequestNavigate">
                 <Image Source="github.png" Height="30" Width="25"/>
             </Hyperlink>
         </TextBlock>
@@ -50,7 +50,7 @@
 
 
         <!-- Email -->
-        <TextBlock Text="{Binding Summary}" Margin="495,29,10,10" Grid.Row="0" TextAlignment="Center"/>
+        <TextBlock Text="{Binding Summary}" Margin="558,29,10,10" Grid.Row="0" TextAlignment="Center"/>
 
         <!-- Education Section -->
         <Border BorderBrush="Black" BorderThickness="1" Margin="10" Grid.Row="1" >
@@ -295,10 +295,10 @@
                 </ItemsControl>
             </StackPanel>
         </Border>
-        <Button Content="Search" HorizontalAlignment="Left" Margin="425,38,0,0" VerticalAlignment="Top" Width="70"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="483,52,0,0" VerticalAlignment="Top" Width="70"/>
+        <Button Content="Notifications" HorizontalAlignment="Left" Margin="483,84,0,0" VerticalAlignment="Top" Width="70"/>
         <Button Content="Become Premium Member" HorizontalAlignment="Left" Margin="28,70,0,0" Grid.Row="6" VerticalAlignment="Top"/>
         <Button Content="Create Assesments" HorizontalAlignment="Left" Margin="213,70,0,0" Grid.Row="6" VerticalAlignment="Top" />
-        <Button Content="Notifications" HorizontalAlignment="Left" Margin="425,70,0,0" VerticalAlignment="Top" Width="70"/>
         <Button Content="Take Assesments" HorizontalAlignment="Left" Margin="368,70,0,0" Grid.Row="6" VerticalAlignment="Top" />
 
     </Grid>
