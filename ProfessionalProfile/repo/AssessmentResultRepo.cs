@@ -7,30 +7,31 @@ using System.Threading.Tasks;
 
 namespace ProfessionalProfile.repo
 {
-    public class AssesmentTest : RepoInterface<AssesmentTest>
+    internal class AssessmentResultRepo : RepoInterface<AssessmentResult>
     {
-        public void Add(AssesmentTest item)
+        public void Add(AssessmentResult item)
         {
+            
         }
 
         public void Delete(int id)
         {
+            
         }
 
-        public List<AssesmentTest> GetAll()
-        {
-            List<AssesmentTest> assesmentTests = new List<AssesmentTest>();
-
-            return assesmentTests;
-        }
-
-        public AssesmentTest GetById(int id)
+        public List<AssessmentResult> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public void Update(AssesmentTest item)
+        public AssessmentResult GetById(int id)
         {
+            throw new NotImplementedException();
+        }
+
+        public void Update(AssessmentResult item)
+        {
+            
         }
     }
 }

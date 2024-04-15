@@ -8,22 +8,23 @@ namespace ProfessionalProfile.domain
 {
     public class Volunteering
     {
-        private int _volunteering_id;
+        private int _volunteeringId; 
+        private int _userId;
         private string _organisation;
         private string _role;
         private string _description;
-        private int _user_id;
+        
 
-        public Volunteering(int volunteering_id, string organisation, string role, string description, int user_id)
+        public Volunteering(int volunteeringId, int userId, string organisation, string role, string description)
         {
-            _volunteering_id = volunteering_id;
+            _volunteeringId = volunteeringId;
             _organisation = organisation;
             _role = role;
             _description = description;
-            _user_id = user_id;
+            _userId = userId;
         }
 
-        public int Volunteering_id { get {  return _volunteering_id; } set { this._volunteering_id = value; } }
+        public int VolunteeringId { get {  return _volunteeringId; } set { this._volunteeringId = value; } }
 
         public string Organisation { get { return _organisation; } set { this._organisation = value; } }
 
@@ -31,21 +32,21 @@ namespace ProfessionalProfile.domain
 
         public string Description { get { return _description;} set { this._description = value; } }    
 
-        public int User_id {  get { return _user_id; } set {  _user_id = value; } }
+        public int UserId {  get { return _userId; } set {  _userId = value; } }
 
         public override bool Equals(object? obj)
         {
             return obj is Volunteering volunteering &&
-                   _volunteering_id == volunteering._volunteering_id &&
+                   _volunteeringId == volunteering._volunteeringId &&
                    _organisation == volunteering._organisation &&
                    _role == volunteering._role &&
                    _description == volunteering._description &&
-                   _user_id == volunteering._user_id &&
-                   Volunteering_id == volunteering.Volunteering_id &&
+                   _userId == volunteering._userId &&
+                   VolunteeringId == volunteering.VolunteeringId &&
                    Organisation == volunteering.Organisation &&
                    Role == volunteering.Role &&
                    Description == volunteering.Description &&
-                   User_id == volunteering.User_id;
+                   UserId == volunteering.UserId;
         }
     }
 }

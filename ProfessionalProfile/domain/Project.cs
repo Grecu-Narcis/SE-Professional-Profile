@@ -8,26 +8,26 @@ namespace ProfessionalProfile.domain
 {
     public class Project
     {
-        private int _project_id;
+        private int _projectId;
         private string _projectName;
         private string _description;
-        private string _tehnologies;
-        private string _user_id;
+        private string _technologies;
+        private string _userId;
         
 
-        public Project(int id, string name, string desc, string tech, string user_id)
+        public Project(int projectId, string projectName, string description, string technologies, string userId)
         {
-            this._project_id = id;
-            this._projectName = name;
-            this._description = desc;
-            this._tehnologies = tech;
-            this._user_id = user_id;
+            this._projectId = projectId;
+            this._projectName = projectName;
+            this._description = description;
+            this._technologies = technologies;
+            this._userId = userId;
         }
 
-        public int Proj_id
+        public int ProjectId
         {
-            get { return this._project_id; }
-            set { this._project_id = value;}
+            get { return this._projectId; }
+            set { this._projectId = value;}
         }
 
         public string ProjectName
@@ -42,26 +42,26 @@ namespace ProfessionalProfile.domain
             set { this._description = value; }
         }
 
-        public string Tehnologies
+        public string Technologies
         {
-            get { return this._tehnologies; }
-            set { this._tehnologies = value; }
+            get { return this._technologies; }
+            set { this._technologies = value; }
         }
 
-        public string User_id{
-            get { return this._user_id; }
-            set { this._user_id = value; }
+        public string UserId{
+            get { return this._userId; }
+            set { this._userId = value; }
         }
 
         public override bool Equals(object? obj)
         {
             return obj is Project project &&
-                   _project_id == project._project_id &&
+                   _projectId == project._projectId &&
                    _projectName == project._projectName &&
                    _description == project._description &&
-                   _tehnologies == project._tehnologies &&
-                   _user_id == project._user_id &&
-                   Proj_id == project.Proj_id &&
+                   _technologies == project._technologies &&
+                   _userId == project._userId &&
+                   ProjectId == project.ProjectId &&
                    ProjectName == project.ProjectName &&
                    Description == project.Description;
         }

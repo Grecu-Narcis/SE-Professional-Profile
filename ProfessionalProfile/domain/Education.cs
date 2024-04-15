@@ -8,29 +8,30 @@ namespace ProfessionalProfile.domain
 {
     public class Education
     {
-        private int _education_id;
+        private int _educationId;
+        private int _userId;
         private string _degree;
         private string _institution;
         private string _fieldOfStudy;
         private DateTime _graduationDate;
-        private double _gpa;
-        private int _user_id;
+        private double _GPA;
+        
 
-        public Education(int ed_id, string degree, string institution, string fieldOfStudy, DateTime graduationDate, double gpa, int user_id)
+        public Education(int educationId, int userId, string degree, string institution, string fieldOfStudy, DateTime graduationDate, double GPA )
         {
-            this._education_id = ed_id;
+            this._educationId = educationId;
             this._degree = degree;
             this._institution = institution;
             this._fieldOfStudy = fieldOfStudy;
             this._graduationDate = graduationDate;
-            this._gpa = gpa;
-            this._user_id = user_id;
+            this._GPA = GPA;
+            this._userId = userId;
         }
 
-        public int Education_id
+        public int EducationId
         {
-            get { return _education_id; }
-            set { _education_id = value; }
+            get { return _educationId; }
+            set { _educationId = value; }
         }
 
         public string Degree
@@ -56,31 +57,31 @@ namespace ProfessionalProfile.domain
             set { _graduationDate = value; }
         }
 
-        public double Gpa
+        public double GPA
         {
-            get { return this._gpa; }
-            set { this._gpa = value; }
+            get { return this._GPA; }
+            set { this._GPA = value; }
         }
 
-        public int User_id { get { return this._user_id; } set {  this._user_id = value; } }
+        public int UserId { get { return this._userId; } set {  this._userId = value; } }
 
         public override bool Equals(object? obj)
         {
             return obj is Education education &&
-                   _education_id == education._education_id &&
+                   _educationId == education._educationId &&
                    _degree == education._degree &&
                    _institution == education._institution &&
                    _fieldOfStudy == education._fieldOfStudy &&
                    _graduationDate == education._graduationDate &&
-                   _gpa == education._gpa &&
-                   _user_id == education._user_id &&
-                   User_id == education.User_id &&
-                   Education_id == education.Education_id &&
+                   _GPA == education._GPA &&
+                   _userId == education._userId &&
+                   UserId == education.UserId &&
+                   EducationId == education.EducationId &&
                    Degree == education.Degree &&
                    Institution == education.Institution &&
                    FieldOfStudy == education.FieldOfStudy &&
                    GraduationDate == education.GraduationDate &&
-                   Gpa == education.Gpa;
+                   GPA == education.GPA;
         }
     }
 }

@@ -1,0 +1,61 @@
+﻿<Window x:Class="ProfessionalProfile.SectionViews.VolunteeringWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProfessionalProfile.SectionViews"
+        mc:Ignorable="d"
+        Title="VolunteeringWindow" Height="450" Width="800">
+    <Grid MaxWidth="600" Margin="20 10" MaxHeight="800">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Professional Profile" FontSize="40" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFD319DE"/>
+
+        <TextBlock Text="Let's set up your profile!" FontSize="25" Grid.Row="1" Margin="0 50 0 0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFD319DE"/>
+
+        <Grid Grid.Row="2" Margin="0 25 0 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Organisation"  FontSize="20"/>
+            <TextBox Grid.Row="1" Text="{Binding Organisation, UpdateSourceTrigger=PropertyChanged}" Margin="0 15 0 0" Padding="5 5" FontSize="15"/>
+        </Grid>
+
+        <Grid Grid.Row="3" Margin="0 25 0 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Role"  FontSize="20"/>
+            <TextBox Grid.Row="1" Text="{Binding Role, UpdateSourceTrigger=PropertyChanged}" Margin="0 15 0 0" Padding="5 5" FontSize="15"/>
+        </Grid>
+
+        <Grid Grid.Row="4" Margin="0 25 0 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Description"  FontSize="20"/>
+            <TextBox Grid.Row="1" Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" Margin="0 15 0 0" Padding="5 5" FontSize="15"/>
+        </Grid>
+
+        <TextBlock Text="Enter your volunteering" FontSize="25" Grid.Row="5" Margin="0 35 0 0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <StackPanel Grid.Row="6" Margin="0 20 0 0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Content="Add Volunteering" Command="{Binding AddVolunteeringButton}" Padding="10 10" Background="#FFD319DE" Foreground="White" Margin="0 0 20 0"/>
+            <Button Content="Next" Padding="20 10" Background="#FFD319DE" Foreground="White" Click="OpenSkillWindow" />
+        </StackPanel>
+    </Grid>
+</Window>

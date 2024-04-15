@@ -8,33 +8,34 @@ namespace ProfessionalProfile.domain
 {
     public class WorkExperience
     {
-        private int _work_id;
+        private int _workId;
+        private int _userId;
         private string _jobTitle;
         private string _company;
         private string _location;
-        private string _employementPeriod;
+        private string _employmentPeriod;
         private string _responsibilities;
         private string _achievements;
         private string _description;
-        private int _user_id;
+        
 
-        public WorkExperience(int work_id, string jobTitle, string company, string location, string employementPeriod, string responsibilities, string achievements, string description, int user_id)
+        public WorkExperience(int workId, int userId, string jobTitle, string company, string location, string employmentPeriod, string responsibilities, string achievements, string description)
         {
-            this._work_id = work_id;
+            this._workId = workId;
             this._jobTitle = jobTitle;
             this._company = company;
             this._location = location;
-            this._employementPeriod = employementPeriod;
+            this._employmentPeriod = employmentPeriod;
             this._responsibilities = responsibilities;
             this._achievements = achievements;
             this._description = description;
-            _user_id = user_id;
+            this._userId = userId;
         }
 
-        public int Work_id
+        public int WorkId
         {
-            get { return _work_id; }
-            set { _work_id = value; }
+            get { return _workId; }
+            set { _workId = value; }
         }
 
         public string JobTitle
@@ -57,8 +58,8 @@ namespace ProfessionalProfile.domain
 
         public string EmployementPeriod
         { 
-            get { return _employementPeriod;}
-            set { _employementPeriod = value; }
+            get { return _employmentPeriod;}
+            set { _employmentPeriod = value; }
         }
 
         public string Achievements
@@ -73,26 +74,32 @@ namespace ProfessionalProfile.domain
             set { _description = value; }
         }
 
-        public int User_id
+        public int UserId
         {
-            get { return this._user_id; }
-            set { this._user_id = value; }
+            get { return this._userId; }
+            set { this._userId = value; }
+        }
+
+        public string Responsibilities
+        {
+            get { return _responsibilities; }
+            set { _responsibilities = value; }
         }
 
         public override bool Equals(object? obj)
         {
             return obj is WorkExperience experience &&
-                   _work_id == experience._work_id &&
+                   _workId == experience._workId &&
                    _jobTitle == experience._jobTitle &&
                    _company == experience._company &&
                    _location == experience._location &&
-                   _employementPeriod == experience._employementPeriod &&
+                   _employmentPeriod == experience._employmentPeriod &&
                    _responsibilities == experience._responsibilities &&
                    _achievements == experience._achievements &&
                    _description == experience._description &&
-                   _user_id == experience._user_id &&
-                   User_id  == experience.User_id &&
-                   Work_id == experience.Work_id &&
+                   _userId == experience._userId &&
+                   UserId  == experience.UserId &&
+                   WorkId == experience.WorkId &&
                    JobTitle == experience.JobTitle &&
                    Company == experience.Company &&
                    Location == experience.Location &&

@@ -8,20 +8,20 @@ namespace ProfessionalProfile.domain
 {
     public class Skill
     {
-        private int _skill_id;
+        private int _skillId;
         private string _name;
-        private string _skillLevel;
+        
 
-        public Skill(int skill_id, string name, string skillLevel)
+        public Skill(int skillId, string name)
         {
-            this._skill_id = skill_id;
+            this._skillId = skillId;
             this._name = name;
-            this._skillLevel = skillLevel;
         }
 
-        public int Skill_id{
-            get { return _skill_id; }
-            set { _skill_id = value; }
+        public int SkillId
+        {
+            get { return _skillId; }
+            set { _skillId = value; }
         }
 
         public string Name
@@ -30,21 +30,13 @@ namespace ProfessionalProfile.domain
             set { _name = value; }
         }
 
-        public string SkillLevel
-        {
-            get { return _skillLevel; }
-            set { _skillLevel = value; }
-        }
-
         public override bool Equals(object? obj)
         {
             return obj is Skill skill &&
-                   _skill_id == skill._skill_id &&
+                   _skillId == skill._skillId &&
                    _name == skill._name &&
-                   _skillLevel == skill._skillLevel &&
-                   Skill_id == skill.Skill_id &&
-                   Name == skill.Name &&
-                   SkillLevel == skill.SkillLevel;
+                   SkillId == skill.SkillId &&
+                   Name == skill.Name;
         }
     }
 }

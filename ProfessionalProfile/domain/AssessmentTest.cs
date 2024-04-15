@@ -6,31 +6,39 @@ using System.Threading.Tasks;
 
 namespace ProfessionalProfile.domain
 {
-    public class AssesmentTest
+    public class AssessmentTest
     {
-        private int _assest_id;
+        private int _assessmentTestId;
         private string _testName;
+        private int _userId;
         private string _description;
         private string _skill_id;
 
-        public AssesmentTest(int assest_id, string testName, string description, string skillsAssessed)
+        public AssessmentTest(int assest_id, string testName, int userId, string description, string skillsAssessed)
         {
-            this._assest_id = assest_id;
+            this._assessmentTestId = assest_id;
             this._testName = testName;
+            this._userId = userId;
             this._description = description;
             this._skill_id = skillsAssessed;
         }
 
-        public int Assest_id
+        public int AssessmentTestId
         {
-            get { return _assest_id; }
-            set { _assest_id = value; }
+            get { return _assessmentTestId; }
+            set { _assessmentTestId = value; }
         }
 
         public string TestName
         {
             get { return _testName; }
             set { _testName = value; }
+        }
+
+        public int UserId
+        {
+            get { return _userId; }
+            set { _userId = value; }
         }
 
         public string Description
@@ -46,13 +54,15 @@ namespace ProfessionalProfile.domain
 
         public override bool Equals(object? obj)
         {
-            return obj is AssesmentTest test &&
-                   _assest_id == test._assest_id &&
+            return obj is AssessmentTest test &&
+                   _assessmentTestId == test._assessmentTestId &&
                    _testName == test._testName &&
+                   _userId == test._userId &&
                    _description == test._description &&
-                    _skill_id == test._skill_id &&
-                   Assest_id == test.Assest_id &&
+                   _skill_id == test._skill_id &&
+                   AssessmentTestId == test.AssessmentTestId &&
                    TestName == test.TestName &&
+                   UserId == test.UserId &&
                    Description == test.Description &&
                    Skill_id == test.Skill_id;
         }
