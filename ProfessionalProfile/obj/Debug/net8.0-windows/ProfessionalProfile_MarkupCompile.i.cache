@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\higye\OneDrive\Desktop\UBB Anul 2\Sem2\ISSP\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\
 ProfessionalProfile
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\higye\OneDrive\Desktop\UBB Anul 2\Sem2\ISSP\SE-Professional-Profile\ProfessionalProfile\App.xaml
-10-487057977
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\App.xaml
+11-550190583
 
-62815203468
-199365740156
-MainWindow.xaml;SectionViews\CertificateWindow.xaml;SectionViews\EducationWindow.xaml;SectionViews\ProfilePictureWindow.xaml;SectionViews\SkillWindow.xaml;SectionViews\VolunteeringWindow.xaml;SectionViews\WorkExperienceWindow.xaml;service\login\LoginPage.xaml;service\signUp\SignUpPage.xaml;service\webBrowser\BrowserPage.xaml;
+63-167397695
+198155382431
+MainWindow.xaml;profile page\ProfilePage.xaml;SectionViews\CertificateWindow.xaml;SectionViews\EducationWindow.xaml;SectionViews\ProfilePictureWindow.xaml;SectionViews\SkillWindow.xaml;SectionViews\VolunteeringWindow.xaml;SectionViews\WorkExperienceWindow.xaml;service\login\LoginPage.xaml;service\signUp\SignUpPage.xaml;service\webBrowser\BrowserPage.xaml;
 
-True
+False
 
