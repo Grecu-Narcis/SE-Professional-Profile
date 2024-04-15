@@ -21,18 +21,20 @@ namespace ProfessionalProfile.SectionViews
     /// </summary>
     public partial class WorkExperienceWindow : Window
     {
-        public WorkExperienceWindow()
+        int userId;
+        public WorkExperienceWindow(int userId)
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
 
             WorkExperienceViewModel viewModel = new WorkExperienceViewModel(new WorkExperienceRepo());
             DataContext = viewModel;
+            this.userId = userId;
         }
 
         private void OpenCertificateWindow(object sender, RoutedEventArgs e)
         {
-            CertificateWindow certificateWindow = new CertificateWindow();
+            CertificateWindow certificateWindow = new CertificateWindow(userId);
             this.Visibility = Visibility.Hidden;
             certificateWindow.Show();
         }

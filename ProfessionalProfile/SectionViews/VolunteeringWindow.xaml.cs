@@ -21,18 +21,20 @@ namespace ProfessionalProfile.SectionViews
     /// </summary>
     public partial class VolunteeringWindow : Window
     {
-        public VolunteeringWindow()
+        int userId;
+        public VolunteeringWindow(int userId)
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
 
             VolunteeringViewModel viewModel = new VolunteeringViewModel(new VolunteeringRepo());
             DataContext = viewModel;
+            this.userId = userId;
         }
 
         private void OpenSkillWindow(object sender, RoutedEventArgs e)
         {
-            SkillWindow skillWindow = new SkillWindow();
+            SkillWindow skillWindow = new SkillWindow(userId);
             this.Visibility = Visibility.Hidden;
             skillWindow.Show();
         }

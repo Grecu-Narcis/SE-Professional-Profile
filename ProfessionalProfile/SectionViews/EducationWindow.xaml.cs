@@ -21,18 +21,20 @@ namespace ProfessionalProfile.SectionViews
     /// </summary>
     public partial class EducationWindow : Window
     {
-        public EducationWindow()
+        int userId;
+        public EducationWindow(int userId)
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
 
             EducationViewModel viewModel = new EducationViewModel(new EducationRepo());
             DataContext = viewModel;
+            this.userId = userId;
         }
 
         private void OpenWorkExperienceWindow(object sender, RoutedEventArgs e)
         {
-            WorkExperienceWindow workExperienceWindow = new WorkExperienceWindow();
+            WorkExperienceWindow workExperienceWindow = new WorkExperienceWindow(userId);
             this.Visibility = Visibility.Hidden;
             workExperienceWindow.Show();
         }
