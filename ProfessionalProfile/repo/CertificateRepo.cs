@@ -86,6 +86,24 @@ namespace ProfessionalProfile.repo
             return certificates;
         }
 
+        public List<Certificate> GetByUserId(int userId)
+        {
+            List<Certificate> certificates = new List<Certificate>();
+
+            certificates = GetAll();
+
+            for (int i = 0; i < certificates.Count; i++)
+            {
+                if (certificates[i].UserId != userId)
+                {
+                    certificates.RemoveAt(i);
+                    i--;
+                }
+            }
+
+            return certificates;
+        }
+
         public Certificate GetById(int id)
         {
             Certificate certificate = null;

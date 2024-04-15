@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProfessionalProfile.domain;
+using ProfessionalProfile.repo;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -13,44 +15,59 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace ProfessionalProfile.profile_page
 {
+    public class ButtonVisibilityMultiConverter : IMultiValueConverter
+    {
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+        {
+            // Ensure both values are provided and are of type int
+            if (values != null && values.Length == 2 && values[0] is int userId && values[1] is int currentUserId)
+            {
+                // Compare the UserId and CurrentUserId
+                return userId == currentUserId ? System.Windows.Visibility.Visible : System.Windows.Visibility.Collapsed;
+            }
+
+            return System.Windows.Visibility.Collapsed;
+        }
+
+        public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
 
     public partial class ProfilePage : Window
     {
         
-
+        UserRepo usersRepo = new UserRepo();
         public ProfilePage(int UserId)
         {
             InitializeComponent();
 
             // Populate sample data we will fetch this from the user object later
-            CurrentUserId = 123; // this will be fetched from the logged in user
+            CurrentUserId = 41; // this will be fetched from the logged in user
             this.UserId = UserId;
-            ProfilePic = "profile.jpg";
-            Name = "John Doe";
-            Email = "john.doe@example.com";
-            Contact = "+1234567890";
-            Education = new List<string> { "Bachelor's in Computer Science", "Master's in Software Engineering" };
-            Experience = new List<string> { "Software Engineer at ABC Inc.", "Intern at XYZ Corp" };
-            Certifications = new List<string> { "Microsoft Certified Professional (MCP)", "AWS Certified Solutions Architect" };
-            Skills = new List<string> { "C#", "ASP.NET", "JavaScript", "React", "SQL" };
-            Volunteering = new List<string> { "Red Cross Volunteer", "Community Cleanup Organizer" }; // will be of class Volunteering
-            MyUrl = "http://website" + UserId;
+            User user = usersRepo.GetById(UserId);
+            this.Name = user.FirstName + user.LastName;
+            Email = user.Email;
+            EducationRepo = new EducationRepo();
+            Education = EducationRepo.GetByUserId(UserId);
+            ExperienceRepo = new WorkExperienceRepo();
+            Experience = ExperienceRepo.GetByUserId(UserId);
+            CertificationsRepo = new CertificateRepo();
+            Certifications = CertificationsRepo.GetByUserId(UserId);
+            SkillsRepo = new SkillRepo();
+            Skills = SkillsRepo.GetByUserId(UserId);
+            VolunteeringRepo = new VolunteeringRepo();
+            Volunteering = VolunteeringRepo.GetByUserId(UserId);
 
             // Set the DataContext to this instance
             DataContext = this;
         }
 
-        public Visibility GetButtonVisibility()
-        {
-            return UserId == CurrentUserId ? Visibility.Visible : Visibility.Collapsed;
-        }
-
-        public Visibility GetEndorseButtonVisibility()
-        {
-            return UserId != CurrentUserId ? Visibility.Visible : Visibility.Collapsed;
-        }
+        
 
         private void AddEducationButton_Click(object sender, RoutedEventArgs e)
         {
@@ -189,18 +206,20 @@ namespace ProfessionalProfile.profile_page
         }
 
         // Define properties for profile information
-        public string MyUrl { get; set; }
         public int CurrentUserId { get; set; }
         public int UserId { get; set; }
-        public string ProfilePic { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-        public string Contact { get; set; }
-        public List<string> Education { get; set; }
-        public List<string> Experience { get; set; }
-        public List<string> Certifications { get; set; }
-        public List<string> Skills { get; set; }
-        public List<string> Volunteering { get; set; }
+        public List<Education> Education { get; set; }
+        public EducationRepo EducationRepo { get; set; }
+        public List<WorkExperience> Experience { get; set; }
+        public WorkExperienceRepo ExperienceRepo { get; set; }
+        public List<Certificate> Certifications { get; set; }
+        public CertificateRepo CertificationsRepo { get; set; }
+        public List<Skill> Skills { get; set; }
+        public SkillRepo SkillsRepo { get; set; }
+        public List<Volunteering> Volunteering { get; set; }    
+        public VolunteeringRepo VolunteeringRepo { get; set; }
     }
 
 }

@@ -75,7 +75,8 @@ namespace ProfessionalProfile.repo
                         string institution = (string)reader["Institution"];
                         string fieldOfStudy = (string)reader["FieldOfStudy"];
                         DateTime graduationDate = (DateTime)reader["GraduationDate"];
-                        double GPA = (double)reader["GPA"];
+                        decimal GPAValue = (decimal)reader["GPA"];
+                        double GPA = Convert.ToDouble(GPAValue);
 
                         Education education = new Education(educationId, userId, degree, institution, fieldOfStudy, graduationDate, GPA);
                         educations.Add(education);
@@ -85,6 +86,24 @@ namespace ProfessionalProfile.repo
 
            return educations;
         }
+
+        public List<Education> GetByUserId(int userId)
+        {
+            List<Education> educations = [];
+
+            educations = GetAll();
+
+            for (int i = 0; i < educations.Count; i++)
+            {
+                if (educations[i].UserId != userId)
+                {
+                    educations.RemoveAt(i);
+                    i--;
+                }   
+            }
+
+            return educations;
+        }   
 
         public Education GetById(int id)
         {
