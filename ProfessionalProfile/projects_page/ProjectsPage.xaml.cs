@@ -20,7 +20,7 @@ namespace ProfessionalProfile.projects_page
 
         public ProjectsPage()
         {
-            //InitializeComponent();
+            InitializeComponent();
 
             // Set the data context to this instance
             DataContext = this;

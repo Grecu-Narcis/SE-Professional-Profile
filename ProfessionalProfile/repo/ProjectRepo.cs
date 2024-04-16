@@ -72,9 +72,9 @@ namespace ProfessionalProfile.repo
                         string projectName = (string)reader["ProjectName"];
                         string description = (string)reader["Description"];
                         string technologies = (string)reader["Technologies"];
-                        string userId = (string)reader["UserId"];
+                        int userId = (int)reader["UserId"];
 
-                        Project project = new Project(projectId, projectName, description, technologies, userId);
+                        Project project = new Project(projectId, projectName, description, technologies, userId.ToString());
                         projects.Add(project);
                     }
                 }
@@ -107,7 +107,8 @@ namespace ProfessionalProfile.repo
                             string projectName = (string)reader["ProjectName"];
                             string description = (string)reader["Description"];
                             string technologies = (string)reader["Technologies"];
-                            string userId = (string)reader["UserId"];
+                            string userId = reader["UserId"].ToString();
+                            
 
                             project = new Project(projectId, projectName, description, technologies, userId);
                         }

@@ -7,35 +7,43 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using ProfessionalProfile.domain;
+using ProfessionalProfile.repo;
 
 namespace ProfessionalProfile.business_card_page
 {
     public partial class BusinessCardPage : Window
     {
+        UserRepo usersRepo = new UserRepo();
+        BusinessCardRepo businessCardRepo = new BusinessCardRepo();
 
-        public BusinessCardPage(BussinesCard businessCard)
+        public BusinessCardPage(int UserId)
         {
             InitializeComponent();
 
-            Name = "John Doe";
-            PhoneNumber = "123-456-7890";
+
+            BussinesCard businessCard = businessCardRepo.GetByUserId(UserId);
+            User user = usersRepo.GetById(UserId);
+            List<string> cardSkills = businessCardRepo.GetBusinessCardSkills(businessCard.BcId);
+
+            FullName = user.FirstName + " " + user.LastName;
+            PhoneNumber = user.Phone;
             JobTitle = "Software Developer";
             Company = "Microsoft";
-            Email = "johndoe@email.com";
-            WebsiteURL = "https://";
-            KeySkills = new List<string> { "C#", "Java", "Python", "JavaScript", "SQL" };
-            Description = "I am a software developer with 5 years of experience.";
+            Email = user.Email;
+            WebsiteURL = businessCard.UniqueUrl;
+            KeySkills = string.Join(",",  cardSkills);
+            Description = businessCard.Summary;
             Achievement = "I have developed 5 applications that are used by millions of people.";
 
             DataContext = this;
         }
-        public string Name { get; set; }
+        public string FullName { get; set; }
         public string PhoneNumber { get; set; }
         public string JobTitle { get; set; }
         public string Company { get; set; }
         public string Email { get; set; }
         public string WebsiteURL { get; set; }
-        public List<string> KeySkills { get; set; }
+        public string KeySkills { get; set; }
         public string Description { get; set; }
         public string Achievement { get; set; }
 
