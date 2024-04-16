@@ -15,12 +15,17 @@ namespace ProfessionalProfile.SectionViewModels
         public EditCertificateViewModel(CertificateRepo certificateRepo, int userId, int certificateId)
         {
             certificate = certificateRepo.GetById(certificateId);
+            CertificateName = certificate.Name;
+            IssuedBy = certificate.IssuedBy;
+            Description = certificate.Description;
+            IssuedDate = certificate.IssuedDate;
+            ExpirationDate = certificate.ExpirationDate;
             EditCertificateButton = new EditCertificateCommand(this, certificateRepo, userId, certificateId);
         }
 
-        private static Certificate certificate;
+        private Certificate certificate;
 
-        private string _certificateName = certificate.Name;
+        private string _certificateName;
         public string CertificateName
         {
             get { return _certificateName; }
@@ -31,7 +36,7 @@ namespace ProfessionalProfile.SectionViewModels
             }
         }
 
-        private string _issuedBy = certificate.IssuedBy;
+        private string _issuedBy;
         public string IssuedBy
         {
             get { return _issuedBy; }
@@ -42,7 +47,7 @@ namespace ProfessionalProfile.SectionViewModels
             }
         }
 
-        private string _description = certificate.Description;
+        private string _description;
         public string Description
         {
             get { return _description; }
@@ -53,7 +58,7 @@ namespace ProfessionalProfile.SectionViewModels
             }
         }
 
-        private DateTime _issuedDate = certificate.IssuedDate;
+        private DateTime _issuedDate = new DateTime(2024, 1, 1);
         public DateTime IssuedDate
         {
             get { return _issuedDate; }
@@ -64,7 +69,7 @@ namespace ProfessionalProfile.SectionViewModels
             }
         }
 
-        private DateTime _expirationDate = certificate.ExpirationDate;
+        private DateTime _expirationDate = new DateTime(2024, 1, 20);
         public DateTime ExpirationDate
         {
             get { return _expirationDate; }

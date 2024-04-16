@@ -131,7 +131,8 @@ namespace ProfessionalProfile.repo
                             string institution = (string)reader["Institution"];
                             string fieldOfStudy = (string)reader["FieldOfStudy"];
                             DateTime graduationDate = (DateTime)reader["GraduationDate"];
-                            double GPA = (double)reader["GPA"];
+                            decimal GPAValue = (decimal)reader["GPA"];
+                            double GPA = Convert.ToDouble(GPAValue);
 
                             education = new Education(educationId, userId, degree, institution, fieldOfStudy, graduationDate, GPA);
                         }
@@ -147,12 +148,23 @@ namespace ProfessionalProfile.repo
 
         public void Update(Education item)
         {
+            SectionValidator.validateEducation(item);
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
 
-                string sql = "EXEC UpdateEducation @EducationId, @UserId, @Degree, @Institution, @FieldOfStudy, @GraduationDate, @GPA";
+                string sql = @"EXEC UpdateEducation
+                @EducationId = @EducationId,
+                @UserId = @UserId,
+                @Degree = @Degree,
+                @Institution = @Institution,
+                @FieldOfStudy = @FieldOfStudy,
+                @GraduationDate = @GraduationDate,
+                @GPA = @GPA";
+
                 SqlCommand command = new SqlCommand(sql, connection);
+
+                Decimal GPA = Convert.ToDecimal(item.GPA);
 
                 command.Parameters.AddWithValue("@EducationId", item.EducationId);
                 command.Parameters.AddWithValue("@UserId", item.UserId);
@@ -160,7 +172,7 @@ namespace ProfessionalProfile.repo
                 command.Parameters.AddWithValue("@Institution", item.Institution);
                 command.Parameters.AddWithValue("@FieldOfStudy", item.FieldOfStudy);
                 command.Parameters.AddWithValue("@GraduationDate", item.GraduationDate);
-                command.Parameters.AddWithValue("@GPA", item.GPA);
+                command.Parameters.AddWithValue("@GPA", GPA);
 
                 command.ExecuteNonQuery();
             }

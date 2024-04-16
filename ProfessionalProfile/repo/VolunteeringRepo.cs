@@ -140,7 +140,13 @@ namespace ProfessionalProfile.repo
             {
                 connection.Open();
 
-                string sql = "EXEC UpdateVolunteering @VolunteeringId, @UserId, @Organisation, @Role, @Description";
+                string sql = @"EXEC UpdateVolunteering
+                @VolunteeringId = @VolunteeringId,
+                @UserId = @UserId,
+                @Organisation = @Organisation,
+                @Role = @Role,
+                @Description = @Description";
+
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 command.Parameters.AddWithValue("@VolunteeringId", item.VolunteeringId);
