@@ -314,7 +314,7 @@ namespace ProfessionalProfile.service.webBrowser
                     //this.errorLabel.Content = "Welcome back " + loggedInUser.FirstName + loggedInUser.LastName + loggedInUser.Email + loggedInUser.Address + loggedInUser.Picture;
                     //this.errorLabel.Foreground = Brushes.Green;
                     //CertificateWindow window = new CertificateWindow(loggedInUser.UserId) ;
-                    ProfilePage window = new ProfilePage(loggedInUser.UserId);
+                    ProfilePage window = new ProfilePage(loggedInUser.UserId, loggedInUser.UserId);
                     this.Hide();
                     window.Show();
                 }
@@ -374,7 +374,7 @@ namespace ProfessionalProfile.service.webBrowser
                 }
                 else
                 {
-                    ProfilePage window = new ProfilePage(loggedInUser.UserId);
+                    ProfilePage window = new ProfilePage(loggedInUser.UserId, loggedInUser.UserId);
                     //CertificateWindow window = new CertificateWindow(loggedInUser.UserId);
                     this.Hide();
                     window.Show();

@@ -104,7 +104,7 @@ namespace ProfessionalProfile.view
             Notification profileViewNotification = new Notification(0, selectedUser.Id, user.FirstName + " " + user.LastName + " viewed your profile!", DateTime.Now, "Profile visited", true);
             this.NotificationsService.AddNotification(profileViewNotification);
 
-            ProfilePage profilePage = new ProfilePage(selectedUser.Id);
+            ProfilePage profilePage = new ProfilePage(this.userId, selectedUser.Id);
             profilePage.Show();
             this.Close();
         }

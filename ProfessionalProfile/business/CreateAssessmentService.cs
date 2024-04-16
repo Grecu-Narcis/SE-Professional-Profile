@@ -32,10 +32,10 @@ namespace ProfessionalProfile.business
             return skills;
         }
 
-        public void createAssessmentTest(AssessmentTestDTO assessmentTestDTO)
+        public void createAssessmentTest(AssessmentTestDTO assessmentTestDTO, int userId)
         {
             int skillId = SkillRepo.GetIdByName(assessmentTestDTO.SkillTested);
-            AssessmentTest assessmentTest = new AssessmentTest(0, assessmentTestDTO.TestName, 4, assessmentTestDTO.Description, skillId);
+            AssessmentTest assessmentTest = new AssessmentTest(0, assessmentTestDTO.TestName, userId, assessmentTestDTO.Description, skillId);
 
             AssessmentTestRepo.Add(assessmentTest);
             int assessmentTestId = AssessmentTestRepo.GetIdByName(assessmentTestDTO.TestName);

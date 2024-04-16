@@ -148,7 +148,7 @@ namespace ProfessionalProfile.service.login
                 {
                     //this.titleBox.Text = "Welcome back " + loggedInUser.FirstName;
                     //CertificateWindow window = new CertificateWindow(loggedInUser.UserId);
-                    ProfilePage window = new ProfilePage(loggedInUser.UserId);
+                    ProfilePage window = new ProfilePage(loggedInUser.UserId, loggedInUser.UserId);
                     this.Hide();
                     window.Show();
 

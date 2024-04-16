@@ -75,10 +75,12 @@ namespace ProfessionalProfile.view
     {
         public List<QuestionControl> questionControls;
         public CreateAssessmentService CreateAssessmentService;
+        public int userId;
 
-        public CreateAssessmentWindow()
+        public CreateAssessmentWindow(int userId)
         {
             InitializeComponent();
+            this.userId = userId;
             this.questionControls = new List<QuestionControl>();
             QuestionControl firstQuestion = new QuestionControl();
             questionsListLayout.Children.Add(firstQuestion);
@@ -130,7 +132,7 @@ namespace ProfessionalProfile.view
 
             AssessmentTestDTO assessmentTestDTO = new AssessmentTestDTO(TestName, Description, questions, SkillTested);
 
-            this.CreateAssessmentService.createAssessmentTest(assessmentTestDTO);
+            this.CreateAssessmentService.createAssessmentTest(assessmentTestDTO, this.userId);
 
             MessageBox.Show("Assessment created successfully");
 

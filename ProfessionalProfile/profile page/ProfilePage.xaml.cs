@@ -1,6 +1,7 @@
 ﻿using ProfessionalProfile.domain;
 using ProfessionalProfile.repo;
 using ProfessionalProfile.SectionViews;
+using ProfessionalProfile.view;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -46,13 +47,13 @@ namespace ProfessionalProfile.profile_page
     {
         
         UserRepo usersRepo = new UserRepo();
-        public ProfilePage(int UserId)
+        public ProfilePage(int userVisitingId, int UserProfileId)
         {
             InitializeComponent();
 
             // Populate sample data we will fetch this from the user object later
-            CurrentUserId = 4; // this will be fetched from the logged in user
-            this.UserId = UserId;
+            CurrentUserId = userVisitingId; // this will be fetched from the logged in user
+            this.UserId = UserProfileId;
             User user = usersRepo.GetById(UserId);
             UserName = user.FirstName + " " + user.LastName;
             Email = user.Email;
@@ -127,7 +128,7 @@ namespace ProfessionalProfile.profile_page
             // Call a method to delete the education item using the educationId
             EducationRepo.Delete(id);
 
-            ProfilePage profilePage = new ProfilePage(UserId);
+            ProfilePage profilePage = new ProfilePage(this.CurrentUserId, this.UserId);
             profilePage.WindowState = WindowState.Maximized;
             profilePage.Show();
             this.Hide();
@@ -151,7 +152,7 @@ namespace ProfessionalProfile.profile_page
 
             // Call a method to delete the experience item using the experienceId
             ExperienceRepo.Delete(id);
-            ProfilePage profilePage = new ProfilePage(UserId);
+            ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
             profilePage.WindowState = WindowState.Maximized;
             profilePage.Show();
             this.Hide();
@@ -178,7 +179,7 @@ namespace ProfessionalProfile.profile_page
 
             // Call a method to delete the certification item using the certificationId
             CertificationsRepo.Delete(id);
-            ProfilePage profilePage = new ProfilePage(UserId);
+            ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
             profilePage.WindowState = WindowState.Maximized;
             profilePage.Show();
             this.Hide();
@@ -201,7 +202,7 @@ namespace ProfessionalProfile.profile_page
 
             // Call a method to delete the skill item using the skillId
             SkillsRepo.Delete(id);
-            ProfilePage profilePage = new ProfilePage(UserId);
+            ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
             profilePage.WindowState = WindowState.Maximized;
             profilePage.Show();
             this.Hide();
@@ -224,7 +225,7 @@ namespace ProfessionalProfile.profile_page
 
             // Call a method to delete the volunteering item using the volunteeringId
             VolunteeringRepo.Delete(id);
-            ProfilePage profilePage = new ProfilePage(UserId);
+            ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
             profilePage.WindowState = WindowState.Maximized;
             profilePage.Show();
             this.Hide();
@@ -264,6 +265,37 @@ namespace ProfessionalProfile.profile_page
         public SkillRepo SkillsRepo { get; set; }
         public List<Volunteering> Volunteering { get; set; }    
         public VolunteeringRepo VolunteeringRepo { get; set; }
+
+
+        private void SearchPageButton_Click(object sender, RoutedEventArgs e)
+        {
+            SearchUserPage searchUserPage = new SearchUserPage(CurrentUserId);
+
+            searchUserPage.Show();
+        }
+
+        private void ViewNotificationsButton_Click(object sender, RoutedEventArgs e)
+        {
+            NotificationsPage notificationsPage = new NotificationsPage(CurrentUserId);
+            notificationsPage.Show();
+        }
+
+        private void createAssessmentButton_Click(object sender, RoutedEventArgs e)
+        {
+            CreateAssessmentWindow createAssessmentWindow = new CreateAssessmentWindow(CurrentUserId);
+            createAssessmentWindow.Show();
+        }
+
+        private void takeAssessmentButton_Click(object sender, RoutedEventArgs e)
+        {
+            SelectTestWindow selectTestWindow = new SelectTestWindow(CurrentUserId);
+            selectTestWindow.Show();
+        }
+
+        private void becomePremiumUserButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
 }
