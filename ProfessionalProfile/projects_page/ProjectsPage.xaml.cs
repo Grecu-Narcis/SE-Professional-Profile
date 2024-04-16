@@ -15,19 +15,30 @@ namespace ProfessionalProfile.projects_page
     {
 
         ProjectRepo projectRepo = new ProjectRepo();
-        Project project = new Project(1, "Project 1", "Description 1", "Technologies 1", "User 1");
 
 
         public ProjectsPage()
         {
             InitializeComponent();
 
+            Project project = projectRepo.GetById(1);
+            List<Project> projects = projectRepo.GetAll();
+
+            ManualProjects = projects;
+
+            //ProjectName = project.ProjectName;
+            //ProjectDescription = project.Description;
+            //ProjectTechnologies = project.Technologies;
+
             // Set the data context to this instance
             DataContext = this;
-
-            // For now, let's just bind the mocked data directly
-            List<Project> allProjects = projectRepo.GetAll();
+            
         }
+
+        string ProjectName { get; set; }
+        string ProjectDescription { get; set; }
+        string ProjectTechnologies { get; set; }
+
 
         // Properties to bind to UI elements
         public List<Project> GitHubProjects { get; set; }

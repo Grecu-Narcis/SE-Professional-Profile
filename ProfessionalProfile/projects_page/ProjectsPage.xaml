@@ -23,21 +23,23 @@
             <StackPanel>
                 <TextBlock Text="Projects from GitHub" FontWeight="Bold" Margin="5"/>
                 <!-- Display GitHub projects here -->
-                <ItemsControl ItemsSource="{Binding GitHubProjects}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <!-- Define the UI layout for each GitHub project -->
-                            <Border BorderBrush="Gray" BorderThickness="1" Margin="5">
-                                <StackPanel>
-                                    <!-- Display project name, description, link, picture, and technologies -->
-                                    <TextBlock Text="{Binding Name}" FontWeight="Bold" Margin="5"/>
-                                    <TextBlock Text="{Binding Description}" Margin="5"/>
-                                    <TextBlock Text="{Binding Technologies}" Margin="5"/>
-                                </StackPanel>
-                            </Border>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <ItemsControl ItemsSource="{Binding GitHubProjects}" Height="190">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <!-- Define the UI layout for each GitHub project -->
+                                <Border BorderBrush="Gray" BorderThickness="1" Margin="5">
+                                    <StackPanel>
+                                        <!-- Display project name, description, link, picture, and technologies -->
+                                        <TextBlock Text="{Binding Name}" FontWeight="Bold" Margin="5" TextWrapping="Wrap"/>
+                                        <TextBlock Text="{Binding Description}" Margin="5" TextWrapping="Wrap"/>
+                                        <TextBlock Text="{Binding Technologies}" Margin="5" TextWrapping="Wrap"/>
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
             </StackPanel>
         </Border>
 
@@ -46,21 +48,23 @@
             <StackPanel>
                 <TextBlock Text="Projects Added Manually" FontWeight="Bold" Margin="5"/>
                 <!-- Display manually added projects here -->
-                <ItemsControl ItemsSource="{Binding ManualProjects}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <!-- Define the UI layout for each manually added project -->
-                            <Border BorderBrush="Gray" BorderThickness="1" Margin="5">
-                                <StackPanel>
-                                    <!-- Display project name, description, link, picture, and technologies -->
-                                    <TextBlock Text="{Binding Name}" FontWeight="Bold" Margin="5"/>
-                                    <TextBlock Text="{Binding Description}" Margin="5"/>
-                                    <TextBlock Text="{Binding Technologies}" Margin="5"/>
-                                </StackPanel>
-                            </Border>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Height="194">
+                    <ItemsControl ItemsSource="{Binding ManualProjects}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <!-- Define the UI layout for each manually added project -->
+                                <Border BorderBrush="Gray" BorderThickness="1" Margin="5">
+                                    <StackPanel>
+                                        <!-- Display project name, description, link, picture, and technologies -->
+                                        <TextBlock Text="{Binding ProjectName}" FontWeight="Bold" Margin="5" TextWrapping="Wrap"/>
+                                        <TextBlock Text="{Binding Description}" Margin="5" TextWrapping="Wrap"/>
+                                        <TextBlock Text="{Binding Technologies}" Margin="5" TextWrapping="Wrap"/>
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
             </StackPanel>
         </Border>
 
@@ -72,7 +76,6 @@
             <Button Content="Go to Profile" Width="150" Margin="5" Click="GoToProfile_Click"/>
             <!-- Button to add projects manually -->
             <Button Content="Add Manually" Width="150" Margin="5" Click="AddManually_Click"/>
-
         </StackPanel>
     </Grid>
 </Window>
