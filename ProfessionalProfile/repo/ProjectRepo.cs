@@ -149,5 +149,37 @@ namespace ProfessionalProfile.repo
                 command.ExecuteNonQuery();
             }
         }
+
+        public List<Project> GetByUserId(int userId)
+        {
+            List<Project> projects = new List<Project>();
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string sql = "SELECT Projects.* FROM Projects JOIN Users ON Projects.UserId = Users.UserId WHERE Users.UserId = @UserId;";
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                command.Parameters.AddWithValue("@UserId", userId);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int projectId = (int)reader["ProjectId"];
+                        string projectName = (string)reader["ProjectName"];
+                        string description = (string)reader["Description"];
+                        string technologies = (string)reader["Technologies"];
+                        int userIdInt = (int)reader["UserId"];
+
+                        Project project = new Project(projectId, projectName, description, technologies, userIdInt.ToString());
+                        projects.Add(project);
+                    }
+                }
+            }
+
+            return projects;
+        }
     }
 }

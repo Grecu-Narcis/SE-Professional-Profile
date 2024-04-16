@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using ProfessionalProfile.domain;
 using ProfessionalProfile.repo;
 
 namespace ProfessionalProfile.projects_page
@@ -15,14 +14,16 @@ namespace ProfessionalProfile.projects_page
     {
 
         ProjectRepo projectRepo = new ProjectRepo();
+        UserRepo userRepo = new UserRepo();
 
-
-        public ProjectsPage()
+        public ProjectsPage(int userId)
         {
             InitializeComponent();
 
-            Project project = projectRepo.GetById(1);
-            List<Project> projects = projectRepo.GetAll();
+            User user = userRepo.GetById(userId);
+            currentUserId = userId;
+
+            List<Project> projects = projectRepo.GetByUserId(userId);
 
             ManualProjects = projects;
 
@@ -35,6 +36,7 @@ namespace ProfessionalProfile.projects_page
             
         }
 
+        int currentUserId;
         string ProjectName { get; set; }
         string ProjectDescription { get; set; }
         string ProjectTechnologies { get; set; }
@@ -55,9 +57,8 @@ namespace ProfessionalProfile.projects_page
         // Event handler for the "Add Manually" button click
         private void AddManually_Click(object sender, RoutedEventArgs e)
         {
-            // You can implement the logic to add projects manually here
-            // For now, let's just display a message box
-            MessageBox.Show("Functionality to add projects manually is not yet implemented.");
+            AddManualProject addManualProject = new AddManualProject(this.currentUserId);
+            addManualProject.Show();
         }
 
         // Event handler for the "Go to Profile" button click
