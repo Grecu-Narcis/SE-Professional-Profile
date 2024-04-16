@@ -56,7 +56,7 @@ namespace ProfessionalProfile.domain
             set { _location = value; }
         }
 
-        public string EmployementPeriod
+        public string EmploymentPeriod
         { 
             get { return _employmentPeriod;}
             set { _employmentPeriod = value; }
@@ -103,7 +103,7 @@ namespace ProfessionalProfile.domain
                    JobTitle == experience.JobTitle &&
                    Company == experience.Company &&
                    Location == experience.Location &&
-                   EmployementPeriod == experience.EmployementPeriod &&
+                   EmploymentPeriod == experience.EmploymentPeriod &&
                    Achievements == experience.Achievements &&
                    Description == experience.Description;
         }
