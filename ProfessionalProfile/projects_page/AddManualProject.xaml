@@ -1,0 +1,39 @@
+<Window x:Class="ProfessionalProfile.projects_page.AddManualProject" 
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:local="clr-namespace:ProfessionalProfile.projects_page"
+		Title="Add Manual Project" Height="300" Width="400">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<!-- Title -->
+		<TextBlock Text="Add New Project" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,20"/>
+
+		<!-- Project Name -->
+		<TextBlock Text="Name:" Grid.Row="1" Margin="10,1,10,19"/>
+		<TextBox Text="{Binding textName}" Grid.Row="1" Margin="10,18,10,1"/>
+
+		<!-- Project Description -->
+		<TextBlock Text="Description:" Grid.Row="2" Margin="10,0,10,20"/>
+		<TextBox Text="{Binding textDescription}" Grid.Row="2" Margin="10,16,10,2"/>
+
+		<!-- Project Technologies -->
+		<TextBlock Text="Technologies:" Grid.Row="3" Margin="10,0,10,20"/>
+		<TextBox Text="{Binding textTechnologies}" Grid.Row="3" Margin="10,17,10,2"/>
+
+		<!-- Buttons -->
+		<StackPanel Orientation="Horizontal" Grid.Row="4" HorizontalAlignment="Center" Margin="10">
+			<!-- Button to save project -->
+			<Button Content="Save" Width="100" Margin="5" Click="Save_Click"/>
+			<!-- Button to cancel -->
+			<Button Content="Cancel" Width="100" Margin="5" Click="Cancel_Click"/>
+		</StackPanel>
+	</Grid>
+</Window>
