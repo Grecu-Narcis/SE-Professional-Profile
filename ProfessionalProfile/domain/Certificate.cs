@@ -87,5 +87,10 @@ namespace ProfessionalProfile.domain
                    ExpirationDate == certification.ExpirationDate &&
                    UserId == certification.UserId;
         }
+
+        public override string ToString()
+        {
+            return _name + "\n" + _description + "\n" + _issuedBy + "\n" + _issuedDate + "\n" + _expirationDate;
+        }
     }
 }

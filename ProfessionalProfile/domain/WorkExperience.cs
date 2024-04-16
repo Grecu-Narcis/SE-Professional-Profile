@@ -107,5 +107,11 @@ namespace ProfessionalProfile.domain
                    Achievements == experience.Achievements &&
                    Description == experience.Description;
         }
+
+        public override string ToString()
+        {
+            return _jobTitle + "\n" + _company + "\n" + _location + "\n" + _employmentPeriod + "\n" +
+                _responsibilities + "\n" + _description + "\n" + _achievements;
+        }
     }
 }

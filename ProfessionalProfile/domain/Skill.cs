@@ -38,5 +38,10 @@ namespace ProfessionalProfile.domain
                    SkillId == skill.SkillId &&
                    Name == skill.Name;
         }
+
+        public override string ToString()
+        {
+            return _name;
+        }
     }
 }
