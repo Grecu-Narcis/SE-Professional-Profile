@@ -17,6 +17,7 @@
                     <ListBox x:Name="UsersListBox" Height="271"/>
                 </StackPanel>
             </ScrollViewer>
+            <Button x:Name="ViewProfileButton" Content="View Profile" Height="32" Width="124" Click="ViewProfileButton_Click"/>
         </StackPanel>
 
     </Grid>

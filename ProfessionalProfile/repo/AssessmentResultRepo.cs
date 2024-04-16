@@ -44,7 +44,34 @@ namespace ProfessionalProfile.repo
 
         public List<AssessmentResult> GetAll()
         {
-            throw new NotImplementedException();
+            List<AssessmentResult> assessmentResults = new List<AssessmentResult>();
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string sql = "SELECT * FROM AssessmentResult";
+
+                SqlCommand command = new SqlCommand(sql, connection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    AssessmentResult assessmentResult = new AssessmentResult(reader.GetInt32(0),
+                        reader.GetInt32(1), reader.GetInt32(2),
+                        reader.GetInt32(3), reader.GetDateTime(4));
+
+                    assessmentResults.Add(assessmentResult);
+                }
+            }
+
+            return assessmentResults;
+        }
+
+        public List<AssessmentResult> GetAssessmentResultsByUserId(int userId)
+        {
+            List<AssessmentResult> allResults = this.GetAll();
+            return allResults.FindAll(result => result.UserId == userId);
         }
 
         public AssessmentResult GetById(int id)

@@ -1,6 +1,7 @@
 ﻿using ProfessionalProfile.domain;
 using ProfessionalProfile.repo;
 using ProfessionalProfile.service.login;
+using ProfessionalProfile.view;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,8 +25,18 @@ namespace ProfessionalProfile
         {
             InitializeComponent();
             this.Hide();
-            LoginPage login =   new LoginPage();
+
+            SelectTestWindow selectTestWindow = new SelectTestWindow(4);
+            selectTestWindow.Show();
+
+            LoginPage login = new LoginPage();
             login.Show();
+
+            SearchUserPage searchUserPage = new SearchUserPage(4);
+            searchUserPage.Show();
+
+            NotificationsPage notificationsPage = new NotificationsPage(60);
+            notificationsPage.Show();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

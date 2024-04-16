@@ -22,13 +22,39 @@ namespace ProfessionalProfile.view
     public partial class SelectTestWindow : Window
     {
         private SelectTestService selectTestService { get; }
+        private AssessmentResultsService AssessmentResultsService { get; }
+        int userId { get; set; }
 
-        public SelectTestWindow()
+        public SelectTestWindow(int userId)
         {
             InitializeComponent();
+            this.userId = userId;
 
             selectTestService = new SelectTestService();
+            AssessmentResultsService = new AssessmentResultsService();
             populateTestsNames();
+            loadPreviousResults();
+        }
+
+        public void loadPreviousResults()
+        {
+            this.previousResultsListBox.Items.Clear();
+
+            List<AssessmentResult> assessmentResults = this.AssessmentResultsService.getResultsByUserId(this.userId);
+
+            if (assessmentResults.Count == 0)
+            {
+                this.previousResultsListBox.Items.Add("No previous results");
+                return;
+            }
+
+            this.previousResultsListBox.Items.Add("Skill - Score - Date");
+
+            foreach (AssessmentResult result in assessmentResults)
+            {
+                AssessmentTest test = this.AssessmentResultsService.getTestById(result.AssessmentTestId);
+                this.previousResultsListBox.Items.Add(test.TestName + " - " + result.Score + " - " + result.TestDate.ToShortDateString());
+            }
         }
 
         private void populateTestsNames()
@@ -70,7 +96,7 @@ namespace ProfessionalProfile.view
             AssessmentTest test = selectTestService.getAssessmentByName(testName);
 
             // TODO: Open the test window
-            TakeTestWindow takeTestWindow = new TakeTestWindow(test.AssessmentTestId);
+            TakeTestWindow takeTestWindow = new TakeTestWindow(test.AssessmentTestId, this.userId);
             takeTestWindow.Show();
             this.Close();
         }
