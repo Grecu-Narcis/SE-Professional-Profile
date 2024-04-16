@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel Margin="161,0,162,0">
             <Label x:Name="nameLabel" Content="Label"/>
-            <ScrollViewer Height="401">
+            <ScrollViewer Height="381">
                 <ListBox x:Name="notificationsList" />
             </ScrollViewer>
         </StackPanel>

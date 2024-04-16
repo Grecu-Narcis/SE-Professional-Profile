@@ -35,7 +35,7 @@ namespace ProfessionalProfile.SectionViews
 
         private void OpenWorkExperienceWindow(object sender, RoutedEventArgs e)
         {
-            ProfilePage profilePage = new ProfilePage(userId);
+            ProfilePage profilePage = new ProfilePage(userId, userId);
             this.Visibility = Visibility.Hidden;
             profilePage.Show();
         }

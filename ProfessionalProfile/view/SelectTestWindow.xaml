@@ -30,7 +30,7 @@
                     </TransformGroup>
                 </TextBox.RenderTransform>
             </TextBox>
-            <Button x:Name="SelectTestButton" Content="Select" HorizontalAlignment="Left" Margin="297,357,0,0" VerticalAlignment="Top" Click="SelectTestButton_Click" Width="50" Grid.Column="2" Grid.Row="1"/>
+            <Button x:Name="SelectTestButton" Content="Select" HorizontalAlignment="Left" Margin="366,357,0,0" VerticalAlignment="Top" Click="SelectTestButton_Click" Width="50" Grid.Column="2" Grid.Row="1"/>
             <Label Content="Previous results:" HorizontalAlignment="Left" Margin="539,22,0,0" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1"/>
             <ScrollViewer Margin="539,53,10,60" Grid.Column="2" Grid.Row="1">
                 <ListBox x:Name="previousResultsListBox" />
