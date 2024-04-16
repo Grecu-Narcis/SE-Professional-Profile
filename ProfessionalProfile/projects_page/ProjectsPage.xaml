@@ -1,4 +1,4 @@
-<Window x:Class="ProfessionalProfile.profile_page.ProjectsPage"
+<Window x:Class="ProfessionalProfile.projects_page.ProjectsPage"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:ProfessionalProfile.profile_page"

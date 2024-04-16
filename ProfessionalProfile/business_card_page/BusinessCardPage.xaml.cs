@@ -44,11 +44,6 @@ namespace ProfessionalProfile.business_card_page
         public ICommand GoToProfileCommand { get; }
         public ICommand DownloadCardCommand { get; }
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
-
         // Methods for command actions
         private void GenerateQRCode(object parameter)
         {
@@ -76,4 +71,3 @@ namespace ProfessionalProfile.business_card_page
 }
 
 
-}

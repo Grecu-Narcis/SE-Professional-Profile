@@ -1,5 +1,7 @@
-﻿using ProfessionalProfile.domain;
+﻿using ProfessionalProfile.business_card_page;
+using ProfessionalProfile.domain;
 using ProfessionalProfile.profile_page;
+using ProfessionalProfile.projects_page;
 using ProfessionalProfile.repo;
 using ProfessionalProfile.service.login;
 using ProfessionalProfile.view;

@@ -13,9 +13,11 @@ namespace ProfessionalProfile.projects_page
 {
     public partial class ProjectsPage : Window
     {
+
         ProjectRepo projectRepo = new ProjectRepo();
-        Project Project = new Project(1, "Project 1", "Description 1", "Technologies 1", "User 1");
-        ProjectRepo.Add(Project);
+        Project project = new Project(1, "Project 1", "Description 1", "Technologies 1", "User 1");
+
+
         public ProjectsPage()
         {
             //InitializeComponent();
@@ -24,7 +26,7 @@ namespace ProfessionalProfile.projects_page
             DataContext = this;
 
             // For now, let's just bind the mocked data directly
-            List<Project> allProjects = ProjectRepo.GetAll();
+            List<Project> allProjects = projectRepo.GetAll();
         }
 
         // Properties to bind to UI elements
