@@ -113,8 +113,10 @@ namespace ProfessionalProfile.service.signUp
                 this.errorLabel.Visibility = Visibility.Collapsed;
                 string[] name = this.nameBox.Text.Split(' ');
                 string password = ComputeSHA256Hash(this.passwordBox.Password);
+                string phoneNr = this.phoneBox.Text;
+                string about = this.descBox.Text;
                 // the user ID doesn't get processed in the add procedure, and an automatic ID is generated instead
-                User newUser = new User(0, name[0], String.Join(" ",name.Skip(1).ToArray()), emailBox.Text,password, "","",DateTime.Parse(this.dateBox.Text),false,"","","");
+                User newUser = new User(0, name[0], String.Join(" ",name.Skip(1).ToArray()), emailBox.Text,password,phoneNr,about,DateTime.Parse(this.dateBox.Text),false,"","","");
 
                 this.usersRepo.Add(newUser);
 
