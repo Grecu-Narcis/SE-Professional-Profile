@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace ProfessionalProfile.business_card_page
         public BusinessCardPage(BussinesCard businessCard)
         {
             InitializeComponent();
-            
+
             Name = "John Doe";
             PhoneNumber = "123-456-7890";
             JobTitle = "Software Developer";
@@ -38,11 +39,41 @@ namespace ProfessionalProfile.business_card_page
         public string Description { get; set; }
         public string Achievement { get; set; }
 
+        // Commands for button actions
+        public ICommand GenerateQRCodeCommand { get; }
+        public ICommand GoToProfileCommand { get; }
+        public ICommand DownloadCardCommand { get; }
+
         private void InitializeComponent()
         {
             throw new NotImplementedException();
         }
+
+        // Methods for command actions
+        private void GenerateQRCode(object parameter)
+        {
+            // Code to generate QR code
+        }
+
+        private void GoToProfile(object parameter)
+        {
+            // Code to navigate to profile page
+        }
+
+        private void DownloadCard(object parameter)
+        {
+            // Code to download business card
+        }
+
+        // Implementation of INotifyPropertyChanged interface
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
+
+}
 
 
 }

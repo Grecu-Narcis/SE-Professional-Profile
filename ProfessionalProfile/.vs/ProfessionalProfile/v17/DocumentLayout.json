@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\_DOCUMENTE_RARES\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|d:\\_documente_rares\\desktop\\se-professional-profile\\professionalprofile\\business_card_page\\businesscardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:business_card_page\\businesscardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|d:\\_documente_rares\\desktop\\se-professional-profile\\professionalprofile\\projects-page\\projectspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:projects-page\\projectspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|d:\\_documente_rares\\desktop\\se-professional-profile\\professionalprofile\\business_card_page\\businesscardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:business_card_page\\businesscardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,8 +19,16 @@
       "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:domain\\businesscard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|d:\\_documente_rares\\desktop\\se-professional-profile\\professionalprofile\\business_card_page\\businesscardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:business_card_page\\businesscardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|d:\\_documente_rares\\desktop\\se-professional-profile\\professionalprofile\\projects-page\\projectspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:projects-page\\projectspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|d:\\_documente_rares\\desktop\\se-professional-profile\\professionalprofile\\domain\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:domain\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|d:\\_documente_rares\\desktop\\se-professional-profile\\professionalprofile\\repo\\projectrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\projectrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,15 +38,66 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1144,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProjectRepo.cs",
+              "DocumentMoniker": "D:\\_DOCUMENTE_RARES\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\repo\\ProjectRepo.cs",
+              "RelativeDocumentMoniker": "repo\\ProjectRepo.cs",
+              "ToolTip": "D:\\_DOCUMENTE_RARES\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\repo\\ProjectRepo.cs",
+              "RelativeToolTip": "repo\\ProjectRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T11:00:53.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Project.cs",
+              "DocumentMoniker": "D:\\_DOCUMENTE_RARES\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\domain\\Project.cs",
+              "RelativeDocumentMoniker": "domain\\Project.cs",
+              "ToolTip": "D:\\_DOCUMENTE_RARES\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\domain\\Project.cs",
+              "RelativeToolTip": "domain\\Project.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAAEUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T10:36:00.92Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "ProjectsPage.xaml",
+              "DocumentMoniker": "D:\\_DOCUMENTE_RARES\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\projects-page\\ProjectsPage.xaml",
+              "RelativeDocumentMoniker": "projects-page\\ProjectsPage.xaml",
+              "ToolTip": "D:\\_DOCUMENTE_RARES\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\projects-page\\ProjectsPage.xaml",
+              "RelativeToolTip": "projects-page\\ProjectsPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-16T10:30:53.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProjectsPage.xaml.cs",
+              "DocumentMoniker": "D:\\_DOCUMENTE_RARES\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\projects-page\\ProjectsPage.xaml.cs",
+              "RelativeDocumentMoniker": "projects-page\\ProjectsPage.xaml.cs",
+              "ToolTip": "D:\\_DOCUMENTE_RARES\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\projects-page\\ProjectsPage.xaml.cs",
+              "RelativeToolTip": "projects-page\\ProjectsPage.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T10:30:36.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "BusinessCardPage.xaml",
               "DocumentMoniker": "D:\\_DOCUMENTE_RARES\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\business_card_page\\BusinessCardPage.xaml",
               "RelativeDocumentMoniker": "business_card_page\\BusinessCardPage.xaml",
@@ -42,7 +109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "BusinessCard.cs",
               "DocumentMoniker": "D:\\_DOCUMENTE_RARES\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\domain\\BusinessCard.cs",
               "RelativeDocumentMoniker": "domain\\BusinessCard.cs",
@@ -55,13 +122,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "BusinessCardPage.xaml.cs",
               "DocumentMoniker": "D:\\_DOCUMENTE_RARES\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\business_card_page\\BusinessCardPage.xaml.cs",
               "RelativeDocumentMoniker": "business_card_page\\BusinessCardPage.xaml.cs",
               "ToolTip": "D:\\_DOCUMENTE_RARES\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\business_card_page\\BusinessCardPage.xaml.cs",
               "RelativeToolTip": "business_card_page\\BusinessCardPage.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAhAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T14:07:46.989Z",
               "EditorCaption": ""
