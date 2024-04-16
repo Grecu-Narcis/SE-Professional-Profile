@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\
 ProfessionalProfile
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\App.xaml
-16-1978819668
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\App.xaml
+161594846721
 
-76335188472
-199-546198748
-MainWindow.xaml;profile page\ProfilePage.xaml;SectionViews\CertificateWindow.xaml;SectionViews\EducationWindow.xaml;SectionViews\ProfilePictureWindow.xaml;SectionViews\SkillWindow.xaml;SectionViews\VolunteeringWindow.xaml;SectionViews\WorkExperienceWindow.xaml;service\login\LoginPage.xaml;service\signUp\SignUpPage.xaml;service\webBrowser\BrowserPage.xaml;view\CreateAssessmentWindow.xaml;view\NotificationsPage.xaml;view\SearchUserPage.xaml;view\SelectTestWindow.xaml;view\TakeTestWindow.xaml;
+751606834048
+199441067390
+MainWindow.xaml;profile page\ProfilePage.xaml;SectionViews\CertificateWindow.xaml;SectionViews\EditCertificateWindow.xaml;SectionViews\EducationWindow.xaml;SectionViews\ProfilePictureWindow.xaml;SectionViews\SkillWindow.xaml;SectionViews\VolunteeringWindow.xaml;SectionViews\WorkExperienceWindow.xaml;service\login\LoginPage.xaml;service\signUp\SignUpPage.xaml;service\webBrowser\BrowserPage.xaml;view\CreateAssessmentWindow.xaml;view\SearchUserPage.xaml;view\SelectTestWindow.xaml;view\TakeTestWindow.xaml;
 
 False
 

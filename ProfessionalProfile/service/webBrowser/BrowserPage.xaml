@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProfessionalProfile.service.webBrowser"
         mc:Ignorable="d"
-        Title="BrowserPage" Height="450" Width="800">
+        Title="BrowserPage" 
+        WindowState="Maximized"
+        >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

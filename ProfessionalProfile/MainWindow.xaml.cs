@@ -1,4 +1,5 @@
 ﻿using ProfessionalProfile.domain;
+using ProfessionalProfile.profile_page;
 using ProfessionalProfile.repo;
 using ProfessionalProfile.service.login;
 using ProfessionalProfile.view;
@@ -26,17 +27,9 @@ namespace ProfessionalProfile
             InitializeComponent();
             this.Hide();
 
-            SelectTestWindow selectTestWindow = new SelectTestWindow(4);
-            selectTestWindow.Show();
-
-            LoginPage login = new LoginPage();
-            login.Show();
-
-            SearchUserPage searchUserPage = new SearchUserPage(4);
-            searchUserPage.Show();
-
-            NotificationsPage notificationsPage = new NotificationsPage(60);
-            notificationsPage.Show();
+            ProfilePage profile = new ProfilePage(4);
+            profile.WindowState = WindowState.Maximized; // Set the WindowState to Maximized
+            profile.Show();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

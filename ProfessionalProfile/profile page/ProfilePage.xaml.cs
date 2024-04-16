@@ -1,5 +1,9 @@
-﻿using System;
+﻿using ProfessionalProfile.domain;
+using ProfessionalProfile.repo;
+using ProfessionalProfile.SectionViews;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -11,122 +15,157 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 
 namespace ProfessionalProfile.profile_page
 {
+    public class ButtonVisibilityMultiConverter : IMultiValueConverter
+    {
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+        {
+            // Ensure both values are provided and are of type int
+            if (values != null && values.Length == 2 && values[0] is int userId && values[1] is int currentUserId)
+            {
+                // Compare the UserId and CurrentUserId
+                return userId == currentUserId ? System.Windows.Visibility.Visible : System.Windows.Visibility.Collapsed;
+            }
+
+            return System.Windows.Visibility.Collapsed;
+        }
+
+        public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
 
     public partial class ProfilePage : Window
     {
         
-
+        UserRepo usersRepo = new UserRepo();
         public ProfilePage(int UserId)
         {
             InitializeComponent();
 
             // Populate sample data we will fetch this from the user object later
-            CurrentUserId = 123; // this will be fetched from the logged in user
+            CurrentUserId = 4; // this will be fetched from the logged in user
             this.UserId = UserId;
-            ProfilePic = "profile.jpg";
-            Name = "John Doe";
-            Email = "john.doe@example.com";
-            Contact = "+1234567890";
-            Education = new List<string> { "Bachelor's in Computer Science", "Master's in Software Engineering" };
-            Experience = new List<string> { "Software Engineer at ABC Inc.", "Intern at XYZ Corp" };
-            Certifications = new List<string> { "Microsoft Certified Professional (MCP)", "AWS Certified Solutions Architect" };
-            Skills = new List<string> { "C#", "ASP.NET", "JavaScript", "React", "SQL" };
-            Volunteering = new List<string> { "Red Cross Volunteer", "Community Cleanup Organizer" }; // will be of class Volunteering
-            MyUrl = "http://website" + UserId;
+            User user = usersRepo.GetById(UserId);
+            UserName = user.FirstName + " " + user.LastName;
+            Email = user.Email;
+            Summary = user.Summary;
+
+            // Fetch the user's education, experience, certifications, skills, and volunteering
+            EducationRepo = new EducationRepo();
+            Education = EducationRepo.GetByUserId(UserId);
+            ExperienceRepo = new WorkExperienceRepo();
+            Experience = ExperienceRepo.GetByUserId(UserId);
+            CertificationsRepo = new CertificateRepo();
+            Certifications = CertificationsRepo.GetByUserId(UserId);
+            SkillsRepo = new SkillRepo();
+            Skills = SkillsRepo.GetByUserId(UserId);
+            VolunteeringRepo = new VolunteeringRepo();
+            Volunteering = VolunteeringRepo.GetByUserId(UserId);
 
             // Set the DataContext to this instance
             DataContext = this;
         }
 
-        public Visibility GetButtonVisibility()
-        {
-            return UserId == CurrentUserId ? Visibility.Visible : Visibility.Collapsed;
-        }
-
-        public Visibility GetEndorseButtonVisibility()
-        {
-            return UserId != CurrentUserId ? Visibility.Visible : Visibility.Collapsed;
-        }
+        
 
         private void AddEducationButton_Click(object sender, RoutedEventArgs e)
         {
             // Navigate to the page for adding education
-            //AddEducationPage addEducationPage = new AddEducationPage(); // Replace AddEducationPage with the actual name of your page
-            //this.NavigationService.Navigate(addEducationPage);
+            EducationWindow educationWindow = new EducationWindow(UserId);
+            educationWindow.Show();
         }
 
         private void AddExperienceButton_Click(object sender, RoutedEventArgs e)
         {
             // Navigate to the page for adding experience
-            //AddExperiencePage addExperiencePage = new AddExperiencePage(); // Replace AddExperiencePage with the actual name of your page
-            //this.NavigationService.Navigate(addExperiencePage);
+            WorkExperienceWindow workExperienceWindow = new WorkExperienceWindow(UserId);
+            workExperienceWindow.Show();
         }
 
         private void AddCertificationButton_Click(object sender, RoutedEventArgs e)
         {
             // Navigate to the page for adding certification
-            //AddCertificationPage addCertificationPage = new AddCertificationPage(); // Replace AddCertificationPage with the actual name of your page
-            //this.NavigationService.Navigate(addCertificationPage);
+            CertificateWindow certificateWindow = new CertificateWindow(UserId);
+            certificateWindow.Show();
         }
 
         private void AddSkillsButton_Click(object sender, RoutedEventArgs e)
         {
             // Navigate to the page for adding skills
-            //AddSkillsPage addSkillsPage = new AddSkillsPage(); // Replace AddSkillsPage with the actual name of your page
-            //this.NavigationService.Navigate(addSkillsPage);
+            SkillWindow skillWindow = new SkillWindow(UserId);
+            skillWindow.Show();
         }
 
         private void AddVolunteeringButton_Click(object sender, RoutedEventArgs e)
         {
             // Navigate to the page for adding volunteering
-            //AddVolunteeringPage addVolunteeringPage = new AddVolunteeringPage(); // Replace AddVolunteeringPage with the actual name of your page
-            //this.NavigationService.Navigate(addVolunteeringPage);
+            VolunteeringWindow volunteeringWindow = new VolunteeringWindow(UserId);
+            volunteeringWindow.Show();
         }
 
         private void EditEducationButton_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
             string educationId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the education ID
-
+            int id = int.Parse(educationId);
             // Call a method to edit the education item using the educationId
-            //EditEducation(educationId);
         }
         private void DeleteEducationButton_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
             string educationId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the education ID
+            int id = int.Parse(educationId);
 
             // Call a method to delete the education item using the educationId
-            //DeleteEducation(educationId);
+            EducationRepo.Delete(id);
+
+            ProfilePage profilePage = new ProfilePage(UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Hide();
         }
 
         private void EditExperienceButton_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
             string experienceId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the experience ID
+            int id = int.Parse(experienceId);
+
 
             // Call a method to edit the experience item using the experienceId
-            //EditExperience(experienceId);
         }
 
         private void DeleteExperienceButton_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
             string experienceId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the experience ID
+            int id = int.Parse(experienceId);
 
             // Call a method to delete the experience item using the experienceId
-            //DeleteExperience(experienceId);
+            ExperienceRepo.Delete(id);
+            ProfilePage profilePage = new ProfilePage(UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Hide();
         }
 
         private void EditCertificationButton_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
             string certificationId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the certification ID
+            int id = int.Parse(certificationId);
 
+            EditCertificateWindow editCertificateWindow = new EditCertificateWindow(UserId, id);
+            editCertificateWindow.Show();
+            
             // Call a method to edit the certification item using the certificationId
             //EditCertification(certificationId);
         }
@@ -135,16 +174,21 @@ namespace ProfessionalProfile.profile_page
         {
             Button button = sender as Button;
             string certificationId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the certification ID
+            int id = int.Parse(certificationId);
 
             // Call a method to delete the certification item using the certificationId
-            //DeleteCertification(certificationId);
+            CertificationsRepo.Delete(id);
+            ProfilePage profilePage = new ProfilePage(UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Hide();
         }
 
         private void EditSkillsButton_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
             string skillId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the skill ID
-
+            int id = int.Parse(skillId);
             // Call a method to edit the skill item using the skillId
             //EditSkill(skillId);
         }
@@ -153,16 +197,21 @@ namespace ProfessionalProfile.profile_page
         {
             Button button = sender as Button;
             string skillId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the skill ID
+            int id = int.Parse(skillId);
 
             // Call a method to delete the skill item using the skillId
-            //DeleteSkill(skillId);
+            SkillsRepo.Delete(id);
+            ProfilePage profilePage = new ProfilePage(UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Hide();
         }
 
         private void EditVolunteeringButton_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
             string volunteeringId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the volunteering ID
-
+            int id = int.Parse(volunteeringId);
             // Call a method to edit the volunteering item using the volunteeringId
             //EditVolunteering(volunteeringId);
         }
@@ -171,36 +220,50 @@ namespace ProfessionalProfile.profile_page
         {
             Button button = sender as Button;
             string volunteeringId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the volunteering ID
+            int id = int.Parse(volunteeringId);
 
             // Call a method to delete the volunteering item using the volunteeringId
-            //DeleteVolunteering(volunteeringId);
+            VolunteeringRepo.Delete(id);
+            ProfilePage profilePage = new ProfilePage(UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Hide();
         }
 
-        private void LightThemeButton_Click(object sender, RoutedEventArgs e)
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
-            // Call a method to switch to light theme
-            //SwitchToLightTheme();
+            // Get the URL from the Hyperlink
+            string url = e.Uri.AbsoluteUri;
+
+            // Open the URL in the default web browser
+            System.Diagnostics.Process.Start(new ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
+            });
+
+            // Mark the event as handled
+            e.Handled = true;
         }
 
-        private void DarkThemeButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Call a method to switch to dark theme
-            //SwitchToDarkTheme();
-        }
 
         // Define properties for profile information
-        public string MyUrl { get; set; }
         public int CurrentUserId { get; set; }
         public int UserId { get; set; }
-        public string ProfilePic { get; set; }
-        public string Name { get; set; }
+        public string UserName { get; set; }
         public string Email { get; set; }
-        public string Contact { get; set; }
-        public List<string> Education { get; set; }
-        public List<string> Experience { get; set; }
-        public List<string> Certifications { get; set; }
-        public List<string> Skills { get; set; }
-        public List<string> Volunteering { get; set; }
+        public string Phone { get; set; }
+        public string Summary { get; set; }
+        public List<Education> Education { get; set; }
+        public EducationRepo EducationRepo { get; set; }
+        public List<WorkExperience> Experience { get; set; }
+        public WorkExperienceRepo ExperienceRepo { get; set; }
+        public List<Certificate> Certifications { get; set; }
+        public CertificateRepo CertificationsRepo { get; set; }
+        public List<Skill> Skills { get; set; }
+        public SkillRepo SkillsRepo { get; set; }
+        public List<Volunteering> Volunteering { get; set; }    
+        public VolunteeringRepo VolunteeringRepo { get; set; }
     }
 
 }

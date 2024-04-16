@@ -72,6 +72,30 @@ namespace ProfessionalProfile.repo
             return skills;
         }
 
+        public List<Skill> GetByUserId(int userId)
+        {
+            List<Skill> skills = new List<Skill>();
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string sql = "EXEC GetUserSkills @id";
+                SqlCommand command = new SqlCommand(sql, connection);
+                command.Parameters.AddWithValue("@id", userId);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Skill skill = new Skill(reader.GetInt32(0), reader.GetString(1));
+                    skills.Add(skill);
+                }
+            }
+
+            return skills;
+        }
+
         public Skill GetById(int id)
         {
             Skill skill = null;

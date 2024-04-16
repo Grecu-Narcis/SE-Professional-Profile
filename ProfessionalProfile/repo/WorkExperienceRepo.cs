@@ -77,7 +77,7 @@ namespace ProfessionalProfile.repo
                         string jobTitle = (string)reader["JobTitle"];
                         string company = (string)reader["Company"];
                         string location = (string)reader["Location"];
-                        string employementPeriod = (string)reader["EmployementPeriod"];
+                        string employementPeriod = (string)reader["EmploymentPeriod"];
                         string responsibilities = (string)reader["Responsibilities"];
                         string achievements = (string)reader["Achievements"];
                         string description = (string)reader["Description"];
@@ -90,6 +90,24 @@ namespace ProfessionalProfile.repo
             }
 
             return workExperiences;
+        }
+
+        public List<WorkExperience> GetByUserId(int userId)
+        {
+            List<WorkExperience> experiences = new List<WorkExperience>();
+
+            experiences = GetAll();
+
+            for (int i = 0; i < experiences.Count; i++)
+            {
+                if (experiences[i].UserId != userId)
+                {
+                    experiences.RemoveAt(i);
+                    i--;
+                }
+            }
+
+            return experiences;
         }
 
         public WorkExperience GetById(int id)
