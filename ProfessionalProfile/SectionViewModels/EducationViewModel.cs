@@ -68,9 +68,9 @@ namespace ProfessionalProfile.SectionViewModels
 
         public ICommand AddEducationButton { get; }
 
-        public EducationViewModel(EducationRepo educationRepo)
+        public EducationViewModel(EducationRepo educationRepo, int userId)
         {
-            AddEducationButton = new AddEducationCommand(this, educationRepo);
+            AddEducationButton = new AddEducationCommand(this, educationRepo, userId);
         }
     }
 }

@@ -90,9 +90,9 @@ namespace ProfessionalProfile.SectionViewModels
 
         public ICommand AddWorkExperienceButton { get; }
 
-        public WorkExperienceViewModel(WorkExperienceRepo workExperienceRepo)
+        public WorkExperienceViewModel(WorkExperienceRepo workExperienceRepo, int userId)
         {
-            AddWorkExperienceButton = new AddWorkExperienceCommand(this, workExperienceRepo);
+            AddWorkExperienceButton = new AddWorkExperienceCommand(this, workExperienceRepo, userId);
         }
     }
 }

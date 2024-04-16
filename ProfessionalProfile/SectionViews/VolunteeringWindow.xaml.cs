@@ -26,10 +26,9 @@ namespace ProfessionalProfile.SectionViews
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
-
-            VolunteeringViewModel viewModel = new VolunteeringViewModel(new VolunteeringRepo());
-            DataContext = viewModel;
             this.userId = userId;
+            VolunteeringViewModel viewModel = new VolunteeringViewModel(new VolunteeringRepo(), userId);
+            DataContext = viewModel;
         }
 
         private void OpenSkillWindow(object sender, RoutedEventArgs e)

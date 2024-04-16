@@ -27,10 +27,10 @@ namespace ProfessionalProfile.SectionViews
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
-
-            EducationViewModel viewModel = new EducationViewModel(new EducationRepo());
-            DataContext = viewModel;
             this.userId = userId;
+            EducationViewModel viewModel = new EducationViewModel(new EducationRepo(), userId);
+            DataContext = viewModel;
+            
         }
 
         private void OpenWorkExperienceWindow(object sender, RoutedEventArgs e)

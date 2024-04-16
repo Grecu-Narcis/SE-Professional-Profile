@@ -16,18 +16,20 @@ namespace ProfessionalProfile.SectionCommands
     {
         private readonly WorkExperienceRepo _workExperienceRepo;
         private readonly WorkExperienceViewModel _workExperienceViewModel;
+        private readonly int _userId;
 
-        public AddWorkExperienceCommand(WorkExperienceViewModel workExperienceViewModel, WorkExperienceRepo workExperienceRepo)
+        public AddWorkExperienceCommand(WorkExperienceViewModel workExperienceViewModel, WorkExperienceRepo workExperienceRepo, int userId)
         {
             _workExperienceRepo = workExperienceRepo;
             _workExperienceViewModel = workExperienceViewModel;
-
+            _userId = userId;
             _workExperienceViewModel.PropertyChanged += OnViewModelPropertyChanged;
+            
         }
 
         public override void Execute(object parameter)
         {
-            WorkExperience workExperience = new WorkExperience(4, 4, _workExperienceViewModel.JobTitle, _workExperienceViewModel.Company, _workExperienceViewModel.Location, _workExperienceViewModel.EmploymentPeriod, _workExperienceViewModel.Responsibilities, _workExperienceViewModel.Achievements, _workExperienceViewModel.Description);
+            WorkExperience workExperience = new WorkExperience(4, _userId, _workExperienceViewModel.JobTitle, _workExperienceViewModel.Company, _workExperienceViewModel.Location, _workExperienceViewModel.EmploymentPeriod, _workExperienceViewModel.Responsibilities, _workExperienceViewModel.Achievements, _workExperienceViewModel.Description);
 
             try
             {

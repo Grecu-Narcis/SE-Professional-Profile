@@ -24,9 +24,9 @@ namespace ProfessionalProfile.SectionViewModels
 
         public ICommand AddSkillButton { get; }
 
-        public SkillViewModel(SkillRepo skillRepo)
+        public SkillViewModel(SkillRepo skillRepo, int userId)
         {
-            AddSkillButton = new AddSkillCommand(this, skillRepo);
+            AddSkillButton = new AddSkillCommand(this, skillRepo, userId);
         }
     }
 }
