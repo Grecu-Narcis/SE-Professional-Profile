@@ -28,7 +28,7 @@ namespace ProfessionalProfile.SectionValidators
 
         public static void validateWorkExperience(WorkExperience workExperience)
         {
-            string[] dates = workExperience.EmployementPeriod.Split(" to ");
+            string[] dates = workExperience.EmploymentPeriod.Split(" to ");
 
             // Ensure that there are two dates
             if (dates.Length != 2)

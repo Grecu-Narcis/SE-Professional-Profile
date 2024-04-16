@@ -27,13 +27,13 @@ namespace ProfessionalProfile.repo
             {
                 connection.Open();
 
-                string sql = "EXEC InsertWorkExperience @UserId, @JobTitle, @Company, @Location, @EmployementPeriod, @Responsibilities, @Achievements, @Description";
+                string sql = "EXEC InsertWorkExperience @UserId, @JobTitle, @Company, @Location, @EmploymentPeriod, @Responsibilities, @Achievements, @Description";
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 command.Parameters.AddWithValue("@JobTitle", item.JobTitle);
                 command.Parameters.AddWithValue("@Company", item.Company);
                 command.Parameters.AddWithValue("@Location", item.Location);
-                command.Parameters.AddWithValue("@EmployementPeriod", item.EmployementPeriod);
+                command.Parameters.AddWithValue("@EmploymentPeriod", item.EmploymentPeriod);
                 command.Parameters.AddWithValue("@Responsibilities", item.Responsibilities);
                 command.Parameters.AddWithValue("@Achievements", item.Achievements);
                 command.Parameters.AddWithValue("@Description", item.Description);
@@ -77,13 +77,13 @@ namespace ProfessionalProfile.repo
                         string jobTitle = (string)reader["JobTitle"];
                         string company = (string)reader["Company"];
                         string location = (string)reader["Location"];
-                        string employementPeriod = (string)reader["EmploymentPeriod"];
+                        string employmentPeriod = (string)reader["EmploymentPeriod"];
                         string responsibilities = (string)reader["Responsibilities"];
                         string achievements = (string)reader["Achievements"];
                         string description = (string)reader["Description"];
                         int userId = (int)reader["UserId"];
 
-                        WorkExperience workExperience = new WorkExperience(workId, userId, jobTitle, company, location, employementPeriod, responsibilities, achievements, description);
+                        WorkExperience workExperience = new WorkExperience(workId, userId, jobTitle, company, location, employmentPeriod, responsibilities, achievements, description);
                         workExperiences.Add(workExperience);
                     }
                 }
@@ -130,16 +130,16 @@ namespace ProfessionalProfile.repo
                         try
                         {
                             int workId = (int)reader["WorkId"];
+                            int userId = (int)reader["UserId"];
                             string jobTitle = (string)reader["JobTitle"];
                             string company = (string)reader["Company"];
                             string location = (string)reader["Location"];
-                            string employementPeriod = (string)reader["EmployementPeriod"]  ;
-                            string responsibilities = (string)reader["Responsibilities"];
                             string achievements = (string)reader["Achievements"];
                             string description = (string)reader["Description"];
-                            int userId = (int)reader["UserId"];
+                            string responsibilities = (string)reader["Responsibilities"];
+                            string employmentPeriod = (string)reader["EmploymentPeriod"];
 
-                            workExperience = new WorkExperience(workId, userId, jobTitle, company, location, employementPeriod, responsibilities, achievements, description);
+                            workExperience = new WorkExperience(workId, userId, jobTitle, company, location, employmentPeriod, responsibilities, achievements, description);
                         }
                         catch (Exception ex)
                         {
@@ -154,18 +154,29 @@ namespace ProfessionalProfile.repo
 
         public void Update(WorkExperience item)
         {
+            SectionValidator.validateWorkExperience(item);
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
 
-                string sql = "EXEC UpdateWorkExperience @WorkId = @workId, @UserId = @userId, @JobTitle = @jobTitle, @Company = @company, @Location = @location, @EmployementPeriod = @employementPeriod, @Responsibilities = @responsibilities, @Achievements = @achievements, @Description = @description";
+                string sql = @"EXEC UpdateWorkExperience
+                @WorkId = @workId,
+                @UserId = @userId,
+                @JobTitle = @jobTitle,
+                @Company = @company,
+                @Location = @location,
+                @EmploymentPeriod = @employmentPeriod,
+                @Responsibilities = @responsibilities,
+                @Achievements = @achievements,
+                @Description = @description";
+
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 command.Parameters.AddWithValue("@workId", item.WorkId);
                 command.Parameters.AddWithValue("@jobTitle", item.JobTitle);
                 command.Parameters.AddWithValue("@company", item.Company);
                 command.Parameters.AddWithValue("@location", item.Location);
-                command.Parameters.AddWithValue("@employementPeriod", item.EmployementPeriod);
+                command.Parameters.AddWithValue("@employmentPeriod", item.EmploymentPeriod);
                 command.Parameters.AddWithValue("@responsibilities", item.Responsibilities);
                 command.Parameters.AddWithValue("@achievements", item.Achievements);
                 command.Parameters.AddWithValue("@description", item.Description);

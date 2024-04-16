@@ -118,6 +118,9 @@ namespace ProfessionalProfile.profile_page
             Button button = sender as Button;
             string educationId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the education ID
             int id = int.Parse(educationId);
+
+            EditEducationWindow editEducationWindow = new EditEducationWindow(UserId, id);
+            editEducationWindow.Show();
             // Call a method to edit the education item using the educationId
         }
         private void DeleteEducationButton_Click(object sender, RoutedEventArgs e)
@@ -140,7 +143,8 @@ namespace ProfessionalProfile.profile_page
             Button button = sender as Button;
             string experienceId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the experience ID
             int id = int.Parse(experienceId);
-
+            EditWorkExperienceWindow editWorkExperienceWindow = new EditWorkExperienceWindow(UserId, id);
+            editWorkExperienceWindow.Show();
 
             // Call a method to edit the experience item using the experienceId
         }
@@ -214,6 +218,9 @@ namespace ProfessionalProfile.profile_page
             Button button = sender as Button;
             string volunteeringId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the volunteering ID
             int id = int.Parse(volunteeringId);
+
+            EditVolunteeringWindow volunteeringWindow = new EditVolunteeringWindow(UserId, id);
+            volunteeringWindow.Show();
             // Call a method to edit the volunteering item using the volunteeringId
             //EditVolunteering(volunteeringId);
         }

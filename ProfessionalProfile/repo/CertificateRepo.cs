@@ -113,7 +113,8 @@ namespace ProfessionalProfile.repo
                 connection.Open();
 
                 // Consider using parameterized queries to prevent SQL injection
-                string sql = "EXEC GetCertificateById CertificateId = @id";
+                string sql = "EXEC GetCertificateById @CertificateId = @id";
+
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 command.Parameters.AddWithValue("@id", id);
@@ -154,13 +155,14 @@ namespace ProfessionalProfile.repo
 
                 // Consider using parameterized queries to prevent SQL injection
                 string sql = @"EXEC UpdateCertificate
-                            CertificateId = @CertificateId
-                            UserId = @UserId
-                            Name = @Name,
-                            Description = @Description
-                            IssuedBy = @IssuedBy
-                            IssuedDate = @IssuedDate
-                            ExpirationDate = @ExpirationDate    ";
+                @CertificateId = @CertificateId,
+                @UserId = @UserId,
+                @Name = @Name,
+                @Description = @Description,
+                @IssuedBy = @IssuedBy,
+                @IssuedDate = @IssuedDate,
+                @ExpirationDate = @ExpirationDate";
+
                 SqlCommand command = new SqlCommand(sql, connection);
 
                 command.Parameters.AddWithValue("@CertificateId", item.CertificateId);

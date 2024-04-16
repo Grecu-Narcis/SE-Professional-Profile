@@ -1,4 +1,5 @@
-﻿using ProfessionalProfile.repo;
+﻿using ProfessionalProfile.domain;
+using ProfessionalProfile.repo;
 using ProfessionalProfile.SectionCommands;
 using System;
 using System.Collections.Generic;
@@ -9,8 +10,23 @@ using System.Windows.Input;
 
 namespace ProfessionalProfile.SectionViewModels
 {
-    public class WorkExperienceViewModel: SectionViewModelBase
+    public class EditWorkExperienceViewModel: SectionViewModelBase
     {
+        public EditWorkExperienceViewModel(WorkExperienceRepo workExperienceRepo, int userId, int workExperienceId)
+        {
+            workExperience = workExperienceRepo.GetById(workExperienceId);
+            JobTitle = workExperience.JobTitle;
+            Company = workExperience.Company;
+            Location = workExperience.Location;
+            EmploymentPeriod = workExperience.EmploymentPeriod;
+            Responsibilities = workExperience.Responsibilities;
+            Achievements = workExperience.Achievements;
+            Description = workExperience.Description;
+            EditWorkExperienceButton = new EditWorkExperienceCommand(this, workExperienceRepo, userId, workExperienceId);
+        }
+
+        private WorkExperience workExperience;
+
         private string _jobTitle;
         public string JobTitle
         {
@@ -88,11 +104,6 @@ namespace ProfessionalProfile.SectionViewModels
             }
         }
 
-        public ICommand AddWorkExperienceButton { get; }
-
-        public WorkExperienceViewModel(WorkExperienceRepo workExperienceRepo)
-        {
-            AddWorkExperienceButton = new AddWorkExperienceCommand(this, workExperienceRepo);
-        }
+        public ICommand EditWorkExperienceButton { get; }
     }
 }

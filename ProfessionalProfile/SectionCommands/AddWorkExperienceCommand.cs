@@ -27,7 +27,7 @@ namespace ProfessionalProfile.SectionCommands
 
         public override void Execute(object parameter)
         {
-            WorkExperience workExperience = new WorkExperience(4, 4, _workExperienceViewModel.JobTitle, _workExperienceViewModel.Company, _workExperienceViewModel.Location, _workExperienceViewModel.EmployementPeriod, _workExperienceViewModel.Responsibilities, _workExperienceViewModel.Achievements, _workExperienceViewModel.Description);
+            WorkExperience workExperience = new WorkExperience(4, 4, _workExperienceViewModel.JobTitle, _workExperienceViewModel.Company, _workExperienceViewModel.Location, _workExperienceViewModel.EmploymentPeriod, _workExperienceViewModel.Responsibilities, _workExperienceViewModel.Achievements, _workExperienceViewModel.Description);
 
             try
             {
@@ -47,7 +47,7 @@ namespace ProfessionalProfile.SectionCommands
             return !string.IsNullOrEmpty(_workExperienceViewModel.JobTitle) &&
                 !string.IsNullOrEmpty(_workExperienceViewModel.Company) &&
                 !string.IsNullOrEmpty(_workExperienceViewModel.Location) &&
-                !string.IsNullOrEmpty(_workExperienceViewModel.EmployementPeriod) &&
+                !string.IsNullOrEmpty(_workExperienceViewModel.EmploymentPeriod) &&
                 !string.IsNullOrEmpty(_workExperienceViewModel.Responsibilities) &&
                 !string.IsNullOrEmpty(_workExperienceViewModel.Achievements) &&
                 !string.IsNullOrEmpty(_workExperienceViewModel.Description) &&
@@ -59,7 +59,7 @@ namespace ProfessionalProfile.SectionCommands
             if (e.PropertyName == nameof(WorkExperienceViewModel.JobTitle) ||
                                e.PropertyName == nameof(WorkExperienceViewModel.Company) ||
                                               e.PropertyName == nameof(WorkExperienceViewModel.Location) ||
-                                                             e.PropertyName == nameof(WorkExperienceViewModel.EmployementPeriod) ||
+                                                             e.PropertyName == nameof(WorkExperienceViewModel.EmploymentPeriod) ||
                                                                             e.PropertyName == nameof(WorkExperienceViewModel.Responsibilities) ||
                                                                                            e.PropertyName == nameof(WorkExperienceViewModel.Achievements) ||
                                                                                                           e.PropertyName == nameof(WorkExperienceViewModel.Description))
