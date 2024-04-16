@@ -44,6 +44,26 @@ namespace ProfessionalProfile.profile_page
         }
     }
 
+    public class EndorseButtonVisibilityMultiConverter : IMultiValueConverter
+    {
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+        {
+            // Ensure both values are provided and are of type int
+            if (values != null && values.Length == 2 && values[0] is int userId && values[1] is int currentUserId)
+            {
+                // Compare the UserId and CurrentUserId
+                return userId != currentUserId ? System.Windows.Visibility.Visible : System.Windows.Visibility.Collapsed;
+            }
+
+            return System.Windows.Visibility.Collapsed;
+        }
+
+        public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
     public partial class ProfilePage : Window
     {
         
