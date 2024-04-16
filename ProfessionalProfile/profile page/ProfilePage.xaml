@@ -8,7 +8,8 @@
         <local:ButtonVisibilityMultiConverter x:Key="ButtonVisibilityMultiConverter"/>
     </Window.Resources>
 
-    <Grid Margin="0,0,10,0">
+    <ScrollViewer>
+            <Grid Margin="0,0,10,0">
         <!-- Define rows -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -297,9 +298,11 @@
         </Border>
         <Button x:Name="SearchPageButton" Content="Search" HorizontalAlignment="Left" Margin="483,52,0,0" VerticalAlignment="Top" Width="70" Click="SearchPageButton_Click"/>
         <Button x:Name="ViewNotificationsButton" Content="Notifications" HorizontalAlignment="Left" Margin="483,84,0,0" VerticalAlignment="Top" Width="70" Click="ViewNotificationsButton_Click"/>
-        <Button x:Name="becomePremiumUserButton" Content="Become Premium Member" HorizontalAlignment="Left" Margin="28,70,0,0" Grid.Row="6" VerticalAlignment="Top" Click="becomePremiumUserButton_Click"/>
+        <Button x:Name="becomePremiumUserButton" Content="Become Premium Member" HorizontalAlignment="Left" Margin="28,70,0,0" Grid.Row="6" Click="becomePremiumUserButton_Click"/>
         <Button x:Name="createAssessmentButton" Content="Create Assesments" HorizontalAlignment="Left" Margin="213,70,0,0" Grid.Row="6" VerticalAlignment="Top" Click="createAssessmentButton_Click" />
         <Button x:Name="takeAssessmentButton" Content="Take Assesments" HorizontalAlignment="Left" Margin="368,70,0,0" Grid.Row="6" VerticalAlignment="Top" Click="takeAssessmentButton_Click" />
 
     </Grid>
+    </ScrollViewer>
+
 </Window>

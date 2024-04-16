@@ -8,7 +8,7 @@
         Title="NotificationsPage" Height="450" Width="800">
     <Grid>
         <StackPanel Margin="161,0,162,0">
-            <Label x:Name="nameLabel" Content="Label"/>
+            <Label x:Name="nameLabel" Content="Label" FontSize="14" FontWeight="Bold"/>
             <ScrollViewer Height="381">
                 <ListBox x:Name="notificationsList" />
             </ScrollViewer>

@@ -1,4 +1,5 @@
-﻿using ProfessionalProfile.domain;
+﻿using ProfessionalProfile.business;
+using ProfessionalProfile.domain;
 using ProfessionalProfile.repo;
 using ProfessionalProfile.SectionViews;
 using ProfessionalProfile.view;
@@ -294,7 +295,8 @@ namespace ProfessionalProfile.profile_page
 
         private void becomePremiumUserButton_Click(object sender, RoutedEventArgs e)
         {
-
+            PremiumUsersService premiumUsersService = new PremiumUsersService();
+            premiumUsersService.AddPremiumUser(CurrentUserId);
         }
     }
 
