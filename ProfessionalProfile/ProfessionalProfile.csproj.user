@@ -13,6 +13,9 @@
     <Compile Update="view\NotificationsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="view\PrivacySettingsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -22,6 +25,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="view\NotificationsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="view\PrivacySettingsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

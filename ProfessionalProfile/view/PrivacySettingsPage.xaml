@@ -1,0 +1,47 @@
+﻿<Window x:Class="ProfessionalProfile.view.PrivacySettingsPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProfessionalProfile.view"
+        mc:Ignorable="d"
+        Title="PrivacySettingsPage" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="175,0,175,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label x:Name="helloLabel" Content="Label" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+            <StackPanel Height="44" Margin="0,20,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Education:" Width="70" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                <CheckBox x:Name="educationPublicCheckBox" Content="Public" VerticalAlignment="Center" Margin="10,0,10,0" Checked="educationPublicCheckBox_Checked"/>
+                <CheckBox x:Name="educationPrivateCheckBox" Content="Private" VerticalAlignment="Center" Margin="0,0,10,0" Checked="educationPrivateCheckBox_Checked"/>
+            </StackPanel>
+            <StackPanel Height="43" Orientation="Horizontal">
+                <Label Content="Work Experience:" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                <CheckBox x:Name="workExperiencePublicCheckBox" Content="Public" VerticalAlignment="Center" Margin="10,0,10,0" Checked="workExperiencePublicCheckBox_Checked"/>
+                <CheckBox x:Name="workExperiencePrivateCheckBox" Content="Private" VerticalAlignment="Center" Margin="0,0,10,0" Checked="workExperiencePrivateCheckBox_Checked"/>
+            </StackPanel>
+            <StackPanel Height="43" Orientation="Horizontal">
+                <Label Content="Volunteering:" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                <CheckBox x:Name="volunteeringPublicCheckBox" Content="Public" VerticalAlignment="Center" Margin="10,0,10,0" Checked="volunteeringPublicCheckBox_Checked"/>
+                <CheckBox x:Name="volunteeringPrivateCheckBox" Content="Private" VerticalAlignment="Center" Margin="0,0,10,0" Checked="volunteeringPrivateCheckBox_Checked"/>
+            </StackPanel>
+            <StackPanel Height="44" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Certifications:" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                <CheckBox x:Name="certificationsPublicCheckBox" Content="Public" VerticalAlignment="Center" Margin="10,0,10,0" Checked="certificationsPublicCheckBox_Checked"/>
+                <CheckBox x:Name="certificationsPrivateCheckBox" Content="Private" VerticalAlignment="Center" Margin="0,0,10,0" Checked="certificationsPrivateCheckBox_Checked"/>
+            </StackPanel>
+            <StackPanel Height="39" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Skills:" Width="70" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                <CheckBox x:Name="skillsPublicCheckBox" Content="Public" VerticalAlignment="Center" Margin="10,0,10,0" Checked="skillsPublicCheckBox_Checked"/>
+                <CheckBox x:Name="skillsPrivateCheckBox" Content="Private" VerticalAlignment="Center" Margin="0,0,10,0" Checked="skillsPrivateCheckBox_Checked"/>
+            </StackPanel>
+            <StackPanel Height="39" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Projects:" Width="70" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                <CheckBox x:Name="projectsPublicCheckBox" Content="Public" VerticalAlignment="Center" Margin="10,0,10,0" Checked="projectsPublicCheckBox_Checked"/>
+                <CheckBox x:Name="projectsPrivateCheckBox" Content="Private" VerticalAlignment="Center" Margin="0,0,10,0" Checked="projectsPrivateCheckBox_Checked"/>
+            </StackPanel>
+            <Button x:Name="changePrivacyButton" Content="Change Privacy" HorizontalAlignment="Center" Margin="0,20,0,10" Click="changePrivacyButton_Click"/>
+            <Label x:Name="updateSuccessLabel" Content="" HorizontalAlignment="Center"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

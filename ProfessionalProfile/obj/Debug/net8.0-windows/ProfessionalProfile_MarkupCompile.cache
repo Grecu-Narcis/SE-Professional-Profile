@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\App.xaml
-17565735326
+18506338112
 
-79-1224430962
+84-105433505
 199-546198748
-MainWindow.xaml;profile page\ProfilePage.xaml;SectionViews\CertificateWindow.xaml;SectionViews\EditCertificateWindow.xaml;SectionViews\EducationWindow.xaml;SectionViews\ProfilePictureWindow.xaml;SectionViews\SkillWindow.xaml;SectionViews\VolunteeringWindow.xaml;SectionViews\WorkExperienceWindow.xaml;service\login\LoginPage.xaml;service\signUp\SignUpPage.xaml;service\webBrowser\BrowserPage.xaml;view\CreateAssessmentWindow.xaml;view\NotificationsPage.xaml;view\SearchUserPage.xaml;view\SelectTestWindow.xaml;view\TakeTestWindow.xaml;
+MainWindow.xaml;profile page\ProfilePage.xaml;SectionViews\CertificateWindow.xaml;SectionViews\EditCertificateWindow.xaml;SectionViews\EducationWindow.xaml;SectionViews\ProfilePictureWindow.xaml;SectionViews\SkillWindow.xaml;SectionViews\VolunteeringWindow.xaml;SectionViews\WorkExperienceWindow.xaml;service\login\LoginPage.xaml;service\signUp\SignUpPage.xaml;service\webBrowser\BrowserPage.xaml;view\CreateAssessmentWindow.xaml;view\NotificationsPage.xaml;view\PrivacySettingsPage.xaml;view\SearchUserPage.xaml;view\SelectTestWindow.xaml;view\TakeTestWindow.xaml;
 
 False
 
