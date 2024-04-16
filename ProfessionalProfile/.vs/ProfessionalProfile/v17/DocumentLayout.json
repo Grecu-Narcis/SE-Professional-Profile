@@ -1,38 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\",
+  "WorkspaceRootPath": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\drago\\desktop\\anul 2\\sem 4\\soft\\professional-profile\\professionalprofile\\profile page\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:profile page\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\drago\\desktop\\anul 2\\sem 4\\soft\\professional-profile\\professionalprofile\\profile page\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:profile page\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\drago\\desktop\\anul 2\\sem 4\\soft\\professional-profile\\professionalprofile\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\projects_page\\projectspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:projects_page\\projectspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\projects_page\\projectspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:projects_page\\projectspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\business_card_page\\businesscardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\business_card_page\\businesscardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:business_card_page\\businesscardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\business_card_page\\businesscardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\business_card_page\\businesscardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:business_card_page\\businesscardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\obj\\Debug\\net8.0-windows\\business_card_page\\BusinessCardPage.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net8.0-windows\\business_card_page\\BusinessCardPage.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\domain\\businesscard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\domain\\businesscard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:domain\\businesscard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\domain\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:domain\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\projects_page\\projectspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:projects_page\\projectspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\projects_page\\projectspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:projects_page\\projectspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,27 +42,51 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1144,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProjectsPage.xaml",
-              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\projects_page\\ProjectsPage.xaml",
-              "RelativeDocumentMoniker": "projects_page\\ProjectsPage.xaml",
-              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\projects_page\\ProjectsPage.xaml",
-              "RelativeToolTip": "projects_page\\ProjectsPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-16T15:48:02.173Z",
+              "DocumentIndex": 0,
+              "Title": "ProfilePage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\profile page\\ProfilePage.xaml.cs",
+              "RelativeDocumentMoniker": "profile page\\ProfilePage.xaml.cs",
+              "ToolTip": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\profile page\\ProfilePage.xaml.cs",
+              "RelativeToolTip": "profile page\\ProfilePage.xaml.cs",
+              "ViewState": "AQIAALMAAAAAAAAAAAAqwMEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T20:13:25.809Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "ProfilePage.xaml",
+              "DocumentMoniker": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\profile page\\ProfilePage.xaml",
+              "RelativeDocumentMoniker": "profile page\\ProfilePage.xaml",
+              "ToolTip": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\profile page\\ProfilePage.xaml",
+              "RelativeToolTip": "profile page\\ProfilePage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-16T20:13:19.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProjectsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\projects_page\\ProjectsPage.xaml",
+              "RelativeDocumentMoniker": "projects_page\\ProjectsPage.xaml",
+              "ToolTip": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\projects_page\\ProjectsPage.xaml",
+              "RelativeToolTip": "projects_page\\ProjectsPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-16T15:48:02.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ProjectsPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\projects_page\\ProjectsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\projects_page\\ProjectsPage.xaml.cs",
               "RelativeDocumentMoniker": "projects_page\\ProjectsPage.xaml.cs",
-              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\projects_page\\ProjectsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\projects_page\\ProjectsPage.xaml.cs",
               "RelativeToolTip": "projects_page\\ProjectsPage.xaml.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -73,9 +97,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "BusinessCardPage.xaml",
-              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\business_card_page\\BusinessCardPage.xaml",
+              "DocumentMoniker": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\business_card_page\\BusinessCardPage.xaml",
               "RelativeDocumentMoniker": "business_card_page\\BusinessCardPage.xaml",
-              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\business_card_page\\BusinessCardPage.xaml",
+              "ToolTip": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\business_card_page\\BusinessCardPage.xaml",
               "RelativeToolTip": "business_card_page\\BusinessCardPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-04-16T15:48:02.183Z",
@@ -83,66 +107,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "BusinessCard.cs",
-              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\domain\\BusinessCard.cs",
+              "DocumentMoniker": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\domain\\BusinessCard.cs",
               "RelativeDocumentMoniker": "domain\\BusinessCard.cs",
-              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\domain\\BusinessCard.cs",
+              "ToolTip": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\domain\\BusinessCard.cs",
               "RelativeToolTip": "domain\\BusinessCard.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T15:48:02.188Z"
+              "WhenOpened": "2024-04-16T15:48:02.188Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "BusinessCardPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\business_card_page\\BusinessCardPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\business_card_page\\BusinessCardPage.xaml.cs",
               "RelativeDocumentMoniker": "business_card_page\\BusinessCardPage.xaml.cs",
-              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\business_card_page\\BusinessCardPage.xaml.cs",
+              "ToolTip": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\business_card_page\\BusinessCardPage.xaml.cs",
               "RelativeToolTip": "business_card_page\\BusinessCardPage.xaml.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAA2wC0AAAAAAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAywC0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-16T15:48:02.192Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\drago\\Desktop\\Anul 2\\Sem 4\\Soft\\Professional-Profile\\ProfessionalProfile\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAAB8AAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-16T15:57:53.233Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BusinessCardPage.g.cs",
-              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\obj\\Debug\\net8.0-windows\\business_card_page\\BusinessCardPage.g.cs",
-              "RelativeDocumentMoniker": "obj\\Debug\\net8.0-windows\\business_card_page\\BusinessCardPage.g.cs",
-              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\obj\\Debug\\net8.0-windows\\business_card_page\\BusinessCardPage.g.cs",
-              "RelativeToolTip": "obj\\Debug\\net8.0-windows\\business_card_page\\BusinessCardPage.g.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAhwDEAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T15:53:13.79Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Project.cs",
-              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\domain\\Project.cs",
-              "RelativeDocumentMoniker": "domain\\Project.cs",
-              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\domain\\Project.cs",
-              "RelativeToolTip": "domain\\Project.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAAAEUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T15:48:02.168Z"
             }
           ]
         },

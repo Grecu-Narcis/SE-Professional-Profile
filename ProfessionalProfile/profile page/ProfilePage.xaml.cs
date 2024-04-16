@@ -196,7 +196,7 @@ namespace ProfessionalProfile.profile_page
             string skillId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the skill ID
             int id = int.Parse(skillId);
             // Call a method to edit the skill item using the skillId
-            //EditSkill(skillId);
+
         }
 
         private void DeleteSkillsButton_Click(object sender, RoutedEventArgs e)
