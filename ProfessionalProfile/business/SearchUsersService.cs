@@ -21,11 +21,16 @@ namespace ProfessionalProfile.business
         {
             List<User> allUsers = UserRepo.GetAll();
             List<User> searchResults = allUsers.FindAll((user) =>
-                (user.FirstName.ToLower().Contains(search) || 
-                user.LastName.ToLower().Contains(search)) &&
+                (user.FirstName.ToLower().Contains(search.ToLower()) || 
+                user.LastName.ToLower().Contains(search.ToLower())) &&
                 user.UserId != loggedUserId);
 
             return searchResults;
+        }
+
+        public User getUserById(int userId)
+        {
+            return UserRepo.GetById(userId);
         }
     }
 }

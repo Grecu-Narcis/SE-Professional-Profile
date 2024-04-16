@@ -5,13 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProfessionalProfile.view"
         mc:Ignorable="d"
-        Title="SelectTestWindow" Height="450" Width="800">
+        Title="SelectTestWindow" Height="450" Width="901">
     <Grid>
         <Grid>
-            <Label Content="Choose the assessment you want to take" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
-            <ListBox x:Name="assessmentNames" Margin="10,46,465,60" SelectionChanged="assessmentNames_SelectionChanged"/>
-            <Label x:Name="skillTestedLabel" Content="Skill tested:" HorizontalAlignment="Left" Margin="400,41,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="assessmentDescriptionBox" HorizontalAlignment="Left" Margin="400,82,0,0" TextWrapping="Wrap" Text="Test description..." VerticalAlignment="Top" Width="358" Height="268" RenderTransformOrigin="0.5,0.5" IsEnabled="False">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="12*"/>
+                <RowDefinition Height="205*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="24*"/>
+                <ColumnDefinition Width="29*"/>
+                <ColumnDefinition Width="747*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Choose the assessment you want to take" HorizontalAlignment="Left" Margin="190,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Grid.Column="2" Grid.RowSpan="2"/>
+            <ListBox x:Name="assessmentNames" Margin="10,22,0,60" SelectionChanged="assessmentNames_SelectionChanged" Grid.ColumnSpan="3" Grid.Row="1" HorizontalAlignment="Left" Width="324"/>
+            <Label x:Name="skillTestedLabel" Content="Skill tested:" HorizontalAlignment="Left" Margin="312,17,0,0" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1"/>
+            <TextBox x:Name="assessmentDescriptionBox" HorizontalAlignment="Left" Margin="317,54,0,0" TextWrapping="Wrap" Text="Test description..." VerticalAlignment="Top" Width="193" Height="294" RenderTransformOrigin="0.5,0.5" IsEnabled="False" Grid.Column="2" Grid.Row="1">
                 <TextBox.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -21,7 +30,12 @@
                     </TransformGroup>
                 </TextBox.RenderTransform>
             </TextBox>
-            <Button x:Name="SelectTestButton" Content="Select" HorizontalAlignment="Left" Margin="350,381,0,0" VerticalAlignment="Top" Click="SelectTestButton_Click" Width="50"/>
+            <Button x:Name="SelectTestButton" Content="Select" HorizontalAlignment="Left" Margin="297,357,0,0" VerticalAlignment="Top" Click="SelectTestButton_Click" Width="50" Grid.Column="2" Grid.Row="1"/>
+            <Label Content="Previous results:" HorizontalAlignment="Left" Margin="539,22,0,0" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1"/>
+            <ScrollViewer Margin="539,53,10,60" Grid.Column="2" Grid.Row="1">
+                <ListBox x:Name="previousResultsListBox" />
+
+            </ScrollViewer>
         </Grid>
 
     </Grid>

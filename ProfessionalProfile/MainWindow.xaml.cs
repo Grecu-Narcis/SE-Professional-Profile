@@ -2,6 +2,7 @@
 using ProfessionalProfile.profile_page;
 using ProfessionalProfile.repo;
 using ProfessionalProfile.service.login;
+using ProfessionalProfile.view;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;

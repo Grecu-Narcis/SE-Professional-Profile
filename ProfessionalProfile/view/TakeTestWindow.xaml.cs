@@ -88,9 +88,10 @@ namespace ProfessionalProfile.view
     public partial class TakeTestWindow : Window
     {
         private int TestId { get; }
+        private int UserId { get; }
         private TakeTestService takeTestService { get; }
         private List<QuestionComponent> questionComponents { get; }
-        public TakeTestWindow(int testId)
+        public TakeTestWindow(int testId, int userId)
         {
             InitializeComponent();
             this.TestId = testId;
@@ -98,6 +99,7 @@ namespace ProfessionalProfile.view
             this.questionComponents = new List<QuestionComponent>();
 
             loadTest();
+            UserId=userId;
         }
 
         private void loadTest()
@@ -119,7 +121,7 @@ namespace ProfessionalProfile.view
             AssessmentTestDTO assessmentTestDTO = takeTestService.getTestDTO(TestId);
 
             int score = takeTestService.computeTestResult(assessmentTestDTO, getAnswers());
-            takeTestService.addTestResult(TestId, 4, score, DateTime.Now);
+            takeTestService.addTestResult(TestId, this.UserId, score, DateTime.Now);
 
             MessageBox.Show("Your score is: " + score + "%");
 
