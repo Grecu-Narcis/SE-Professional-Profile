@@ -1,0 +1,303 @@
+﻿using ProfessionalProfile.business;
+using ProfessionalProfile.domain;
+using ProfessionalProfile.repo;
+using ProfessionalProfile.SectionViews;
+using ProfessionalProfile.view;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+
+namespace ProfessionalProfile.profile_page
+{
+    public class ButtonVisibilityMultiConverter : IMultiValueConverter
+    {
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+        {
+            // Ensure both values are provided and are of type int
+            if (values != null && values.Length == 2 && values[0] is int userId && values[1] is int currentUserId)
+            {
+                // Compare the UserId and CurrentUserId
+                return userId == currentUserId ? System.Windows.Visibility.Visible : System.Windows.Visibility.Collapsed;
+            }
+
+            return System.Windows.Visibility.Collapsed;
+        }
+
+        public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public partial class ProfilePage : Window
+    {
+        
+        UserRepo usersRepo = new UserRepo();
+        public ProfilePage(int userVisitingId, int UserProfileId)
+        {
+            InitializeComponent();
+
+            // Populate sample data we will fetch this from the user object later
+            CurrentUserId = userVisitingId; // this will be fetched from the logged in user
+            this.UserId = UserProfileId;
+            User user = usersRepo.GetById(UserId);
+            UserName = user.FirstName + " " + user.LastName;
+            Email = user.Email;
+            Summary = user.Summary;
+
+            // Fetch the user's education, experience, certifications, skills, and volunteering
+            EducationRepo = new EducationRepo();
+            Education = EducationRepo.GetByUserId(UserId);
+            ExperienceRepo = new WorkExperienceRepo();
+            Experience = ExperienceRepo.GetByUserId(UserId);
+            CertificationsRepo = new CertificateRepo();
+            Certifications = CertificationsRepo.GetByUserId(UserId);
+            SkillsRepo = new SkillRepo();
+            Skills = SkillsRepo.GetByUserId(UserId);
+            VolunteeringRepo = new VolunteeringRepo();
+            Volunteering = VolunteeringRepo.GetByUserId(UserId);
+
+            // Set the DataContext to this instance
+            DataContext = this;
+        }
+
+        
+
+        private void AddEducationButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Navigate to the page for adding education
+            EducationWindow educationWindow = new EducationWindow(UserId);
+            educationWindow.Show();
+        }
+
+        private void AddExperienceButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Navigate to the page for adding experience
+            WorkExperienceWindow workExperienceWindow = new WorkExperienceWindow(UserId);
+            workExperienceWindow.Show();
+        }
+
+        private void AddCertificationButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Navigate to the page for adding certification
+            CertificateWindow certificateWindow = new CertificateWindow(UserId);
+            certificateWindow.Show();
+        }
+
+        private void AddSkillsButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Navigate to the page for adding skills
+            SkillWindow skillWindow = new SkillWindow(UserId);
+            skillWindow.Show();
+        }
+
+        private void AddVolunteeringButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Navigate to the page for adding volunteering
+            VolunteeringWindow volunteeringWindow = new VolunteeringWindow(UserId);
+            volunteeringWindow.Show();
+        }
+
+        private void EditEducationButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            string educationId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the education ID
+            int id = int.Parse(educationId);
+            // Call a method to edit the education item using the educationId
+        }
+        private void DeleteEducationButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            string educationId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the education ID
+            int id = int.Parse(educationId);
+
+            // Call a method to delete the education item using the educationId
+            EducationRepo.Delete(id);
+
+            ProfilePage profilePage = new ProfilePage(this.CurrentUserId, this.UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Hide();
+        }
+
+        private void EditExperienceButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            string experienceId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the experience ID
+            int id = int.Parse(experienceId);
+
+
+            // Call a method to edit the experience item using the experienceId
+        }
+
+        private void DeleteExperienceButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            string experienceId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the experience ID
+            int id = int.Parse(experienceId);
+
+            // Call a method to delete the experience item using the experienceId
+            ExperienceRepo.Delete(id);
+            ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Hide();
+        }
+
+        private void EditCertificationButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            string certificationId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the certification ID
+            int id = int.Parse(certificationId);
+
+            EditCertificateWindow editCertificateWindow = new EditCertificateWindow(UserId, id);
+            editCertificateWindow.Show();
+            
+            // Call a method to edit the certification item using the certificationId
+            //EditCertification(certificationId);
+        }
+
+        private void DeleteCertificationButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            string certificationId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the certification ID
+            int id = int.Parse(certificationId);
+
+            // Call a method to delete the certification item using the certificationId
+            CertificationsRepo.Delete(id);
+            ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Hide();
+        }
+
+        private void EditSkillsButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            string skillId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the skill ID
+            int id = int.Parse(skillId);
+            // Call a method to edit the skill item using the skillId
+            //EditSkill(skillId);
+        }
+
+        private void DeleteSkillsButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            string skillId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the skill ID
+            int id = int.Parse(skillId);
+
+            // Call a method to delete the skill item using the skillId
+            SkillsRepo.Delete(id);
+            ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Hide();
+        }
+
+        private void EditVolunteeringButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            string volunteeringId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the volunteering ID
+            int id = int.Parse(volunteeringId);
+            // Call a method to edit the volunteering item using the volunteeringId
+            //EditVolunteering(volunteeringId);
+        }
+
+        private void DeleteVolunteeringButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            string volunteeringId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the volunteering ID
+            int id = int.Parse(volunteeringId);
+
+            // Call a method to delete the volunteering item using the volunteeringId
+            VolunteeringRepo.Delete(id);
+            ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Hide();
+        }
+
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            // Get the URL from the Hyperlink
+            string url = e.Uri.AbsoluteUri;
+
+            // Open the URL in the default web browser
+            System.Diagnostics.Process.Start(new ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
+            });
+
+            // Mark the event as handled
+            e.Handled = true;
+        }
+
+
+        // Define properties for profile information
+        public int CurrentUserId { get; set; }
+        public int UserId { get; set; }
+        public string UserName { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public string Summary { get; set; }
+        public List<Education> Education { get; set; }
+        public EducationRepo EducationRepo { get; set; }
+        public List<WorkExperience> Experience { get; set; }
+        public WorkExperienceRepo ExperienceRepo { get; set; }
+        public List<Certificate> Certifications { get; set; }
+        public CertificateRepo CertificationsRepo { get; set; }
+        public List<Skill> Skills { get; set; }
+        public SkillRepo SkillsRepo { get; set; }
+        public List<Volunteering> Volunteering { get; set; }    
+        public VolunteeringRepo VolunteeringRepo { get; set; }
+
+
+        private void SearchPageButton_Click(object sender, RoutedEventArgs e)
+        {
+            SearchUserPage searchUserPage = new SearchUserPage(CurrentUserId);
+
+            searchUserPage.Show();
+        }
+
+        private void ViewNotificationsButton_Click(object sender, RoutedEventArgs e)
+        {
+            NotificationsPage notificationsPage = new NotificationsPage(CurrentUserId);
+            notificationsPage.Show();
+        }
+
+        private void createAssessmentButton_Click(object sender, RoutedEventArgs e)
+        {
+            CreateAssessmentWindow createAssessmentWindow = new CreateAssessmentWindow(CurrentUserId);
+            createAssessmentWindow.Show();
+        }
+
+        private void takeAssessmentButton_Click(object sender, RoutedEventArgs e)
+        {
+            SelectTestWindow selectTestWindow = new SelectTestWindow(CurrentUserId);
+            selectTestWindow.Show();
+        }
+
+        private void becomePremiumUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            PremiumUsersService premiumUsersService = new PremiumUsersService();
+            premiumUsersService.AddPremiumUser(CurrentUserId);
+        }
+    }
+
+}

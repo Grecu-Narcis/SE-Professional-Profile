@@ -69,5 +69,10 @@ namespace ProfessionalProfile.domain
                     UserId == result.UserId &&
                     TestDate == result.TestDate;
         }
+
+        public override string ToString()
+        {
+            return _score.ToString();
+        }
     }
 }

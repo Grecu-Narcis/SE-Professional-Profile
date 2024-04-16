@@ -32,7 +32,7 @@ namespace ProfessionalProfile.domain
             this._userId = userId;
         }
 
-        public int Work_id
+        public int WorkId
         {
             get { return _workId; }
             set { _workId = value; }
@@ -74,10 +74,16 @@ namespace ProfessionalProfile.domain
             set { _description = value; }
         }
 
-        public int User_id
+        public int UserId
         {
             get { return this._userId; }
             set { this._userId = value; }
+        }
+
+        public string Responsibilities
+        {
+            get { return _responsibilities; }
+            set { _responsibilities = value; }
         }
 
         public override bool Equals(object? obj)
@@ -92,14 +98,20 @@ namespace ProfessionalProfile.domain
                    _achievements == experience._achievements &&
                    _description == experience._description &&
                    _userId == experience._userId &&
-                   User_id  == experience.User_id &&
-                   Work_id == experience.Work_id &&
+                   UserId  == experience.UserId &&
+                   WorkId == experience.WorkId &&
                    JobTitle == experience.JobTitle &&
                    Company == experience.Company &&
                    Location == experience.Location &&
                    EmployementPeriod == experience.EmployementPeriod &&
                    Achievements == experience.Achievements &&
                    Description == experience.Description;
+        }
+
+        public override string ToString()
+        {
+            return _jobTitle + "\n" + _company + "\n" + _location + "\n" + _employmentPeriod + "\n" +
+                _responsibilities + "\n" + _description + "\n" + _achievements;
         }
     }
 }

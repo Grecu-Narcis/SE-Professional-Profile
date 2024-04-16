@@ -49,39 +49,99 @@ C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net
 C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\Professi.045B007E.Up2Date
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.exe
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.dll.config
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.deps.json
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.runtimeconfig.json
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.dll
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.pdb
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.csproj.AssemblyReference.cache
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\MainWindow.g.cs
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\login\LoginPage.g.cs
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\signUp\SignUpPage.g.cs
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\webBrowser\BrowserPage.g.cs
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\App.g.cs
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile_MarkupCompile.cache
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile_MarkupCompile.lref
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\MainWindow.baml
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\login\LoginPage.baml
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\signUp\SignUpPage.baml
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\webBrowser\BrowserPage.baml
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.g.resources
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.GeneratedMSBuildEditorConfig.editorconfig
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.AssemblyInfoInputs.cache
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.AssemblyInfo.cs
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.csproj.CoreCompileInputs.cache
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.sourcelink.json
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\Professi.045B007E.Up2Date
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.dll
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\refint\ProfessionalProfile.dll
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.pdb
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.genruntimeconfig.cache
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ref\ProfessionalProfile.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.exe
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.dll.config
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.deps.json
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.runtimeconfig.json
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\ProfessionalProfile.pdb
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.csproj.AssemblyReference.cache
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\profile page\ProfilePage.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\profile page\ProfilePage.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile_MarkupCompile.cache
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile_MarkupCompile.lref
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.g.resources
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.AssemblyInfoInputs.cache
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.AssemblyInfo.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.csproj.CoreCompileInputs.cache
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.sourcelink.json
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\Professi.045B007E.Up2Date
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\refint\ProfessionalProfile.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.pdb
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ProfessionalProfile.genruntimeconfig.cache
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\ref\ProfessionalProfile.dll
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\profile page\ProfilePage.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\CertificateWindow.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\EducationWindow.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\ProfilePictureWindow.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\SkillWindow.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\VolunteeringWindow.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\WorkExperienceWindow.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\login\LoginPage.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\signUp\SignUpPage.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\webBrowser\BrowserPage.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\CreateAssessmentWindow.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SearchUserPage.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SelectTestWindow.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\TakeTestWindow.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\profile page\ProfilePage.baml
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\CertificateWindow.baml
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\EducationWindow.baml
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\ProfilePictureWindow.baml
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\SkillWindow.baml
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\VolunteeringWindow.baml
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\WorkExperienceWindow.baml
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\login\LoginPage.baml
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\signUp\SignUpPage.baml
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\webBrowser\BrowserPage.baml
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\CreateAssessmentWindow.baml
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SearchUserPage.baml
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SelectTestWindow.baml
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\TakeTestWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\CertificateWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\EducationWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\ProfilePictureWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\SkillWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\VolunteeringWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\WorkExperienceWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\login\LoginPage.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\signUp\SignUpPage.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\webBrowser\BrowserPage.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\CreateAssessmentWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SearchUserPage.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SelectTestWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\TakeTestWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\CertificateWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\EducationWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\ProfilePictureWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\SkillWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\VolunteeringWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\WorkExperienceWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\login\LoginPage.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\signUp\SignUpPage.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\service\webBrowser\BrowserPage.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\CreateAssessmentWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SearchUserPage.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\SelectTestWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\TakeTestWindow.baml
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\EditCertificateWindow.g.cs
+C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\EditCertificateWindow.baml
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\EditCertificateWindow.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\NotificationsPage.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\SectionViews\EditCertificateWindow.baml
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\NotificationsPage.baml
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\PrivacySettingsPage.g.cs
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\view\PrivacySettingsPage.baml

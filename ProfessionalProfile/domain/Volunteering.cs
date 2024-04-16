@@ -48,5 +48,10 @@ namespace ProfessionalProfile.domain
                    Description == volunteering.Description &&
                    UserId == volunteering.UserId;
         }
+
+        public override string ToString()
+        {
+            return _role + "\n" + _organisation + "\n" + _description;
+        }
     }
 }

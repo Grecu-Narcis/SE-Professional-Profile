@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\
 ProfessionalProfile
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\_DOCUMENTE_RARES\Desktop\SE-Professional-Profile\ProfessionalProfile\App.xaml
-642002432
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\App.xaml
+18506338112
 
-44-592154136
-199-663363532
-business_card_page\BusinessCardPage.xaml;MainWindow.xaml;projects-page\ProjectsPage.xaml;service\login\LoginPage.xaml;service\signUp\SignUpPage.xaml;service\webBrowser\BrowserPage.xaml;
+86-719058022
+199-546198748
+MainWindow.xaml;profile page\ProfilePage.xaml;SectionViews\CertificateWindow.xaml;SectionViews\EditCertificateWindow.xaml;SectionViews\EducationWindow.xaml;SectionViews\ProfilePictureWindow.xaml;SectionViews\SkillWindow.xaml;SectionViews\VolunteeringWindow.xaml;SectionViews\WorkExperienceWindow.xaml;service\login\LoginPage.xaml;service\signUp\SignUpPage.xaml;service\webBrowser\BrowserPage.xaml;view\CreateAssessmentWindow.xaml;view\NotificationsPage.xaml;view\PrivacySettingsPage.xaml;view\SearchUserPage.xaml;view\SelectTestWindow.xaml;view\TakeTestWindow.xaml;
 
-False
+True
 

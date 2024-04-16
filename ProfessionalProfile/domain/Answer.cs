@@ -55,5 +55,6 @@ namespace ProfessionalProfile.domain
                    AnswerText == answer.AnswerText &&
                    IsCorrect == answer.IsCorrect;
         }
+
     }
 }

@@ -65,5 +65,10 @@ namespace ProfessionalProfile.domain
                    ProjectName == project.ProjectName &&
                    Description == project.Description;
         }
+
+        public override string ToString()
+        {
+            return _projectName + "\n" + _description + "\n" + _technologies;
+        }
     }
 }

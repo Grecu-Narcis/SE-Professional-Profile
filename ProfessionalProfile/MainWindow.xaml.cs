@@ -1,5 +1,8 @@
 ﻿using ProfessionalProfile.domain;
+using ProfessionalProfile.profile_page;
 using ProfessionalProfile.repo;
+using ProfessionalProfile.service.login;
+using ProfessionalProfile.view;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,6 +25,14 @@ namespace ProfessionalProfile
         public MainWindow()
         {
             InitializeComponent();
+            this.Hide();
+
+            ProfilePage profile = new ProfilePage(60, 4);
+            profile.WindowState = WindowState.Maximized; // Set the WindowState to Maximized
+            profile.Show();
+
+            PrivacySettingsPage privacySettingsPage = new PrivacySettingsPage(60);
+            privacySettingsPage.Show();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

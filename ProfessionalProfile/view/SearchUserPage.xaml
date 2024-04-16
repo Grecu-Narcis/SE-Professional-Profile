@@ -1,0 +1,24 @@
+﻿<Window x:Class="ProfessionalProfile.view.SearchUserPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProfessionalProfile.view"
+        mc:Ignorable="d"
+        Title="SearchUserPage" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="163,0,163,0">
+            <StackPanel Height="39" Orientation="Horizontal">
+                <TextBox x:Name="SearchTextBox" TextWrapping="Wrap" Text="Seach here for users..." Width="310" RenderTransformOrigin="-0.586,1.166" Height="24" GotFocus="SearchTextBox_GotFocus"/>
+                <Button x:Name="SearchUsersButton" Content="Search Users" Margin="50,0,0,0" Height="26" Click="SearchUsersButton_Click"/>
+            </StackPanel>
+            <ScrollViewer Height="287">
+                <StackPanel x:Name="UsersListStackPanel" Height="272">
+                    <ListBox x:Name="UsersListBox" Height="271"/>
+                </StackPanel>
+            </ScrollViewer>
+            <Button x:Name="ViewProfileButton" Content="View Profile" Height="32" Width="124" Click="ViewProfileButton_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

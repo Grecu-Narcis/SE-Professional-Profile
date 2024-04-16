@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProfessionalProfile.repo
 {
-    public class AssessmentTestRepo : RepoInterface<AssessmentTestRepo>
+    public class AssessmentTestRepo : RepoInterface<AssessmentTest>
     {
         private string _connectionString;
 
@@ -19,36 +19,118 @@ namespace ProfessionalProfile.repo
             _connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
         }
 
-        public void Add(AssessmentTestRepo item)
+        public void Add(AssessmentTest item)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
 
-                string sql = "EXEC ";
+                string sql = @"INSERT INTO AssessmentTest (TestName, UserId, Description, SkillId) 
+                       VALUES (@Name, @UserId, @Description, @SkillId)";
+
                 SqlCommand command = new SqlCommand(sql, connection);
+                command.Parameters.AddWithValue("@Name", item.TestName);
+                command.Parameters.AddWithValue("@UserId", item.UserId);
+                command.Parameters.AddWithValue("@Description", item.Description);
+                command.Parameters.AddWithValue("@SkillId", item.Skill_id);
 
                 command.ExecuteNonQuery();
             }
         }
 
+        public int GetIdByName(string testName)
+        {
+            int assessmentTestId = 0;
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string sql = "SELECT AssessmentTestId FROM AssessmentTest WHERE TestName = @TestName";
+
+                SqlCommand command = new SqlCommand(sql, connection);
+                command.Parameters.AddWithValue("@TestName", testName);
+
+                object result = command.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    assessmentTestId = Convert.ToInt32(result);
+                }
+            }
+
+            return assessmentTestId;
+        }
+
+        public List<AssessmentTest> GetAll()
+        {
+            List<AssessmentTest> assessmentTests = new List<AssessmentTest>();
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string sql = "SELECT * FROM AssessmentTest";
+                SqlCommand command = new SqlCommand(sql, connection);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+
+                        int AssessmentTestId = (int)reader["assessmentTestId"];
+                        string TestName = (string)reader["testName"];
+                        int UserId = (int)reader["userId"];
+                        string Description = (string)reader["description"];
+                        int SkillId = (int)reader["SkillId"];
+
+                        AssessmentTest assessmentTest = new AssessmentTest(AssessmentTestId, TestName, UserId, Description, SkillId);
+
+                        assessmentTests.Add(assessmentTest);
+                    }
+                }
+            }
+
+            return assessmentTests;
+        }
+
+
         public void Delete(int id)
         {
         }
 
-        public List<AssessmentTestRepo> GetAll()
+        public AssessmentTest GetById(int id)
         {
-            List<AssessmentTestRepo> assesmentTests = new List<AssessmentTestRepo>();
+            AssessmentTest assessmentTest = null;
 
-            return assesmentTests;
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string sql = "SELECT * FROM AssessmentTest WHERE assessmentTestId = @Id";
+                SqlCommand command = new SqlCommand(sql, connection);
+                command.Parameters.AddWithValue("@Id", id);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        
+                        int AssessmentTestId = (int)reader["assessmentTestId"];
+                        string TestName = (string)reader["testName"];
+                        int UserId = (int)reader["userId"];
+                        string Description = (string)reader["description"];
+                        int SkillId = (int)reader["SkillId"];
+
+                        assessmentTest = new AssessmentTest(AssessmentTestId, TestName, UserId, Description, SkillId);
+
+                    }
+                }
+            }
+
+            return assessmentTest;
         }
 
-        public AssessmentTestRepo GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(AssessmentTestRepo item)
+        public void Update(AssessmentTest item)
         {
         }
     }

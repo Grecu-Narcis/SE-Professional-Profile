@@ -1,5 +1,7 @@
 ﻿using ProfessionalProfile.domain;
+using ProfessionalProfile.profile_page;
 using ProfessionalProfile.repo;
+using ProfessionalProfile.SectionViews;
 using ProfessionalProfile.service.login;
 using System;
 using System.Collections.Generic;
@@ -173,10 +175,25 @@ namespace ProfessionalProfile.service.webBrowser
 
 
                 // AICI IN LOC DE LOGINPAGE, mergem la pagina principala, puteti lua newUser.userId pentru a customiza pagina
-                LoginPage loginPage = new LoginPage();
+                //LoginPage loginPage = new LoginPage();
+                //this.Hide();
+                //loginPage.titleBox.Text = "Welcome back " + newUser.FirstName + newUser.LastName + newUser.Email + newUser.Address + newUser.Picture;
+                //loginPage.Show();
+                User loggedInUser = null;
+                List<User> allUsers = this.usersRepo.GetAll();
+                foreach (var user in allUsers)
+                {
+                    if (user.Email == email)
+                    {
+                        loggedInUser = (User)user;
+                        break;
+                    }
+                }
+
+                CertificateWindow window = new CertificateWindow(loggedInUser.UserId);             
                 this.Hide();
-                loginPage.titleBox.Text = "Welcome back " + newUser.FirstName + newUser.LastName + newUser.Email + newUser.Address + newUser.Picture;
-                loginPage.Show();
+                window.Show();
+
                 return newUser;
 
             }
@@ -223,12 +240,26 @@ namespace ProfessionalProfile.service.webBrowser
                 }
 
                 // AICI IN LOC DE LOGINPAGE, mergem la pagina principala, puteti lua newUser.userId pentru a customiza pagina
-                LoginPage loginPage = new LoginPage();
-                this.Hide();
-                loginPage.titleBox.Text = "Welcome back " + newUser.FirstName + newUser.LastName + newUser.Email + newUser.Address + newUser.Picture;
-                loginPage.Show();
+                //LoginPage loginPage = new LoginPage();
+                //this.Hide();
+                //loginPage.titleBox.Text = "Welcome back " + newUser.FirstName + newUser.LastName + newUser.Email + newUser.Address + newUser.Picture;
+                //loginPage.Show();
+                User loggedInUser = null;
+                List<User> allUsers = this.usersRepo.GetAll();
+                foreach (var user in allUsers)
+                {
+                    if (user.Email == email)
+                    {
+                        loggedInUser = (User)user;
+                        break;
+                    }
+                }
 
-               
+                CertificateWindow window = new CertificateWindow(loggedInUser.UserId);
+                this.Hide();
+                window.Show();
+
+
                 return newUser;
             }
             else
@@ -280,8 +311,12 @@ namespace ProfessionalProfile.service.webBrowser
                 }
                 else
                 {
-                    this.errorLabel.Content = "Welcome back " + loggedInUser.FirstName + loggedInUser.LastName + loggedInUser.Email + loggedInUser.Address + loggedInUser.Picture;
-                    this.errorLabel.Foreground = Brushes.Green;
+                    //this.errorLabel.Content = "Welcome back " + loggedInUser.FirstName + loggedInUser.LastName + loggedInUser.Email + loggedInUser.Address + loggedInUser.Picture;
+                    //this.errorLabel.Foreground = Brushes.Green;
+                    //CertificateWindow window = new CertificateWindow(loggedInUser.UserId) ;
+                    ProfilePage window = new ProfilePage(loggedInUser.UserId, loggedInUser.UserId);
+                    this.Hide();
+                    window.Show();
                 }
 
                 return loggedInUser;
@@ -339,8 +374,10 @@ namespace ProfessionalProfile.service.webBrowser
                 }
                 else
                 {
-                    this.errorLabel.Content = "Welcome back " + loggedInUser.FirstName + loggedInUser.LastName + loggedInUser.Email + loggedInUser.Address + loggedInUser.Picture;
-                    this.errorLabel.Foreground = Brushes.Green;
+                    ProfilePage window = new ProfilePage(loggedInUser.UserId, loggedInUser.UserId);
+                    //CertificateWindow window = new CertificateWindow(loggedInUser.UserId);
+                    this.Hide();
+                    window.Show();
                 }
 
                 return newUser;

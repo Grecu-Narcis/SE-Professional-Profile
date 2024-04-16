@@ -83,5 +83,10 @@ namespace ProfessionalProfile.domain
                    GraduationDate == education.GraduationDate &&
                    GPA == education.GPA;
         }
+
+        public override string ToString()
+        {
+            return _institution + "\n" + _degree +"\n"+ _fieldOfStudy + "\n" + _graduationDate + "\n" + _GPA;
+        }
     }
 }

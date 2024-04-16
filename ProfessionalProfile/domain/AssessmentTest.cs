@@ -12,9 +12,9 @@ namespace ProfessionalProfile.domain
         private string _testName;
         private int _userId;
         private string _description;
-        private string _skill_id;
+        private int _skill_id;
 
-        public AssessmentTest(int assest_id, string testName, int userId, string description, string skillsAssessed)
+        public AssessmentTest(int assest_id, string testName, int userId, string description, int skillsAssessed)
         {
             this._assessmentTestId = assest_id;
             this._testName = testName;
@@ -47,7 +47,7 @@ namespace ProfessionalProfile.domain
             set { _description = value; }
         }
 
-        public string Skill_id{
+        public int Skill_id{
             get {  return _skill_id; }
             set { _skill_id = value;}
         }
@@ -65,6 +65,11 @@ namespace ProfessionalProfile.domain
                    UserId == test.UserId &&
                    Description == test.Description &&
                    Skill_id == test.Skill_id;
+        }
+
+        public override string ToString()
+        {
+            return _testName + "\n" + _description;
         }
     }
 }

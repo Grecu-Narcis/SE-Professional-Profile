@@ -18,7 +18,8 @@ namespace ProfessionalProfile.domain
             this._name = name;
         }
 
-        public int SkillId{
+        public int SkillId
+        {
             get { return _skillId; }
             set { _skillId = value; }
         }
@@ -36,6 +37,11 @@ namespace ProfessionalProfile.domain
                    _name == skill._name &&
                    SkillId == skill.SkillId &&
                    Name == skill.Name;
+        }
+
+        public override string ToString()
+        {
+            return _name;
         }
     }
 }

@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "D:\\_DOCUMENTE_RARES\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\",
   "Documents": [
     {
@@ -29,6 +30,37 @@
     {
       "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|d:\\_documente_rares\\desktop\\se-professional-profile\\professionalprofile\\repo\\projectrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\projectrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+  "WorkspaceRootPath": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\repo\\privacyrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\privacyrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\business\\privacyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:business\\privacyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\profile page\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:profile page\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\business\\premiumusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:business\\premiumusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\repo\\premiumusersrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:repo\\premiumusersrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|c:\\users\\narci\\desktop\\se-professional-profile\\professionalprofile\\profile page\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7837BA7D-BE22-4B79-9078-0CB521EE953B}|ProfessionalProfile.csproj|solutionrelative:profile page\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+>>>>>>> 9f9c138898463b3f09c18715b651751fca58167a
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +70,107 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1144,
+<<<<<<< HEAD
           "SelectedChildIndex": 5,
+=======
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PrivacyRepo.cs",
+              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\repo\\PrivacyRepo.cs",
+              "RelativeDocumentMoniker": "repo\\PrivacyRepo.cs",
+              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\repo\\PrivacyRepo.cs",
+              "RelativeToolTip": "repo\\PrivacyRepo.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAiwBwAAACdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T08:23:50.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAwCEAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T08:22:02.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PrivacyService.cs",
+              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\business\\PrivacyService.cs",
+              "RelativeDocumentMoniker": "business\\PrivacyService.cs",
+              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\business\\PrivacyService.cs",
+              "RelativeToolTip": "business\\PrivacyService.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAcwCEAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T08:19:58.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PremiumUsersRepo.cs",
+              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\repo\\PremiumUsersRepo.cs",
+              "RelativeDocumentMoniker": "repo\\PremiumUsersRepo.cs",
+              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\repo\\PremiumUsersRepo.cs",
+              "RelativeToolTip": "repo\\PremiumUsersRepo.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T08:17:38.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PremiumUsersService.cs",
+              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\business\\PremiumUsersService.cs",
+              "RelativeDocumentMoniker": "business\\PremiumUsersService.cs",
+              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\business\\PremiumUsersService.cs",
+              "RelativeToolTip": "business\\PremiumUsersService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAkwB8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T08:17:00.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProfilePage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\profile page\\ProfilePage.xaml.cs",
+              "RelativeDocumentMoniker": "profile page\\ProfilePage.xaml.cs",
+              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\profile page\\ProfilePage.xaml.cs",
+              "RelativeToolTip": "profile page\\ProfilePage.xaml.cs",
+              "ViewState": "AQIAABsBAAAAAAAAAAA8wCoBAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T08:16:38.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProfilePage.xaml",
+              "DocumentMoniker": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\profile page\\ProfilePage.xaml",
+              "RelativeDocumentMoniker": "profile page\\ProfilePage.xaml",
+              "ToolTip": "C:\\Users\\narci\\Desktop\\SE-Professional-Profile\\ProfessionalProfile\\profile page\\ProfilePage.xaml",
+              "RelativeToolTip": "profile page\\ProfilePage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-16T08:16:30.361Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1144,
+          "SelectedChildIndex": -1,
+>>>>>>> 9f9c138898463b3f09c18715b651751fca58167a
           "Children": [
             {
               "$type": "Document",
@@ -68,6 +200,7 @@
             },
             {
               "$type": "Bookmark",
+<<<<<<< HEAD
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
@@ -132,6 +265,9 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T14:07:46.989Z",
               "EditorCaption": ""
+=======
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+>>>>>>> 9f9c138898463b3f09c18715b651751fca58167a
             }
           ]
         }

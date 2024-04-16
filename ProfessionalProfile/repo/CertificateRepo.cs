@@ -1,4 +1,5 @@
 ﻿using ProfessionalProfile.domain;
+using ProfessionalProfile.SectionValidators;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -20,6 +21,7 @@ namespace ProfessionalProfile.repo
         }
         public void Add(Certificate item)
         {
+            SectionValidator.validateCertificate(item);
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
@@ -84,6 +86,24 @@ namespace ProfessionalProfile.repo
             return certificates;
         }
 
+        public List<Certificate> GetByUserId(int userId)
+        {
+            List<Certificate> certificates = new List<Certificate>();
+
+            certificates = GetAll();
+
+            for (int i = 0; i < certificates.Count; i++)
+            {
+                if (certificates[i].UserId != userId)
+                {
+                    certificates.RemoveAt(i);
+                    i--;
+                }
+            }
+
+            return certificates;
+        }
+
         public Certificate GetById(int id)
         {
             Certificate certificate = null;
@@ -127,6 +147,7 @@ namespace ProfessionalProfile.repo
 
         public void Update(Certificate item)
         {
+            SectionValidator.validateCertificate(item);
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
