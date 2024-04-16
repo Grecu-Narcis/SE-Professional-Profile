@@ -13,21 +13,30 @@
                 <TextBlock Name ="titleBox" Text="Sign up" FontSize="35" HorizontalAlignment="Center" Margin="0,10,0,0"/>
 
                 <StackPanel Margin="40,0,40,0">
-                <Label Content="Email:" FontSize="25" Margin="0 10"/>
+                <Label Content="Email:" FontSize="25" Margin="0 5"/>
                 <TextBox Name="emailBox" FontSize="20" Text="Enter your email" Foreground="Gray" Margin="0,0,0,20" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
 
-                <Label Content="Name:" FontSize="25" Margin="0 10"/>
+                <Label Content="Name:" FontSize="25" Margin="0 5"/>
                 <TextBox Name="nameBox" FontSize="20" Text="Enter your name" Foreground="Gray" Margin="0,0,0,20" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
 
-                <Label Content="Password:" FontSize="25" Margin="0 10"/>
+                <Label Content="Password:" FontSize="25" Margin="0 5"/>
                     <Grid>
                     <PasswordBox x:Name="passwordBox" FontSize="20" PasswordChanged="PasswordBox_PasswordChanged"/>
                     <TextBox x:Name="passwordPlaceholder" FontSize="20" Text="Enter your password" Foreground="Gray"  GotFocus="PasswordPlaceholder_GotFocus"/>
                     </Grid>
-                <Label Content="Birth date:" FontSize="25" Margin="0 20 0 0"/>
+                <Label Content="Birth date:" FontSize="25" Margin="0 15 0 0"/>
                 <TextBox Name="dateBox" FontSize="20" Text="YYYY-MM-DD" Foreground="Gray" Margin="0,5,0,0" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
                     <Label Content="*Optional" FontSize="14"/>
-                </StackPanel>
+                <Label Content="Phone number:" FontSize="25" Margin="0 15 0 0"/>
+                <TextBox Name="phoneBox" FontSize="20" Text="Enter your number: +40" Foreground="Gray" Margin="0,5,0,0" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+                    <Label Content="*Optional" FontSize="14"/>
+                <Label Content="About you:" FontSize="25" Margin="0 15 0 0"/>
+                <TextBox Name="descBox" FontSize="20" TextWrapping="Wrap" AcceptsReturn="True" Text="Write a short description" Foreground="Gray" Margin="0,5,0,0" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" Height="65"/>
+                    <Label Content="*Optional" FontSize="14"/>
+            </StackPanel>
+                
+                
+               
 
             <Button Content="Sign up" Click="handleSignUp" FontSize="30" HorizontalAlignment="Center" Margin="5 5 5 0" Padding="60 5"/>
             <Label Name="errorLabel" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Red" FontSize="25"/>
