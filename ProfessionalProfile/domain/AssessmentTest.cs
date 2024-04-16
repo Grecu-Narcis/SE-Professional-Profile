@@ -66,5 +66,10 @@ namespace ProfessionalProfile.domain
                    Description == test.Description &&
                    Skill_id == test.Skill_id;
         }
+
+        public override string ToString()
+        {
+            return _testName + "\n" + _description;
+        }
     }
 }

@@ -46,5 +46,10 @@ namespace ProfessionalProfile.domain
                    AssesmentTestId == question.AssesmentTestId &&
                    QuestionText == question.QuestionText;
         }
+
+        public override string ToString()
+        {
+            return _questionText;
+        }
     }
 }
