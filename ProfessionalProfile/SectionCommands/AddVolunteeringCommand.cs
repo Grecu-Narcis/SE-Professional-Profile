@@ -1,5 +1,6 @@
 ﻿using ProfessionalProfile.domain;
 using ProfessionalProfile.repo;
+using ProfessionalProfile.SectionExceptions;
 using ProfessionalProfile.SectionViewModels;
 using System;
 using System.Collections.Generic;
@@ -15,20 +16,21 @@ namespace ProfessionalProfile.SectionCommands
     {
         private readonly VolunteeringRepo _volunteeringRepo;
         private readonly VolunteeringViewModel _volunteeringViewModel;
+        private readonly int _userId;
 
-        public AddVolunteeringCommand(VolunteeringRepo volunteeringRepo, VolunteeringViewModel volunteeringViewModel)
+        public AddVolunteeringCommand(VolunteeringRepo volunteeringRepo, VolunteeringViewModel volunteeringViewModel, int userId)
         {
             _volunteeringRepo = volunteeringRepo;
             _volunteeringViewModel = volunteeringViewModel;
-
+            _userId = userId;
             _volunteeringViewModel.PropertyChanged += OnViewModelPropertyChanged;
+            
         }
 
         public override void Execute(object parameter)
         {
-            Volunteering volunteering = new Volunteering(4, 4, _volunteeringViewModel.Organisation, _volunteeringViewModel.Role, _volunteeringViewModel.Description);
-
-            //try catch block
+            Volunteering volunteering = new Volunteering(4, _userId, _volunteeringViewModel.Organisation, _volunteeringViewModel.Role, _volunteeringViewModel.Description);
+          
             _volunteeringRepo.Add(volunteering);
             MessageBox.Show("Volunteering added successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
         }

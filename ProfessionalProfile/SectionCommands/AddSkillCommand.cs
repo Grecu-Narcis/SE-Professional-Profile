@@ -15,12 +15,13 @@ namespace ProfessionalProfile.SectionCommands
     {
         private readonly SkillViewModel _skillViewModel;
         private readonly SkillRepo _skillRepo;
+        private readonly int _userId;
 
-        public AddSkillCommand(SkillViewModel skillViewModel, SkillRepo skillRepo)
+        public AddSkillCommand(SkillViewModel skillViewModel, SkillRepo skillRepo, int userId)
         {
             _skillViewModel = skillViewModel;
             _skillRepo = skillRepo;
-
+            _userId = userId;
             _skillViewModel.PropertyChanged += OnViewModelPropertyChanged;
         }
         

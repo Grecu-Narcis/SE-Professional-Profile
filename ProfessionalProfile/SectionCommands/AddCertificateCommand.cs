@@ -30,7 +30,6 @@ namespace ProfessionalProfile.SectionCommands
 
         public override void Execute(object parameter)
         {
-            //user id 4 always
             Certificate certificate = new Certificate(
                     4,
                     _userId,

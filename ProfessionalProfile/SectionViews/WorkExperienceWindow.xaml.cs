@@ -26,10 +26,9 @@ namespace ProfessionalProfile.SectionViews
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
-
-            WorkExperienceViewModel viewModel = new WorkExperienceViewModel(new WorkExperienceRepo());
-            DataContext = viewModel;
             this.userId = userId;
+            WorkExperienceViewModel viewModel = new WorkExperienceViewModel(new WorkExperienceRepo(), userId);
+            DataContext = viewModel;
         }
 
         private void OpenCertificateWindow(object sender, RoutedEventArgs e)

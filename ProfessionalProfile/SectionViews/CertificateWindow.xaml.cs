@@ -29,7 +29,6 @@ namespace ProfessionalProfile.SectionViews
             this.userId = userId;
             CertificateViewModel viewModel = new CertificateViewModel(new CertificateRepo(), userId);
             DataContext = viewModel;
-            
         }
 
         private void OpenVolunteeringWindow(object sender, RoutedEventArgs e)

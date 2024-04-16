@@ -16,12 +16,13 @@ namespace ProfessionalProfile.SectionCommands
     {
         private readonly EducationRepo _educationRepo;
         private readonly EducationViewModel _educationViewModel;
+        private readonly int _userId;
 
-        public AddEducationCommand(EducationViewModel educationViewModel, EducationRepo educationRepo)
+        public AddEducationCommand(EducationViewModel educationViewModel, EducationRepo educationRepo, int userId)
         {
             _educationRepo = educationRepo;
             _educationViewModel = educationViewModel;
-
+            _userId = userId;
             _educationViewModel.PropertyChanged += OnViewModelPropertyChanged;
         }
 
@@ -32,7 +33,7 @@ namespace ProfessionalProfile.SectionCommands
             {
                 Education education = new Education(
                                                 4,
-                                                4,
+                                                _userId,
                                                 _educationViewModel.Degree,
                                                 _educationViewModel.Institution,
                                                 _educationViewModel.FieldOfStudy,
