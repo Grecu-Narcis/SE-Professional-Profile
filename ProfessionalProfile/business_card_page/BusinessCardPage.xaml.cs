@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media.Imaging;
+using System.Windows.Media;
 using ProfessionalProfile.domain;
 using ProfessionalProfile.repo;
+using Microsoft.Win32;
 
 namespace ProfessionalProfile.business_card_page
 {
@@ -21,8 +25,8 @@ namespace ProfessionalProfile.business_card_page
         {
             InitializeComponent();
 
-            this.DownloadCardButton.Visibility = Visibility.Hidden;
-            this.DownloadCardButton.Visibility = Visibility.Hidden;
+            //this.DownloadCardButton.Visibility = Visibility.Hidden;
+            //this.DownloadCardButton.Visibility = Visibility.Hidden;
 
             BussinesCard businessCard = businessCardRepo.GetByUserId(UserId);
             User user = usersRepo.GetById(UserId);
@@ -91,6 +95,54 @@ namespace ProfessionalProfile.business_card_page
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private void DownloadCardButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //// Capture the content of the current WPF window
+                //RenderTargetBitmap renderTargetBitmap = new RenderTargetBitmap((int)this.ActualWidth, (int)this.ActualHeight, 96, 96, PixelFormats.Pbgra32);
+                //renderTargetBitmap.Render(this);
+
+                //// Create a BitmapEncoder to save the captured content as an image
+                //BitmapEncoder encoder = new PngBitmapEncoder();
+                //encoder.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
+
+                //// Save the image to a file
+                //string fileName = "C:\\Users\\higye\\OneDrive\\Imagini\\business_card.png";
+                //using (FileStream stream = new FileStream(fileName, FileMode.Create))
+                //{
+                //    encoder.Save(stream);
+                //}
+                // Capture the content of the current WPF window
+                RenderTargetBitmap renderTargetBitmap = new RenderTargetBitmap((int)this.ActualWidth, (int)this.ActualHeight, 96, 96, PixelFormats.Pbgra32);
+                renderTargetBitmap.Render(this);
+
+                // Create a BitmapEncoder to save the captured content as an image
+                BitmapEncoder encoder = new PngBitmapEncoder();
+                encoder.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
+
+                // Allow user to choose where to save the file
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "PNG Image|*.png";
+                saveFileDialog.Title = "Save Business Card Image";
+                saveFileDialog.FileName = "business_card.png"; // Default file name
+                if (saveFileDialog.ShowDialog() == true)
+                {
+                    // Save the image to the selected file
+                    using (FileStream stream = new FileStream(saveFileDialog.FileName, FileMode.Create))
+                    {
+                        encoder.Save(stream);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that occur during the file-saving process
+                Console.WriteLine("An error occurred while saving the image: " + ex.Message);
+            }
         }
     }
 
