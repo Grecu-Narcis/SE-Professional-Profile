@@ -10,216 +10,216 @@
     </Window.Resources>
 
     <ScrollViewer>
-            <Grid Margin="0,0,10,0">
-        <!-- Define rows -->
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <!-- Add more rows for additional elements if needed -->
-        </Grid.RowDefinitions>
+        <Grid Margin="0,0,10,0">
+            <!-- Define rows -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <!-- Add more rows for additional elements if needed -->
+            </Grid.RowDefinitions>
 
 
 
-        <!-- Profile Picture -->
-        <Image Source="dude.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="13,23,0,0" Grid.Row="0" Width="121" Height="121" />
+            <!-- Profile Picture -->
+            <Image Source="dude.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="13,23,0,0" Grid.Row="0" Width="121" Height="121" />
 
-        <!-- Name -->
-        <TextBlock Text="{Binding UserName}" FontWeight="Bold" FontSize="24" Margin="147,16,581,89" Grid.Row="0"/>
+            <!-- Name -->
+            <TextBlock Text="{Binding UserName}" FontWeight="Bold" FontSize="24" Margin="147,16,581,89" Grid.Row="0"/>
 
-        <!-- Email -->
-        <TextBlock Text="{Binding Email}" Margin="147,60,581,60" Grid.Row="0"/>
+            <!-- Email -->
+            <TextBlock Text="{Binding Email}" Margin="147,60,581,60" Grid.Row="0"/>
 
-        <!-- Contact -->
-        <TextBlock Text="+40 (756) 883 187" Margin="147,91,581,29" Grid.Row="0" />
+            <!-- Contact -->
+            <TextBlock Text="+40 (756) 883 187" Margin="147,91,581,29" Grid.Row="0" />
 
-        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"  Width="26" Margin="147,114,0,2" >
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"  Width="26" Margin="147,114,0,2" >
             <Hyperlink NavigateUri="https://www.linkedin.com/" TextDecorations="None"  RequestNavigate="Hyperlink_RequestNavigate">
                 <Image Source="linkdin.png" Height="30" Width="25"/>
             </Hyperlink>
-        </TextBlock>
+            </TextBlock>
 
-        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"  Width="26" Margin="200,114,0,2" >
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top"  Width="26" Margin="200,114,0,2" >
             <Hyperlink NavigateUri="https://github.com/" TextDecorations="None" RequestNavigate="Hyperlink_RequestNavigate">
                 <Image Source="github.png" Height="30" Width="25"/>
             </Hyperlink>
-        </TextBlock>
+            </TextBlock>
 
 
 
-        <!-- Email -->
-        <TextBlock Text="{Binding Summary}" Margin="558,29,10,10" Grid.Row="0" TextAlignment="Center"/>
+            <!-- Email -->
+            <TextBlock Text="{Binding Summary}" Margin="558,29,10,10" Grid.Row="0" TextAlignment="Center"/>
 
-        <!-- Education Section -->
-        <Border BorderBrush="Black" BorderThickness="1" Margin="10" Grid.Row="1" >
-            <StackPanel>
-                <DockPanel>
-                    <TextBlock Text="Education" FontWeight="Bold" Margin="5"/>
-                    <Button Content="Add" HorizontalAlignment="Right" Margin="0,0,5,0"  Click="AddEducationButton_Click">
-                        <Button.Visibility>
-                            <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
-                                <Binding Path="UserId"/>
-                                <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
-                            </MultiBinding>
-                        </Button.Visibility>
-                    </Button>
-                </DockPanel>
-                <ItemsControl ItemsSource="{Binding Education}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
-                                <TextBlock Text="{Binding}" Margin="5"/>
-                                <Button Content="Edit" Grid.Column="1" Margin="0,0,5,0" Click="EditEducationButton_Click" Tag="{Binding EducationId}">
-                                    <Button.Visibility>
-                                        <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
-                                            <Binding Path="UserId"/>
-                                            <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
-                                        </MultiBinding>
-                                    </Button.Visibility>
-                                </Button>
-                                <Button Content="Delete" Grid.Column="2" Click="DeleteEducationButton_Click" Tag="{Binding EducationId}">
-                                    <Button.Visibility>
-                                        <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
-                                            <Binding Path="UserId"/>
-                                            <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
-                                        </MultiBinding>
-                                    </Button.Visibility>
-                                </Button>
-                            </Grid>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </StackPanel>
-        </Border>
+            <!-- Education Section -->
+            <Border x:Name="educationBorder" BorderBrush="Black" BorderThickness="1" Margin="10" Grid.Row="1" >
+                <StackPanel x:Name="educationPanel">
+                    <DockPanel>
+                        <TextBlock Text="Education" FontWeight="Bold" Margin="5"/>
+                        <Button Content="Add" HorizontalAlignment="Right" Margin="0,0,5,0"  Click="AddEducationButton_Click">
+                            <Button.Visibility>
+                                <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
+                                    <Binding Path="UserId"/>
+                                    <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
+                                </MultiBinding>
+                            </Button.Visibility>
+                        </Button>
+                    </DockPanel>
+                    <ItemsControl ItemsSource="{Binding Education}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="{Binding}" Margin="5"/>
+                                    <Button Content="Edit" Grid.Column="1" Margin="0,0,5,0" Click="EditEducationButton_Click" Tag="{Binding EducationId}">
+                                        <Button.Visibility>
+                                            <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
+                                                <Binding Path="UserId"/>
+                                                <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
+                                            </MultiBinding>
+                                        </Button.Visibility>
+                                    </Button>
+                                    <Button Content="Delete" Grid.Column="2" Click="DeleteEducationButton_Click" Tag="{Binding EducationId}">
+                                        <Button.Visibility>
+                                            <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
+                                                <Binding Path="UserId"/>
+                                                <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
+                                            </MultiBinding>
+                                        </Button.Visibility>
+                                    </Button>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </Border>
 
-        <!-- Experience Section -->
-        <Border BorderBrush="Black" BorderThickness="1" Margin="10" Grid.Row="2" >
-            <StackPanel>
-                <DockPanel>
-                    <TextBlock Text="Experience" FontWeight="Bold" Margin="5"/>
-                    <Button Content="Add" HorizontalAlignment="Right" Margin="0,0,5,0" Click="AddExperienceButton_Click">
-                        <Button.Visibility>
-                            <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
-                                <Binding Path="UserId"/>
-                                <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
-                            </MultiBinding>
-                        </Button.Visibility>
-                    </Button>
-                </DockPanel>
-                <ItemsControl ItemsSource="{Binding Experience}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
-                                <TextBlock Text="{Binding}" Margin="5"/>
-                                <Button Content="Edit" Grid.Column="1" Margin="0,0,5,0" Click="EditExperienceButton_Click" Tag="{Binding WorkId}">
-                                    <Button.Visibility>
-                                        <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
-                                            <Binding Path="UserId"/>
-                                            <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
-                                        </MultiBinding>
-                                    </Button.Visibility>
-                                </Button>
-                                <Button Content="Delete" Grid.Column="2" Click="DeleteExperienceButton_Click" Tag="{Binding WorkId}">
-                                    <Button.Visibility>
-                                        <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
-                                            <Binding Path="UserId"/>
-                                            <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
-                                        </MultiBinding>
-                                    </Button.Visibility>
-                                </Button>
-                            </Grid>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </StackPanel>
-        </Border>
+            <!-- Experience Section -->
+            <Border x:Name="experienceBorder" BorderBrush="Black" BorderThickness="1" Margin="10" Grid.Row="2" >
+                <StackPanel x:Name="experiencePanel">
+                    <DockPanel>
+                        <TextBlock Text="Experience" FontWeight="Bold" Margin="5"/>
+                        <Button Content="Add" HorizontalAlignment="Right" Margin="0,0,5,0" Click="AddExperienceButton_Click">
+                            <Button.Visibility>
+                                <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
+                                    <Binding Path="UserId"/>
+                                    <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
+                                </MultiBinding>
+                            </Button.Visibility>
+                        </Button>
+                    </DockPanel>
+                    <ItemsControl ItemsSource="{Binding Experience}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="{Binding}" Margin="5"/>
+                                    <Button Content="Edit" Grid.Column="1" Margin="0,0,5,0" Click="EditExperienceButton_Click" Tag="{Binding WorkId}">
+                                        <Button.Visibility>
+                                            <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
+                                                <Binding Path="UserId"/>
+                                                <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
+                                            </MultiBinding>
+                                        </Button.Visibility>
+                                    </Button>
+                                    <Button Content="Delete" Grid.Column="2" Click="DeleteExperienceButton_Click" Tag="{Binding WorkId}">
+                                        <Button.Visibility>
+                                            <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
+                                                <Binding Path="UserId"/>
+                                                <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
+                                            </MultiBinding>
+                                        </Button.Visibility>
+                                    </Button>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </Border>
 
-        <!-- Certifications Section -->
-        <Border BorderBrush="Black" BorderThickness="1" Margin="10" Grid.Row="3" >
-            <StackPanel>
-                <DockPanel>
-                    <TextBlock Text="Certifications" FontWeight="Bold" Margin="5"/>
-                    <Button Content="Add" HorizontalAlignment="Right" Margin="0,0,5,0" Click="AddCertificationButton_Click">
-                        <Button.Visibility>
-                            <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
-                                <Binding Path="UserId"/>
-                                <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
-                            </MultiBinding>
-                        </Button.Visibility>
-                    </Button>
-                </DockPanel>
-                <ItemsControl ItemsSource="{Binding Certifications}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
-                                <TextBlock Text="{Binding}" Margin="5"/>
-                                <Button Content="Edit" Grid.Column="1" Margin="0,0,5,0" Click="EditCertificationButton_Click" Tag="{Binding CertificateId}">
-                                    <Button.Visibility>
-                                        <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
-                                            <Binding Path="UserId"/>
-                                            <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
-                                        </MultiBinding>
-                                    </Button.Visibility>
-                                </Button>
-                                <Button Content="Delete" Grid.Column="2" Click="DeleteCertificationButton_Click" Tag="{Binding CertificateId}">
-                                    <Button.Visibility>
-                                        <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
-                                            <Binding Path="UserId"/>
-                                            <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
-                                        </MultiBinding>
-                                    </Button.Visibility>
-                                </Button>
-                            </Grid>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </StackPanel>
-        </Border>
+            <!-- Certifications Section -->
+            <Border x:Name="certificationsBorder" BorderBrush="Black" BorderThickness="1" Margin="10" Grid.Row="3" >
+                <StackPanel x:Name="certificationsPanel">
+                    <DockPanel>
+                        <TextBlock Text="Certifications" FontWeight="Bold" Margin="5"/>
+                        <Button Content="Add" HorizontalAlignment="Right" Margin="0,0,5,0" Click="AddCertificationButton_Click">
+                            <Button.Visibility>
+                                <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
+                                    <Binding Path="UserId"/>
+                                    <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
+                                </MultiBinding>
+                            </Button.Visibility>
+                        </Button>
+                    </DockPanel>
+                    <ItemsControl ItemsSource="{Binding Certifications}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="{Binding}" Margin="5"/>
+                                    <Button Content="Edit" Grid.Column="1" Margin="0,0,5,0" Click="EditCertificationButton_Click" Tag="{Binding CertificateId}">
+                                        <Button.Visibility>
+                                            <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
+                                                <Binding Path="UserId"/>
+                                                <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
+                                            </MultiBinding>
+                                        </Button.Visibility>
+                                    </Button>
+                                    <Button Content="Delete" Grid.Column="2" Click="DeleteCertificationButton_Click" Tag="{Binding CertificateId}">
+                                        <Button.Visibility>
+                                            <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
+                                                <Binding Path="UserId"/>
+                                                <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
+                                            </MultiBinding>
+                                        </Button.Visibility>
+                                    </Button>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </Border>
 
-        <!-- Skills Section -->
-        <Border BorderBrush="Black" BorderThickness="1" Margin="10" Grid.Row="4" >
-            <StackPanel>
-                <DockPanel>
-                    <TextBlock Text="Skills" FontWeight="Bold" Margin="5"/>
-                    <Button Content="Add" HorizontalAlignment="Right" Margin="0,0,5,0" Click="AddSkillsButton_Click">
-                        <Button.Visibility>
-                            <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
-                                <Binding Path="UserId"/>
-                                <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
-                            </MultiBinding>
-                        </Button.Visibility>
-                    </Button>
-                </DockPanel>
-                <ItemsControl ItemsSource="{Binding Skills}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
-                                <TextBlock Text="{Binding}" Margin="5"/>
+            <!-- Skills Section -->
+            <Border x:Name="skillsBorder" BorderBrush="Black" BorderThickness="1" Margin="10" Grid.Row="4" >
+                <StackPanel x:Name="skillsPanel">
+                    <DockPanel>
+                        <TextBlock Text="Skills" FontWeight="Bold" Margin="5"/>
+                        <Button Content="Add" HorizontalAlignment="Right" Margin="0,0,5,0" Click="AddSkillsButton_Click">
+                            <Button.Visibility>
+                                <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
+                                    <Binding Path="UserId"/>
+                                    <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
+                                </MultiBinding>
+                            </Button.Visibility>
+                        </Button>
+                    </DockPanel>
+                    <ItemsControl ItemsSource="{Binding Skills}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="{Binding}" Margin="5"/>
                                     <Button Content="Endorse" Grid.Column="1" Margin="0,0,5,0" >
                                         <Button.Visibility>
                                             <MultiBinding Converter="{StaticResource EndorseButtonVisibilityMultiConverter}">
@@ -229,13 +229,13 @@
                                         </Button.Visibility>
                                     </Button>
                                     <Button Content="Edit" Grid.Column="2" Margin="0,0,5,0" Click="EditSkillsButton_Click" Tag="{Binding SkillId}">
-                                    <Button.Visibility>
-                                        <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
-                                            <Binding Path="UserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
-                                            <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
-                                        </MultiBinding>
-                                    </Button.Visibility>
-                                </Button>
+                                        <Button.Visibility>
+                                            <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
+                                                <Binding Path="UserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
+                                                <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
+                                            </MultiBinding>
+                                        </Button.Visibility>
+                                    </Button>
                                     <Button Content="Delete" Grid.Column="3" Click="DeleteSkillsButton_Click" Tag="{Binding SkillId}">
                                         <Button.Visibility>
                                             <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
@@ -245,65 +245,66 @@
                                         </Button.Visibility>
                                     </Button>
                                 </Grid>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </StackPanel>
-        </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </Border>
 
-        <!-- Volunteering Section -->
-        <Border BorderBrush="Black" BorderThickness="1" Margin="10" Grid.Row="5" >
-            <StackPanel>
-                <DockPanel>
-                    <TextBlock Text="Volunteering" FontWeight="Bold" Margin="5"/>
-                    <Button Content="Add" HorizontalAlignment="Right" Margin="0,0,5,0" Click="AddVolunteeringButton_Click">
-                        <Button.Visibility>
-                            <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
-                                <Binding Path="UserId"/>
-                                <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
-                            </MultiBinding>
-                        </Button.Visibility>
-                    </Button>
-                </DockPanel>
-                <ItemsControl ItemsSource="{Binding Volunteering}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
-                                <TextBlock Text="{Binding}" Margin="5"/>
-                                <Button Content="Edit" Grid.Column="1" Margin="0,0,5,0" Click="EditVolunteeringButton_Click" Tag="{Binding VolunteeringId}">
-                                    <Button.Visibility>
-                                        <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
-                                            <Binding Path="UserId"/>
-                                            <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
-                                        </MultiBinding>
-                                    </Button.Visibility>
-                                </Button>
-                                <Button Content="Delete" Grid.Column="2" Click="DeleteVolunteeringButton_Click" Tag="{Binding VolunteeringId}">
-                                    <Button.Visibility>
-                                        <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
-                                            <Binding Path="UserId"/>
-                                            <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
-                                        </MultiBinding>
-                                    </Button.Visibility>
-                                </Button>
-                            </Grid>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </StackPanel>
-        </Border>
-        <Button x:Name="SearchPageButton" Content="Search" HorizontalAlignment="Left" Margin="483,52,0,0" VerticalAlignment="Top" Width="70" Click="SearchPageButton_Click"/>
-        <Button x:Name="ViewNotificationsButton" Content="Notifications" HorizontalAlignment="Left" Margin="483,84,0,0" VerticalAlignment="Top" Width="70" Click="ViewNotificationsButton_Click"/>
-        <Button x:Name="becomePremiumUserButton" Content="Become Premium Member" HorizontalAlignment="Left" Margin="28,70,0,0" Grid.Row="6" Click="becomePremiumUserButton_Click"/>
-        <Button x:Name="createAssessmentButton" Content="Create Assesments" HorizontalAlignment="Left" Margin="213,70,0,0" Grid.Row="6" VerticalAlignment="Top" Click="createAssessmentButton_Click" />
-        <Button x:Name="takeAssessmentButton" Content="Take Assesments" HorizontalAlignment="Left" Margin="368,70,0,0" Grid.Row="6" VerticalAlignment="Top" Click="takeAssessmentButton_Click" />
+            <!-- Volunteering Section -->
+            <Border x:Name="volunteeringBorder" BorderBrush="Black" BorderThickness="1" Margin="10" Grid.Row="5" >
+                <StackPanel x:Name="volunteeringPanel">
+                    <DockPanel>
+                        <TextBlock Text="Volunteering" FontWeight="Bold" Margin="5"/>
+                        <Button Content="Add" HorizontalAlignment="Right" Margin="0,0,5,0" Click="AddVolunteeringButton_Click">
+                            <Button.Visibility>
+                                <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
+                                    <Binding Path="UserId"/>
+                                    <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
+                                </MultiBinding>
+                            </Button.Visibility>
+                        </Button>
+                    </DockPanel>
+                    <ItemsControl ItemsSource="{Binding Volunteering}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="{Binding}" Margin="5"/>
+                                    <Button Content="Edit" Grid.Column="1" Margin="0,0,5,0" Click="EditVolunteeringButton_Click" Tag="{Binding VolunteeringId}">
+                                        <Button.Visibility>
+                                            <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
+                                                <Binding Path="UserId"/>
+                                                <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
+                                            </MultiBinding>
+                                        </Button.Visibility>
+                                    </Button>
+                                    <Button Content="Delete" Grid.Column="2" Click="DeleteVolunteeringButton_Click" Tag="{Binding VolunteeringId}">
+                                        <Button.Visibility>
+                                            <MultiBinding Converter="{StaticResource ButtonVisibilityMultiConverter}">
+                                                <Binding Path="UserId"/>
+                                                <Binding Path="CurrentUserId" RelativeSource="{RelativeSource AncestorType={x:Type local:ProfilePage}}"/>
+                                            </MultiBinding>
+                                        </Button.Visibility>
+                                    </Button>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </Border>
+            <Button x:Name="SearchPageButton" Content="Search" HorizontalAlignment="Left" Margin="483,52,0,0" VerticalAlignment="Top" Width="70" Click="SearchPageButton_Click"/>
+            <Button x:Name="ViewNotificationsButton" Content="Notifications" HorizontalAlignment="Left" Margin="483,84,0,0" VerticalAlignment="Top" Width="70" Click="ViewNotificationsButton_Click"/>
+            <Button x:Name="becomePremiumUserButton" Content="Become Premium Member" HorizontalAlignment="Left" Margin="28,70,0,0" Grid.Row="6" Click="becomePremiumUserButton_Click"/>
+            <Button x:Name="createAssessmentButton" Content="Create Assesments" HorizontalAlignment="Left" Margin="213,70,0,0" Grid.Row="6" VerticalAlignment="Top" Click="createAssessmentButton_Click" />
+            <Button x:Name="takeAssessmentButton" Content="Take Assesments" HorizontalAlignment="Left" Margin="368,70,0,0" Grid.Row="6" VerticalAlignment="Top" Click="takeAssessmentButton_Click" />
+            <Button x:Name="settingsButton" Content="Settings" HorizontalAlignment="Left" Margin="483,22,0,0" VerticalAlignment="Top" Width="70" Click="settingsButton_Click"/>
 
-    </Grid>
+        </Grid>
     </ScrollViewer>
 
 </Window>
