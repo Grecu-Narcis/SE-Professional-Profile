@@ -70,7 +70,7 @@
         <!-- Buttons -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20">
             <Button x:Name="generateQrButton" Content="Generate QR Code" Command="{Binding GenerateQRCodeCommand}" Margin="0,0,10,0" />
-            <Button x:Name="DownloadCardButton" Content="Download Card" Command="{Binding DownloadCardCommand}"/>
+            <Button x:Name="DownloadCardButton" Content="Download Card" Command="{Binding DownloadCardCommand}" Click="DownloadCardButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>
