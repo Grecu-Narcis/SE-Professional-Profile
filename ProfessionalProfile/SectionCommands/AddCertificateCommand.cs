@@ -1,4 +1,5 @@
 ﻿using ProfessionalProfile.domain;
+using ProfessionalProfile.profile_page;
 using ProfessionalProfile.repo;
 using ProfessionalProfile.SectionExceptions;
 using ProfessionalProfile.SectionViewModels;
@@ -17,12 +18,14 @@ namespace ProfessionalProfile.SectionCommands
         private readonly CertificateRepo _certificateRepo;
         private readonly CertificateViewModel _certificateViewModel;
         private readonly int _userId;
+        private bool isLoggedIn;
 
-        public AddCertificateCommand(SectionViewModels.CertificateViewModel certificateViewModel, CertificateRepo certificateRepo, int userId)
+        public AddCertificateCommand(SectionViewModels.CertificateViewModel certificateViewModel, CertificateRepo certificateRepo, int userId, bool isLoggedIn)
         {
             _certificateRepo = certificateRepo;
             _certificateViewModel = certificateViewModel;
             _userId = userId;
+            this.isLoggedIn = isLoggedIn;
             _certificateViewModel.PropertyChanged += OnViewModelPropertyChanged;
         }
 
@@ -44,6 +47,8 @@ namespace ProfessionalProfile.SectionCommands
             {
                 _certificateRepo.Add(certificate);
                 MessageBox.Show("Certificate added successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                ProfilePage profilePage = new ProfilePage(_userId, _userId);
+                profilePage.Show();
             }
             catch (CustomSectionException ex)
             {

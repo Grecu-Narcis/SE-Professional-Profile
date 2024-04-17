@@ -17,7 +17,7 @@
                 <TextBox Name="emailBox" FontSize="20" Text="Enter your email" Foreground="Gray" Margin="0,0,0,20" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
 
                 <Label Content="Name:" FontSize="25" Margin="0 5"/>
-                <TextBox Name="nameBox" FontSize="20" Text="Enter your name" Foreground="Gray" Margin="0,0,0,20" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+                <TextBox Name="nameBox" FontSize="20" Text="Enter your name" Foreground="Gray" Margin="0,0,0,20" GotFocus="TextBox_GotFocus"/>
 
                 <Label Content="Password:" FontSize="25" Margin="0 5"/>
                     <Grid>
@@ -25,13 +25,13 @@
                     <TextBox x:Name="passwordPlaceholder" FontSize="20" Text="Enter your password" Foreground="Gray"  GotFocus="PasswordPlaceholder_GotFocus"/>
                     </Grid>
                 <Label Content="Birth date:" FontSize="25" Margin="0 15 0 0"/>
-                <TextBox Name="dateBox" FontSize="20" Text="YYYY-MM-DD" Foreground="Gray" Margin="0,5,0,0" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+                <TextBox Name="dateBox" FontSize="20" Text="YYYY-MM-DD" Foreground="Gray" Margin="0,5,0,0" GotFocus="TextBox_GotFocus" LostFocus="BirthDate_LostFocus"/>
                     <Label Content="*Optional" FontSize="14"/>
                 <Label Content="Phone number:" FontSize="25" Margin="0 15 0 0"/>
-                <TextBox Name="phoneBox" FontSize="20" Text="Enter your number: +40" Foreground="Gray" Margin="0,5,0,0" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+                <TextBox Name="phoneBox" FontSize="20" Text="Enter your number: +40" Foreground="Gray" Margin="0,5,0,0" GotFocus="TextBox_GotFocus" LostFocus="PhoneBox_LostFocus" TextChanged="phoneBox_TextChanged"/>
                     <Label Content="*Optional" FontSize="14"/>
                 <Label Content="About you:" FontSize="25" Margin="0 15 0 0"/>
-                <TextBox Name="descBox" FontSize="20" TextWrapping="Wrap" AcceptsReturn="True" Text="Write a short description" Foreground="Gray" Margin="0,5,0,0" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" Height="65"/>
+                <TextBox Name="descBox" FontSize="20" TextWrapping="Wrap" AcceptsReturn="True" Text="Write a short description" Foreground="Gray" Margin="0,5,0,0" GotFocus="TextBox_GotFocus" Height="65"/>
                     <Label Content="*Optional" FontSize="14"/>
             </StackPanel>
                 

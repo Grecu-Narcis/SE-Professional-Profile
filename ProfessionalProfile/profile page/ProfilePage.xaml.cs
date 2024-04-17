@@ -68,9 +68,34 @@ namespace ProfessionalProfile.profile_page
     {
         
         UserRepo usersRepo = new UserRepo();
+       
         public ProfilePage(int userVisitingId, int UserProfileId)
         {
             InitializeComponent();
+
+            if (userVisitingId != UserProfileId)
+            {
+                ViewNotificationsButton.Visibility = Visibility.Hidden;
+                createAssessmentButton.Visibility = Visibility.Hidden;
+                takeAssessmentButton.Visibility = Visibility.Hidden;
+                becomePremiumUserButton.Visibility = Visibility.Hidden;
+                SearchPageButton.Visibility = Visibility.Hidden;
+            }
+
+            if (userVisitingId == UserProfileId)
+            {
+                PremiumUsersService premiumUsersService = new PremiumUsersService();
+                bool isPremium = premiumUsersService.isPremiumUser(UserProfileId);
+
+                if (isPremium)
+                {
+                    becomePremiumUserButton.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    createAssessmentButton.Visibility = Visibility.Hidden;
+                }
+            }
 
             // Populate sample data we will fetch this from the user object later
             CurrentUserId = userVisitingId; // this will be fetched from the logged in user
@@ -102,35 +127,62 @@ namespace ProfessionalProfile.profile_page
         {
             // Navigate to the page for adding education
             EducationWindow educationWindow = new EducationWindow(UserId);
-            educationWindow.Show();
+            this.Hide();
+
+            educationWindow.ShowDialog();
+
+            ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Close();
         }
 
         private void AddExperienceButton_Click(object sender, RoutedEventArgs e)
         {
             // Navigate to the page for adding experience
             WorkExperienceWindow workExperienceWindow = new WorkExperienceWindow(UserId);
-            workExperienceWindow.Show();
+            workExperienceWindow.ShowDialog();
+
+            ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Close();
         }
 
         private void AddCertificationButton_Click(object sender, RoutedEventArgs e)
         {
             // Navigate to the page for adding certification
             CertificateWindow certificateWindow = new CertificateWindow(UserId);
-            certificateWindow.Show();
+            certificateWindow.ShowDialog();
+
+            ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Close();
         }
 
         private void AddSkillsButton_Click(object sender, RoutedEventArgs e)
         {
             // Navigate to the page for adding skills
             SkillWindow skillWindow = new SkillWindow(UserId);
-            skillWindow.Show();
+            skillWindow.ShowDialog();
+
+            ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Close();
         }
 
         private void AddVolunteeringButton_Click(object sender, RoutedEventArgs e)
         {
             // Navigate to the page for adding volunteering
             VolunteeringWindow volunteeringWindow = new VolunteeringWindow(UserId);
-            volunteeringWindow.Show();
+            volunteeringWindow.ShowDialog();
+
+            ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Close();
         }
 
         private void EditEducationButton_Click(object sender, RoutedEventArgs e)
@@ -140,8 +192,13 @@ namespace ProfessionalProfile.profile_page
             int id = int.Parse(educationId);
 
             EditEducationWindow editEducationWindow = new EditEducationWindow(UserId, id);
-            editEducationWindow.Show();
+            editEducationWindow.ShowDialog();
             // Call a method to edit the education item using the educationId
+
+            ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Close();
         }
         private void DeleteEducationButton_Click(object sender, RoutedEventArgs e)
         {
@@ -164,9 +221,13 @@ namespace ProfessionalProfile.profile_page
             string experienceId = button.Tag.ToString(); // Assuming you set the Tag property of the button to the experience ID
             int id = int.Parse(experienceId);
             EditWorkExperienceWindow editWorkExperienceWindow = new EditWorkExperienceWindow(UserId, id);
-            editWorkExperienceWindow.Show();
+            editWorkExperienceWindow.ShowDialog();
 
             // Call a method to edit the experience item using the experienceId
+            ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Close();
         }
 
         private void DeleteExperienceButton_Click(object sender, RoutedEventArgs e)
@@ -179,8 +240,9 @@ namespace ProfessionalProfile.profile_page
             ExperienceRepo.Delete(id);
             ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
             profilePage.WindowState = WindowState.Maximized;
-            profilePage.Show();
+            profilePage.ShowDialog();
             this.Hide();
+
         }
 
         private void EditCertificationButton_Click(object sender, RoutedEventArgs e)
@@ -190,10 +252,14 @@ namespace ProfessionalProfile.profile_page
             int id = int.Parse(certificationId);
 
             EditCertificateWindow editCertificateWindow = new EditCertificateWindow(UserId, id);
-            editCertificateWindow.Show();
-            
+            editCertificateWindow.ShowDialog();
+
             // Call a method to edit the certification item using the certificationId
             //EditCertification(certificationId);
+            ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            this.Close();
+            profilePage.Show();
         }
 
         private void DeleteCertificationButton_Click(object sender, RoutedEventArgs e)
@@ -240,9 +306,14 @@ namespace ProfessionalProfile.profile_page
             int id = int.Parse(volunteeringId);
 
             EditVolunteeringWindow volunteeringWindow = new EditVolunteeringWindow(UserId, id);
-            volunteeringWindow.Show();
+            volunteeringWindow.ShowDialog();
             // Call a method to edit the volunteering item using the volunteeringId
             //EditVolunteering(volunteeringId);
+
+            ProfilePage profilePage = new ProfilePage(CurrentUserId, UserId);
+            profilePage.WindowState = WindowState.Maximized;
+            profilePage.Show();
+            this.Close();
         }
 
         private void DeleteVolunteeringButton_Click(object sender, RoutedEventArgs e)
@@ -324,6 +395,10 @@ namespace ProfessionalProfile.profile_page
         {
             PremiumUsersService premiumUsersService = new PremiumUsersService();
             premiumUsersService.AddPremiumUser(CurrentUserId);
+            this.becomePremiumUserButton.Visibility = Visibility.Hidden;
+            this.createAssessmentButton.Visibility = Visibility.Visible;
+
+            MessageBox.Show("You are now a premium user", "Success", MessageBoxButton.OK);
         }
     }
 

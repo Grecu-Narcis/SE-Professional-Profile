@@ -22,6 +22,7 @@ using System.Web;
 using System.Windows.Navigation;
 using ProfessionalProfile.service.webBrowser;
 using ProfessionalProfile.SectionViews;
+using System.Diagnostics.Metrics;
 
 namespace ProfessionalProfile.service.signUp
 {
@@ -57,7 +58,7 @@ namespace ProfessionalProfile.service.signUp
 
         private void TextBox_LostFocus(object sender, RoutedEventArgs e)
         {
-            TextBox textBox = (TextBox)sender;
+          TextBox textBox = (TextBox)sender;
             if (string.IsNullOrWhiteSpace(textBox.Text))
             {
                 textBox.Text = "Enter your email";
@@ -75,6 +76,31 @@ namespace ProfessionalProfile.service.signUp
             else
             {
                 passwordPlaceholder.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void BirthDate_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                textBox.Text = "YYYY-MM-DD";
+                textBox.Foreground = System.Windows.Media.Brushes.Gray;
+            }
+        }
+
+        private void phoneBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void PhoneBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                textBox.Text = "Enter your number: +40";
+                textBox.Foreground = System.Windows.Media.Brushes.Gray;
             }
         }
 

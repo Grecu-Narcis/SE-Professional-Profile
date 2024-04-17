@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\obj\Debug\net8.0-windows\
 ProfessionalProfile
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\drago\Desktop\Anul 2\Sem 4\Soft\Professional-Profile\ProfessionalProfile\App.xaml
-231853108926
+C:\Users\narci\Desktop\SE-Professional-Profile\ProfessionalProfile\App.xaml
+241853206205
 
-971692101874
-199441067390
-business_card_page\BusinessCardPage.xaml;MainWindow.xaml;profile page\ProfilePage.xaml;projects_page\ProjectsPage.xaml;SectionViews\CertificateWindow.xaml;SectionViews\EditCertificateWindow.xaml;SectionViews\EditEducationWindow.xaml;SectionViews\EditVolunteeringWindow.xaml;SectionViews\EditWorkExperienceWindow.xaml;SectionViews\EducationWindow.xaml;SectionViews\ProfilePictureWindow.xaml;SectionViews\SkillWindow.xaml;SectionViews\VolunteeringWindow.xaml;SectionViews\WorkExperienceWindow.xaml;service\login\LoginPage.xaml;service\signUp\SignUpPage.xaml;service\webBrowser\BrowserPage.xaml;view\CreateAssessmentWindow.xaml;view\NotificationsPage.xaml;view\PrivacySettingsPage.xaml;view\SearchUserPage.xaml;view\SelectTestWindow.xaml;view\TakeTestWindow.xaml;
+98381234744
+199-546198748
+business_card_page\BusinessCardPage.xaml;MainWindow.xaml;profile page\ProfilePage.xaml;projects_page\AddManualProject.xaml;projects_page\ProjectsPage.xaml;SectionViews\CertificateWindow.xaml;SectionViews\EditCertificateWindow.xaml;SectionViews\EditEducationWindow.xaml;SectionViews\EditVolunteeringWindow.xaml;SectionViews\EditWorkExperienceWindow.xaml;SectionViews\EducationWindow.xaml;SectionViews\ProfilePictureWindow.xaml;SectionViews\SkillWindow.xaml;SectionViews\VolunteeringWindow.xaml;SectionViews\WorkExperienceWindow.xaml;service\login\LoginPage.xaml;service\signUp\SignUpPage.xaml;service\webBrowser\BrowserPage.xaml;view\CreateAssessmentWindow.xaml;view\NotificationsPage.xaml;view\PrivacySettingsPage.xaml;view\SearchUserPage.xaml;view\SelectTestWindow.xaml;view\TakeTestWindow.xaml;
 
 True
 

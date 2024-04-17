@@ -22,12 +22,14 @@ namespace ProfessionalProfile.SectionViews
     public partial class CertificateWindow : Window
     {
         int userId;
-        public CertificateWindow(int userId)
+        bool isLoggedIn;
+        public CertificateWindow(int userId, bool isLoggedIn = false)
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
             this.userId = userId;
-            CertificateViewModel viewModel = new CertificateViewModel(new CertificateRepo(), userId);
+            this.isLoggedIn = isLoggedIn;
+            CertificateViewModel viewModel = new CertificateViewModel(new CertificateRepo(), userId, isLoggedIn);
             DataContext = viewModel;
         }
 

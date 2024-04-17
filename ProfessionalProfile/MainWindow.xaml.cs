@@ -29,12 +29,15 @@ namespace ProfessionalProfile
             InitializeComponent();
             this.Hide();
 
-            ProfilePage profile = new ProfilePage(60, 4);
-            profile.WindowState = WindowState.Maximized; // Set the WindowState to Maximized
-            profile.Show();
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
 
-            PrivacySettingsPage privacySettingsPage = new PrivacySettingsPage(60);
-            privacySettingsPage.Show();
+            //ProfilePage profile = new ProfilePage(60, 4);
+            //profile.WindowState = WindowState.Maximized; // Set the WindowState to Maximized
+            //profile.Show();
+
+            //PrivacySettingsPage privacySettingsPage = new PrivacySettingsPage(60);
+            //privacySettingsPage.Show();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

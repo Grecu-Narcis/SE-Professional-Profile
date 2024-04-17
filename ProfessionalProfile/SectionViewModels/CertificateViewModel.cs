@@ -68,9 +68,9 @@ namespace ProfessionalProfile.SectionViewModels
 
         public ICommand AddCertificateButton { get; }
 
-        public CertificateViewModel(CertificateRepo certificateRepo, int userId)
+        public CertificateViewModel(CertificateRepo certificateRepo, int userId, bool isLoggedIn)
         {
-            AddCertificateButton = new AddCertificateCommand(this, certificateRepo, userId);
+            AddCertificateButton = new AddCertificateCommand(this, certificateRepo, userId, isLoggedIn);
         }
     }
 }
