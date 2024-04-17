@@ -1,5 +1,7 @@
 ﻿using ProfessionalProfile.business;
+using ProfessionalProfile.business_card_page;
 using ProfessionalProfile.domain;
+using ProfessionalProfile.projects_page;
 using ProfessionalProfile.repo;
 using ProfessionalProfile.SectionViews;
 using ProfessionalProfile.view;
@@ -445,6 +447,19 @@ namespace ProfessionalProfile.profile_page
         {
             PrivacySettingsPage privacySettingsPage = new PrivacySettingsPage(CurrentUserId);
             privacySettingsPage.Show();
+        }
+
+        private void viewProjectsButton_Click(object sender, RoutedEventArgs e)
+        {
+            bool isVisiting = CurrentUserId != UserId;
+            ProjectsPage projectsPage = new ProjectsPage(UserId, isVisiting);
+            projectsPage.Show();
+        }
+
+        private void viewBusinessCardButton_Click(object sender, RoutedEventArgs e)
+        {
+            BusinessCardPage businessCardPage = new BusinessCardPage(UserId);
+            businessCardPage.Show();
         }
     }
 

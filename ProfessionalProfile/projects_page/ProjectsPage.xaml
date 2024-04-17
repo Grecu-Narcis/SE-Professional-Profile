@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
 
         <!-- Title -->
-        <Label Content="Your Portfolio" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="24"/>
+        <Label x:Name="nameLabel" Content="Your Portfolio" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="24"/>
 
         <!-- GitHub Projects -->
         <Border BorderBrush="Black" BorderThickness="1" Margin="10" Grid.Row="1">
@@ -71,11 +71,10 @@
         <!-- Buttons -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Grid.Row="3">
             <!-- Button to add projects from GitHub -->
-            <Button Content="Add from GitHub" Width="150" Margin="5" Click="AddFromGitHub_Click"/>
+            <Button x:Name="AddFromGitHub" Content="Add from GitHub" Width="150" Margin="5" Click="AddFromGitHub_Click"/>
             <!-- Button to go to profile page -->
-            <Button Content="Go to Profile" Width="150" Margin="5" Click="GoToProfile_Click"/>
             <!-- Button to add projects manually -->
-            <Button Content="Add Manually" Width="150" Margin="5" Click="AddManually_Click"/>
+            <Button x:Name="AddManually" Content="Add Manually" Width="150" Margin="5" Click="AddManually_Click"/>
         </StackPanel>
     </Grid>
 </Window>
