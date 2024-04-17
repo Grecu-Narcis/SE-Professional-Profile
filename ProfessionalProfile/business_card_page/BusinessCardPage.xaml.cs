@@ -14,26 +14,44 @@ namespace ProfessionalProfile.business_card_page
     public partial class BusinessCardPage : Window
     {
         UserRepo usersRepo = new UserRepo();
+        SkillRepo skillRepo = new SkillRepo();
         BusinessCardRepo businessCardRepo = new BusinessCardRepo();
 
         public BusinessCardPage(int UserId)
         {
             InitializeComponent();
 
+            this.DownloadCardButton.Visibility = Visibility.Hidden;
+            this.DownloadCardButton.Visibility = Visibility.Hidden;
 
             BussinesCard businessCard = businessCardRepo.GetByUserId(UserId);
             User user = usersRepo.GetById(UserId);
-            List<string> cardSkills = businessCardRepo.GetBusinessCardSkills(businessCard.BcId);
+            List<Skill> skills = skillRepo.GetByUserId(UserId);
+
+            if (businessCard == null)
+
+            {
+                BussinesCard newCard = new BussinesCard(0, user.Summary, "htpps://business_card_" +  user.FirstName, user.UserId, skills);
+                businessCardRepo.Add(newCard);
+            }
+            businessCard = businessCardRepo.GetByUserId(UserId);
+
+            List<string> cardSkills = new List<string>();
+
+            foreach (Skill skill in skills)
+            {
+                if (!cardSkills.Contains(skill.Name.ToLower()))
+                    cardSkills.Add(skill.Name);
+            }
 
             FullName = user.FirstName + " " + user.LastName;
             PhoneNumber = user.Phone;
-            JobTitle = "Software Developer";
-            Company = "Microsoft";
+
             Email = user.Email;
             WebsiteURL = businessCard.UniqueUrl;
             KeySkills = string.Join(",",  cardSkills);
             Description = businessCard.Summary;
-            Achievement = "I have developed 5 applications that are used by millions of people.";
+            // Achievement = "I have developed 5 applications that are used by millions of people.";
 
             DataContext = this;
         }

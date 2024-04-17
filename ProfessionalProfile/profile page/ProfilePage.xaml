@@ -303,6 +303,8 @@
             <Button x:Name="createAssessmentButton" Content="Create Assesments" HorizontalAlignment="Left" Margin="213,70,0,0" Grid.Row="6" VerticalAlignment="Top" Click="createAssessmentButton_Click" />
             <Button x:Name="takeAssessmentButton" Content="Take Assesments" HorizontalAlignment="Left" Margin="368,70,0,0" Grid.Row="6" VerticalAlignment="Top" Click="takeAssessmentButton_Click" />
             <Button x:Name="settingsButton" Content="Settings" HorizontalAlignment="Left" Margin="483,22,0,0" VerticalAlignment="Top" Width="70" Click="settingsButton_Click"/>
+            <Button x:Name="viewProjectsButton" Content="View Projects" HorizontalAlignment="Left" Margin="377,22,0,0" VerticalAlignment="Top" Click="viewProjectsButton_Click"/>
+            <Button x:Name="viewBusinessCardButton" Content="Business Card" HorizontalAlignment="Left" Margin="374,52,0,0" VerticalAlignment="Top" Click="viewBusinessCardButton_Click"/>
 
         </Grid>
     </ScrollViewer>

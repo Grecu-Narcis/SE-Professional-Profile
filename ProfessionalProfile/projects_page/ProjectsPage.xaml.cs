@@ -16,12 +16,18 @@ namespace ProfessionalProfile.projects_page
         ProjectRepo projectRepo = new ProjectRepo();
         UserRepo userRepo = new UserRepo();
 
-        public ProjectsPage(int userId)
+        public ProjectsPage(int userId, bool isVisiting=false)
         {
             InitializeComponent();
 
             User user = userRepo.GetById(userId);
             currentUserId = userId;
+
+            if (isVisiting)
+                this.nameLabel.Content = user.FirstName + " " + user.LastName + "'s Portfolio";
+
+            else 
+                this.nameLabel.Content = "My Portfolio";
 
             List<Project> projects = projectRepo.GetByUserId(userId);
 
@@ -32,8 +38,13 @@ namespace ProfessionalProfile.projects_page
             //ProjectTechnologies = project.Technologies;
 
             // Set the data context to this instance
-            DataContext = this;
+            DataContext = this;    
             
+            if (isVisiting)
+            {
+                AddFromGitHub.Visibility = Visibility.Hidden;
+                AddManually.Visibility = Visibility.Hidden;
+            }
         }
 
         int currentUserId;
@@ -58,7 +69,11 @@ namespace ProfessionalProfile.projects_page
         private void AddManually_Click(object sender, RoutedEventArgs e)
         {
             AddManualProject addManualProject = new AddManualProject(this.currentUserId);
-            addManualProject.Show();
+            addManualProject.ShowDialog();
+
+            ProjectsPage projectsPage = new ProjectsPage(this.currentUserId);
+            projectsPage.Show();
+            Close();
         }
 
         // Event handler for the "Go to Profile" button click

@@ -29,6 +29,12 @@ namespace ProfessionalProfile
             InitializeComponent();
             this.Hide();
 
+            //ProjectsPage projectsPage = new ProjectsPage(60);
+            //projectsPage.Show();
+
+            //BusinessCardPage businessCardPage = new BusinessCardPage(60);
+            //businessCardPage.Show();
+
             LoginPage loginPage = new LoginPage();
             loginPage.Show();
 
