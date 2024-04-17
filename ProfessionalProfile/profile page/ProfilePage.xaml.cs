@@ -73,6 +73,8 @@ namespace ProfessionalProfile.profile_page
         {
             InitializeComponent();
 
+            this.WindowState = WindowState.Maximized;
+
             if (userVisitingId != UserProfileId)
             {
                 ViewNotificationsButton.Visibility = Visibility.Hidden;
@@ -80,6 +82,9 @@ namespace ProfessionalProfile.profile_page
                 takeAssessmentButton.Visibility = Visibility.Hidden;
                 becomePremiumUserButton.Visibility = Visibility.Hidden;
                 SearchPageButton.Visibility = Visibility.Hidden;
+                settingsButton.Visibility = Visibility.Hidden;
+
+                setPrivacy(UserProfileId);
             }
 
             if (userVisitingId == UserProfileId)
@@ -121,7 +126,42 @@ namespace ProfessionalProfile.profile_page
             DataContext = this;
         }
 
-        
+        private void setPrivacy(int userId)
+        {
+            PrivacyService privacyService = new PrivacyService();
+
+            Privacy userPrivacySettings = privacyService.GetPrivacy(userId);
+
+            if (!userPrivacySettings.canViewEducation)
+            {
+                this.educationPanel.Visibility = Visibility.Hidden;
+                this.educationBorder.Visibility = Visibility.Hidden;
+            }
+
+            if (!userPrivacySettings.canViewWorkExperience)
+            {
+                this.experiencePanel.Visibility = Visibility.Hidden;
+                this.experienceBorder.Visibility = Visibility.Hidden;
+            }
+
+            if (!userPrivacySettings.canViewCertificates)
+            {
+                this.certificationsPanel.Visibility = Visibility.Hidden;
+                this.certificationsBorder.Visibility = Visibility.Hidden;
+            }
+
+            if (!userPrivacySettings.canViewSkills)
+            {
+                this.skillsPanel.Visibility = Visibility.Hidden;
+                this.skillsBorder.Visibility = Visibility.Hidden;
+            }
+
+            if (!userPrivacySettings.canViewVolunteering)
+            {
+                this.volunteeringPanel.Visibility = Visibility.Hidden;
+                this.volunteeringBorder.Visibility = Visibility.Hidden;
+            }
+        }
 
         private void AddEducationButton_Click(object sender, RoutedEventArgs e)
         {
@@ -399,6 +439,12 @@ namespace ProfessionalProfile.profile_page
             this.createAssessmentButton.Visibility = Visibility.Visible;
 
             MessageBox.Show("You are now a premium user", "Success", MessageBoxButton.OK);
+        }
+
+        private void settingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            PrivacySettingsPage privacySettingsPage = new PrivacySettingsPage(CurrentUserId);
+            privacySettingsPage.Show();
         }
     }
 
