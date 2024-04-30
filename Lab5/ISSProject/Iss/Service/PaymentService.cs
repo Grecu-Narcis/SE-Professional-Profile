@@ -7,13 +7,18 @@ using System.Threading.Tasks;
 
 namespace Iss.Service
 {
-    public class PaymentService
+    public class PaymentService : IPaymentService
     {
-        private PaymentRepository paymentRepository;
+        private IPaymentRepository paymentRepository;
 
         public PaymentService()
         {
-            paymentRepository = new PaymentRepository();
+            this.paymentRepository = new PaymentRepository();
+        }
+
+        public PaymentService(IPaymentRepository paymentRepository)
+        {
+            this.paymentRepository = paymentRepository;
         }
 
         public void addOneAd()

@@ -21,7 +21,7 @@ namespace Iss.Windows
     /// </summary>
     public partial class SubscriptionsPage : UserControl
     {
-        private PaymentService paymentService = new();
+        private IPaymentService paymentService = new PaymentService();
         public SubscriptionsPage()
         {
             InitializeComponent();

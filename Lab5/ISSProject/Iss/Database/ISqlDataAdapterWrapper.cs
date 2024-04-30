@@ -10,14 +10,9 @@ namespace Iss.Database
 {
     public interface ISqlDataAdapterWrapper
     {
-
         void InsertCommand(SqlCommand command);
         void Fill(DataSet dataSet);
         void ExecuteNonQuery(SqlCommand command);
         public void SelectCommand(SqlCommand command);
-
-
-
-
     }
 }
