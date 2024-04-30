@@ -1,19 +1,17 @@
 ﻿using Iss.Entity;
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
+using Xunit;
 
 namespace Iss.Tests.Entity
 {
-    [TestFixture]
-    internal class CollaborationTests
+    
+    public class CollaborationTests
     {
-        [Test]
+        [Fact]
         public void Constructor_WithAllParameters_CorrectInitialization()
         {
             // Arrange
@@ -30,16 +28,16 @@ namespace Iss.Tests.Entity
             Collaboration collaboration = new Collaboration(collaborationId, startDate, status, contentRequirement, adOverview, collaborationFee, days, collaborationTitle);
 
             // Assert
-            Assert.AreEqual(collaborationId, collaboration.CollaborationId);
-            Assert.AreEqual(startDate, collaboration.startDate);
-            Assert.AreEqual(status, collaboration.status);
-            Assert.AreEqual(contentRequirement, collaboration.contentRequirement);
-            Assert.AreEqual(adOverview, collaboration.adOverview);
-            Assert.AreEqual(collaborationFee, collaboration.collaborationFee);
-            Assert.AreEqual(startDate.AddDays(days), collaboration.endDate);
+            Assert.Equal(collaborationId, collaboration.CollaborationId);
+            Assert.Equal(startDate, collaboration.startDate);
+            Assert.Equal(status, collaboration.status);
+            Assert.Equal(contentRequirement, collaboration.contentRequirement);
+            Assert.Equal(adOverview, collaboration.adOverview);
+            Assert.Equal(collaborationFee, collaboration.collaborationFee);
+            Assert.Equal(startDate.AddDays(days), collaboration.endDate);
         }
 
-        [Test]
+        [Fact]
         public void Constructor_WithSelectedParameters_CorrectInitialization()
         {
             // Arrange
@@ -55,13 +53,13 @@ namespace Iss.Tests.Entity
             Collaboration collaboration = new Collaboration(collaborationTitle, adOverview, collaborationFee, contentRequirement, startDate, endDate, status);
 
             // Assert
-            Assert.AreEqual(collaborationTitle, collaboration.collaborationTitle);
-            Assert.AreEqual(adOverview, collaboration.adOverview);
-            Assert.AreEqual(collaborationFee, collaboration.collaborationFee);
-            Assert.AreEqual(contentRequirement, collaboration.contentRequirement);
-            Assert.AreEqual(startDate, collaboration.startDate);
-            Assert.AreEqual(endDate, collaboration.endDate);
-            Assert.AreEqual(status, collaboration.status);
+            Assert.Equal(collaborationTitle, collaboration.collaborationTitle);
+            Assert.Equal(adOverview, collaboration.adOverview);
+            Assert.Equal(collaborationFee, collaboration.collaborationFee);
+            Assert.Equal(contentRequirement, collaboration.contentRequirement);
+            Assert.Equal(startDate, collaboration.startDate);
+            Assert.Equal(endDate, collaboration.endDate);
+            Assert.Equal(status, collaboration.status);
         }
 
 

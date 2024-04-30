@@ -1,21 +1,19 @@
 ﻿using Iss.Entity;
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
+using Xunit;
 
 
 
 namespace Iss.Tests.Entity
 {
-    [TestFixture]
-    internal class BasicSubscriptionTests
+    
+    public class BasicSubscriptionTests
     {
-        [Test]
+        [Fact]
         public void BasicSubscription_Constructor_CorrectInitialization()
         {
             // Arrange
@@ -27,9 +25,9 @@ namespace Iss.Tests.Entity
             BasicSubscription subscription = new BasicSubscription(expectedNumberOfCampaigns, expectedPrice, expectedReach);
 
             // Assert
-            Assert.AreEqual(expectedNumberOfCampaigns, subscription.GetNumberOfCampaigns());
-            Assert.AreEqual(expectedPrice, subscription.GetPrice());
-            Assert.AreEqual(expectedReach, subscription.GetReach());
+            Assert.Equal(expectedNumberOfCampaigns, subscription.GetNumberOfCampaigns());
+            Assert.Equal(expectedPrice, subscription.GetPrice());
+            Assert.Equal(expectedReach, subscription.GetReach());
         }
 
     }

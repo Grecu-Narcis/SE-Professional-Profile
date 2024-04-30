@@ -1,4 +1,5 @@
-﻿using Iss.Entity;
+﻿using Iss.Database;
+using Iss.Entity;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,15 +14,15 @@ namespace Iss.Repository
     internal class CollaborationRepository : IColaborationRepository
     {
 
-        DatabaseConnection databaseConnection;
-        SqlDataAdapter adapter;
+        IDatabaseConnection databaseConnection;
+        ISqlDataAdapterWrapper adapter;
 
         public CollaborationRepository()
         {
             databaseConnection = new DatabaseConnection();
-            adapter = new SqlDataAdapter();
+            adapter = new SqlDataAdapterWrapper();
         }
-        public CollaborationRepository(DatabaseConnection databaseConnection, SqlDataAdapter adapter)
+        public CollaborationRepository(IDatabaseConnection databaseConnection, ISqlDataAdapterWrapper adapter)
         {
             this.databaseConnection = databaseConnection;
             this.adapter = adapter;
@@ -52,8 +53,8 @@ namespace Iss.Repository
             command.Parameters.AddWithValue("@StartDate", collaboration.startDate);
             command.Parameters.AddWithValue("@EndDate", collaboration.endDate);
 
-            adapter.InsertCommand = command;
-            adapter.InsertCommand.ExecuteNonQuery();
+            adapter.InsertCommand(command);
+            adapter.ExecuteNonQuery(command);
             databaseConnection.CloseConnection();
         }
 
@@ -70,8 +71,8 @@ namespace Iss.Repository
             command.Parameters.AddWithValue("@AdAccountID", User.User.getInstance().Id);
 
             // Set the SelectCommand property of the SqlDataAdapter
-            adapter.SelectCommand = command;
-            adapter.SelectCommand.ExecuteNonQuery();
+            adapter.SelectCommand(command);
+            adapter.ExecuteNonQuery(command);
             // Remove unnecessary code that sets InsertCommand and calls ExecuteNonQuery
 
             adapter.Fill(dataSet);
@@ -99,12 +100,13 @@ namespace Iss.Repository
             string query = "SELECT * FROM Collaboration WHERE InfluencerID = @InfluencerID";
 
             SqlCommand command = new SqlCommand(query, databaseConnection.sqlConnection);
+            
             System.Diagnostics.Debug.WriteLine(User.User.getInstance().Id);
             command.Parameters.AddWithValue("@InfluencerID", 1);
 
             // Set the SelectCommand property of the SqlDataAdapter
-            adapter.SelectCommand = command;
-            adapter.SelectCommand.ExecuteNonQuery();
+            adapter.SelectCommand(command);
+            adapter.ExecuteNonQuery(command);
             // Remove unnecessary code that sets InsertCommand and calls ExecuteNonQuery
 
             adapter.Fill(dataSet);

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Iss.Repository
 {
-    internal interface IColaborationRepository
+    public interface IColaborationRepository
     {
         public void createCollaboration(Collaboration collaboration);
         public List<Collaboration> GetCollaborationsForAdAccount();

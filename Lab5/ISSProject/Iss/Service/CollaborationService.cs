@@ -12,9 +12,14 @@ namespace Iss.Service
     internal class CollaborationService : ICollaborationService
     {
 
-        private IColaborationRepository collaborationRepository = new CollaborationRepository();
+        private IColaborationRepository collaborationRepository;
 
-
+        public CollaborationService(IColaborationRepository collaborationRepository) {
+            this.collaborationRepository= collaborationRepository;
+        }
+        public CollaborationService() {
+            this.collaborationRepository = new CollaborationRepository();
+        }
         public void addCollaboration(Collaboration collaboration)
         {
             collaborationRepository.createCollaboration(collaboration);

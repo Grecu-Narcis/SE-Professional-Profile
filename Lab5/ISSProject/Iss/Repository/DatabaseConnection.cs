@@ -12,7 +12,11 @@ namespace Iss.Repository
     {
         public static string ConnectionString = "Data Source = DESKTOP-R01UH5Q\\SQLEXPRESS; Initial Catalog = db_ISS; Integrated Security = True; TrustServerCertificate=True;";
 
-        public SqlConnection sqlConnection = new SqlConnection(ConnectionString);
+        public SqlConnection sqlConnection { get; private set; } =  new SqlConnection(ConnectionString);
+
+
+
+        
 
         public virtual void OpenConnection()
         {
@@ -29,5 +33,6 @@ namespace Iss.Repository
                 sqlConnection.Close();
             }
         }
+     
     }
 }
