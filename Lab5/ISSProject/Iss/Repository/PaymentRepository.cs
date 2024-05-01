@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Iss.Database;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -7,10 +8,23 @@ using System.Threading.Tasks;
 
 namespace Iss.Repository
 {
-    public class PaymentRepository
+    public class PaymentRepository: IPaymentRepository
     {
-        DatabaseConnection databaseConnection = new DatabaseConnection();
-        SqlDataAdapter adapter = new SqlDataAdapter();
+        private IDatabaseConnection databaseConnection;
+        private ISqlDataAdapterWrapper adapter;
+
+        public PaymentRepository()
+        {
+            databaseConnection = new DatabaseConnection();
+            adapter = new SqlDataAdapterWrapper();
+        }
+
+        public PaymentRepository(IDatabaseConnection databaseConnection, ISqlDataAdapterWrapper adapter)
+        {
+            this.databaseConnection = databaseConnection;
+            this.adapter = adapter;
+        }
+
         public void addOneAd()
         {
             //add to the database one ad payment

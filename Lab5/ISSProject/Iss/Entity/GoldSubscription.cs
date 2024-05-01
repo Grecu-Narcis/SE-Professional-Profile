@@ -18,5 +18,20 @@ namespace Iss.Entity
             this.price = price;
             this.reach = reach;
         }
+
+        public int GetNumberOfCampaigns()
+        {
+            return numberOfCampaigns;
+        }
+
+        public decimal GetPrice()
+        {
+            return price;
+        }
+
+        public int GetReach()
+        {
+            return reach;
+        }
     }
 }
