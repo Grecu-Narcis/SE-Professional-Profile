@@ -8,29 +8,29 @@ namespace Iss.Entity
 {
     public class Influencer
     {
-        public string userId { get; set;}
-        public String name { get; set;}
+        public string influencerId { get; set;}
+        public String influencerName { get; set;}
         public int followerCount { get; set;}
         public int collaborationPrice { get; set;}
 
         public Influencer(string userId, string name, int followerCount, int collaborationPrice)
         {
-            this.userId = userId;
-            this.name = name;
+            this.influencerId = userId;
+            this.influencerName = name;
             this.followerCount = followerCount;
             this.collaborationPrice = collaborationPrice;
         }
 
         public Influencer(string name, int followerCount, int collaborationPrice)
         {
-            this.name = name;
+            this.influencerName = name;
             this.followerCount = followerCount;
             this.collaborationPrice = collaborationPrice;
         }
 
         public override string ToString()
         {
-            return name + " with " + followerCount + " followers. Costs: " + collaborationPrice + "$";
+            return influencerName + " with " + followerCount + " followers. Costs: " + collaborationPrice + "$";
         }
     }
 }

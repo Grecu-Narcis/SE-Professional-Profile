@@ -57,7 +57,7 @@ namespace Iss.Windows
             influencerListBox.Items.Clear();
             foreach (Influencer influencer in influencers)
             {
-                if (influencer.name.Contains(searchInfluencerBox.Text))
+                if (influencer.influencerName.Contains(searchInfluencerBox.Text))
                 {
                     influencerListBox.Items.Add(influencer);
                 }
