@@ -8,45 +8,64 @@ using System.Threading.Tasks;
 
 namespace Iss.Service
 {
-    public class CampaignService
+    internal class CampaignService : ICampaignService
     {
-        private CampaignRepository campaignRepository = new CampaignRepository();
+        private ICampaignRepository campaignRepository;
 
-        public void addCampaign(Campaign campaign)
+        public CampaignService(ICampaignRepository campaignRepository)
         {
-            campaignRepository.addCampaign(campaign);
+            this.campaignRepository = campaignRepository;
+        }
 
-            campaign = campaignRepository.getCampaignByName(campaign);
+        public CampaignService()
+        {
+            this.campaignRepository = new CampaignRepository();
+        }
 
-            foreach (AdSet adSet in campaign.adSets)
+        public void addCampaign(Campaign campaignToAdd)
+        {
+            this.campaignRepository.addCampaign(campaignToAdd);
+
+            Campaign campaignFromRepository = campaignRepository.getCampaignByName(campaignToAdd);
+
+            if (campaignFromRepository == null)
             {
-                campaignRepository.addAdSetToCampaign(campaign, adSet);
+                Console.WriteLine("Campaign with the specified name was not found.");
+                return;
+            }
+
+            List<AdSet> currentAdSet = campaignFromRepository.adSets;
+
+            foreach (AdSet adSet in currentAdSet)
+            {
+                campaignRepository.addAdSetToCampaign(campaignFromRepository, adSet);
             }
         }
 
-        public Campaign getCampaignByName(Campaign campaign)
+        public Campaign getCampaignByName(Campaign campaignToGetByName)
         {
-            return campaignRepository.getCampaignByName(campaign);
+            Campaign campaignToReturn =  campaignRepository.getCampaignByName(campaignToGetByName);
+            return campaignToReturn;
         }
 
-        public void deleteCampaign(Campaign campaign)
+        public void deleteCampaign(Campaign campaignToDelete)
         {
-            campaignRepository.deleteCampaign(campaign);
+            campaignRepository.deleteCampaign(campaignToDelete);
         }
 
-        public void addAdSetToCampaign(Campaign campaign, AdSet adSet)
+        public void addAdSetToCampaign(Campaign campaignToAddAdSet, AdSet adSet)
         {
-            campaignRepository.addAdSetToCampaign(campaign, adSet);
+            campaignRepository.addAdSetToCampaign(campaignToAddAdSet, adSet);
         }
 
-        public void deleteAdSetFromCampaign(Campaign campaign, AdSet adSet)
+        public void deleteAdSetFromCampaign(Campaign campaignToDeleteAdSet, AdSet adSet)
         {
-            campaignRepository.deleteAdSetFromCampaign(campaign, adSet);
+            campaignRepository.deleteAdSetFromCampaign(campaignToDeleteAdSet, adSet);
         }
 
-        public void updateCampaign(Campaign campaign)
+        public void updateCampaign(Campaign campaignToUpdate)
         {
-            campaignRepository.updateCampaign(campaign);
+            campaignRepository.updateCampaign(campaignToUpdate);
         }
     }
 }

@@ -30,9 +30,9 @@ namespace Iss.Entity
             this.adSets = adSets;
         }
 
-        public Campaign(string id, string campaignName, DateTime startDate, int duration)
+        public Campaign(string campaignId, string campaignName, DateTime startDate, int duration)
         {
-            this.campaignId = id;
+            this.campaignId = campaignId;
             this.campaignName = campaignName;
             this.startDate = startDate;
             this.duration = duration;
