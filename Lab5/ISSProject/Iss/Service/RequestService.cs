@@ -23,15 +23,15 @@ namespace Iss.Service
             this.requestRepository = new RequestRepository();
         }
 
-        public void addRequest(Request request)
+        public void addRequest(Request requestToAdd)
         {
-            this.requestRepository.addRequest(request);
+            this.requestRepository.addRequest(requestToAdd);
         }
 
   
-        public void deleteRequest(Request request)
+        public void deleteRequest(Request requestToDelete)
         {
-            this.requestRepository.deleteRequest(request);
+            this.requestRepository.deleteRequest(requestToDelete);
         }
 
         public int getInfluencerId()
@@ -46,7 +46,7 @@ namespace Iss.Service
 
         public Request getRequestWithTitle(string title)
         {
-            //parse the request list and find the request with given title
+            //parse the requestToDelete list and find the requestToDelete with given title
 
             List < Request > requestsList = this.requestRepository.getRequestsList();
 
@@ -66,11 +66,11 @@ namespace Iss.Service
             return this.requestRepository.getRequestsForAdAccount();
         }
 
-        public void updateRequest(Request request, string newCompensation, string newContentRequirements)
+        public void updateRequest(Request requestToUpdate, string newCompensation, string newContentRequirements)
         {
-            request.compensation = newCompensation;
-            request.contentRequirements = newContentRequirements;
-            this.requestRepository.updateRequest(request);
+            requestToUpdate.compensation = newCompensation;
+            requestToUpdate.contentRequirements = newContentRequirements;
+            this.requestRepository.updateRequest(requestToUpdate);
         }
     }
 }

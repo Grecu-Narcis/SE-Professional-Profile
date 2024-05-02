@@ -44,8 +44,8 @@ namespace Iss.Windows
 
         public void populateCurrentAds()
         {
-            id = AdSetService.getAdSetByName(adSet).id;
-            adSet.id = id;
+            id = AdSetService.getAdSetByName(adSet).adSetId;
+            adSet.adSetId = id;
             list1 = AdService.GetAdsFromAdSet(id);
             itemListBox1.SetValue(ItemsControl.ItemsSourceProperty, list1);
         }
@@ -77,7 +77,7 @@ namespace Iss.Windows
 
                 try
                 {
-                AdSet newAdSet = new AdSet(adSet.id, name, targetAudience);
+                AdSet newAdSet = new AdSet(adSet.adSetId, name, targetAudience);
                 AdSetService.updateAdSet(newAdSet);
                 foreach (Ad ad in itemListBox1.Items)
                 {

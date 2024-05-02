@@ -10,7 +10,7 @@ namespace Iss.Repository
     public interface IAdAccountRepository
     {
         public AdAccount getAdAccount(string nameOfCompany, string password);
-        public void addAdAccount(AdAccount adAccount);
+        public void addAdAccount(AdAccount adAccountToAdd);
         public List<Ad> getAdsForCurrentUser();
         public List<AdSet> getAdSetsForCurrentUser();
         public List<Campaign> getCampaignsForCurrentUser();

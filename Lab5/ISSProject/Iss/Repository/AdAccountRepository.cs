@@ -63,9 +63,9 @@ namespace Iss.Repository
             List<Ad> ads = new List<Ad>();
             DataSet dataSet = new DataSet();
             databaseConnection.OpenConnection();
-            string query = "SELECT * FROM Ad WHERE AdAccountId = @id";
+            string query = "SELECT * FROM Ad WHERE AdAccountId = @adAccountId";
             SqlCommand command = new SqlCommand(@query, databaseConnection.sqlConnection);
-            command.Parameters.AddWithValue("@id", User.User.getInstance().Id);
+            command.Parameters.AddWithValue("@adAccountId", User.User.getInstance().Id);
             adapter.SelectCommand = command;
             dataSet.Clear();
             adapter.Fill(dataSet, "Ad");
@@ -129,13 +129,13 @@ namespace Iss.Repository
         public void editAdAccount(String nameOfCompany, String URL, String password, String location)
         {
             databaseConnection.OpenConnection();
-            string query = "UPDATE AdAccount SET NameOfCompany = @nameOfCompany, WebSiteUrl = @webSiteUrl, Password = @password, HeadquartersLocation = @headquartersLocation WHERE ID = @id";
+            string query = "UPDATE AdAccount SET NameOfCompany = @nameOfCompany, WebSiteUrl = @webSiteUrl, Password = @password, HeadquartersLocation = @headquartersLocation WHERE ID = @adAccountId";
             SqlCommand command = new SqlCommand(query, databaseConnection.sqlConnection);
             command.Parameters.AddWithValue("@nameOfCompany", nameOfCompany);
             command.Parameters.AddWithValue("@webSiteUrl", URL);
             command.Parameters.AddWithValue("@password", password);
             command.Parameters.AddWithValue("@headquartersLocation", location);
-            command.Parameters.AddWithValue("@id", User.User.getInstance().Id);
+            command.Parameters.AddWithValue("@adAccountId", User.User.getInstance().Id);
             command.ExecuteNonQuery();
             databaseConnection.CloseConnection();
         }

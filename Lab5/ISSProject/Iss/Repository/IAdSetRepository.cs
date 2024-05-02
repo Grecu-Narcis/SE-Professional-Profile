@@ -9,12 +9,12 @@ namespace Iss.Repository
 {
     public interface IAdSetRepository
     {
-        public void addAdSet(AdSet adSet);
-        public void deleteAdSet(AdSet adSet);
-        public void updateAdSet(AdSet adSet);
+        public void addAdSet(AdSet adSetToAdd);
+        public void deleteAdSet(AdSet adSetToDelete);
+        public void updateAdSet(AdSet adSetToUpdate);
         public AdSet getAdSetByName(AdSet adSet);
-        public void addAdToAdSet(AdSet adSet, Ad ad);
-        public void removeAdFromAdSet(AdSet adSet, Ad ad);
+        public void addAdToAdSet(AdSet adSet, Ad adToAdd);
+        public void removeAdFromAdSet(AdSet adSet, Ad adToRemove);
         public List<AdSet> getAdSetsThatAreNotInCampaign();
         public List<AdSet> getAdSetsInCampaign(string id);
     }

@@ -29,7 +29,7 @@ namespace Iss.Service
             AdAccount adAccount = adAccountRepository.getAdAccount(username, password);
             if (adAccount != null)
             {
-                User.User.getInstance().Id = adAccount.id;
+                User.User.getInstance().Id = adAccount.adAccountId;
                 User.User.getInstance().Name = adAccount.nameOfCompany;
                 User.User.getInstance().Password = adAccount.password;
             }

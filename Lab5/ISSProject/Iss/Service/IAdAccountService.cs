@@ -14,7 +14,7 @@ namespace Iss.Service
         public List<Ad> getAdsForCurrentUser();
         public List<AdSet> getAdSetsForCurrentUser();
         public List<Campaign> getCampaignsForCurrentUser();
-        public void addAdAccount(AdAccount account);
+        public void addAdAccount(AdAccount addAccount);
         public void editAdAccount(String nameOfCompany, String URL, String password, String location);
     }
 }

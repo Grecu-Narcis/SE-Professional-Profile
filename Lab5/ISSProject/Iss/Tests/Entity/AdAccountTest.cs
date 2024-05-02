@@ -27,7 +27,7 @@ namespace Iss.Tests.Entity
             AdAccount adAccount = new AdAccount(id, nameOfCompany, domainOfActivity, siteUrl, password, taxIdentificationNumber, headquartersLocation, authorisingInstituion);
 
             // Assert
-            Assert.Equal(id, adAccount.id);
+            Assert.Equal(id, adAccount.adAccountId);
             Assert.Equal(nameOfCompany, adAccount.nameOfCompany);
             Assert.Equal(domainOfActivity, adAccount.domainOfActivity);
             Assert.Equal(siteUrl, adAccount.siteUrl);

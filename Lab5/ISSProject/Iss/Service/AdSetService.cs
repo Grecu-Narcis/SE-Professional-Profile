@@ -22,36 +22,36 @@ namespace Iss.Service
             this.adSetRepository = new AdSetRepository();
         }
 
-        public void addAdSet(AdSet adSet)
+        public void addAdSet(AdSet adSetToAdd)
         {
-            adSetRepository.addAdSet(adSet);
+            adSetRepository.addAdSet(adSetToAdd);
 
-            adSet = adSetRepository.getAdSetByName(adSet);
+            adSetToAdd = adSetRepository.getAdSetByName(adSetToAdd);
 
-            if (adSet == null)
+            if (adSetToAdd == null)
             {
                 return;
             }
 
-            if (adSet.ads == null)
+            if (adSetToAdd.ads == null)
             {
                 return;
             }
 
-            foreach (Ad ad in adSet.ads)
+            foreach (Ad ad in adSetToAdd.ads)
             {
-                adSetRepository.addAdToAdSet(adSet, ad);
+                adSetRepository.addAdToAdSet(adSetToAdd, ad);
             }
         }
 
-        public void addAdToAdSet(AdSet adSet, Ad ad)
+        public void addAdToAdSet(AdSet adSet, Ad adToAdd)
         {
-            this.adSetRepository.addAdToAdSet(adSet, ad);
+            this.adSetRepository.addAdToAdSet(adSet, adToAdd);
         }
 
-        public void removeAdFromAdSet(AdSet adSet, Ad ad)
+        public void removeAdFromAdSet(AdSet adSet, Ad adToRemove)
         {
-            this.adSetRepository.removeAdFromAdSet(adSet, ad);
+            this.adSetRepository.removeAdFromAdSet(adSet, adToRemove);
         }
 
 
@@ -70,14 +70,14 @@ namespace Iss.Service
             return adSetRepository.getAdSetByName(adSet);
         }
 
-        public void updateAdSet(AdSet adSet)
+        public void updateAdSet(AdSet adSetToUpdate)
         {
-            this.adSetRepository.updateAdSet(adSet);
+            this.adSetRepository.updateAdSet(adSetToUpdate);
         }
 
-        public void deleteAdSet(AdSet adSet)
+        public void deleteAdSet(AdSet adSetToDelete)
         {
-            this.adSetRepository.deleteAdSet(adSet);
+            this.adSetRepository.deleteAdSet(adSetToDelete);
         }
     }
 }

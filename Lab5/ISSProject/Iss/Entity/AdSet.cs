@@ -8,22 +8,22 @@ namespace Iss.Entity
 {
     public class AdSet
     {
-        public string id { get; set; }
+        public string adSetId { get; set; }
         public string name { get; set; }
         public List<Ad> ads { get;  set; }
         public string targetAudience { get; set; }
 
         public AdSet(string id, string name, List<Ad> ads, string targetAudience)
         {
-            this.id = id;
+            this.adSetId = id;
             this.name = name;
             this.ads = ads;
             this.targetAudience = targetAudience;
         }
 
-        public AdSet(string id, string name, string targetAudience)
+        public AdSet(string adSetId, string name, string targetAudience)
         {
-            this.id = id;
+            this.adSetId = adSetId;
             this.name = name;
             this.targetAudience = targetAudience;
         }
@@ -35,14 +35,14 @@ namespace Iss.Entity
             this.targetAudience = targetAudience;
         }
 
-        public void addAd(Ad ad)
+        public void addAd(Ad adToAdd)
         {
-            ads.Add(ad);
+            ads.Add(adToAdd);
         }
 
-        public void removeAd(Ad ad)
+        public void removeAd(Ad adToRemove)
         {
-            ads.Remove(ad);
+            ads.Remove(adToRemove);
         }
 
         public override string ToString()

@@ -84,10 +84,10 @@ namespace Iss.Repository
         public List<Ad> getAdsForAdSet(string id)
         {
             databaseConnection.OpenConnection();
-            string query = "SELECT * FROM Ad WHERE AdAccountID = @adAccountId AND AdSetID = @id";
+            string query = "SELECT * FROM Ad WHERE AdAccountID = @adAccountId AND AdSetID = @adAccountId";
             SqlCommand command = new SqlCommand(query, databaseConnection.sqlConnection);
             command.Parameters.AddWithValue("@adAccountId", User.User.getInstance().Id);
-            command.Parameters.AddWithValue("@id", id);
+            command.Parameters.AddWithValue("@adAccountId", id);
             adapter.SelectCommand = command;
             adapter.SelectCommand.ExecuteNonQuery();
             DataSet dataSet = new DataSet();
@@ -110,16 +110,16 @@ namespace Iss.Repository
         public void updateAd(Ad ad)
         {
             databaseConnection.OpenConnection();
-            string query = "UPDATE Ad SET Name = @name, Description = @description, Url = @url, Photo=@photo WHERE ID = @id";
+            string query = "UPDATE Ad SET Name = @name, Description = @description, Url = @url, Photo=@photo WHERE ID = @adAccountId";
             SqlCommand command = new SqlCommand(query, databaseConnection.sqlConnection);
             command.Parameters.AddWithValue("@name", ad.productName);
             command.Parameters.AddWithValue("@description", ad.description);
             command.Parameters.AddWithValue("@url", ad.websiteLink);
             command.Parameters.AddWithValue("@photo", ad.photo);
-            command.Parameters.AddWithValue("@id", ad.id);
+            command.Parameters.AddWithValue("@adAccountId", ad.id);
             adapter.UpdateCommand = command;
             adapter.UpdateCommand.ExecuteNonQuery();
-            //MessageBox.Show(ad.id);
+            //MessageBox.Show(ad.adAccountId);
             databaseConnection.CloseConnection();
         }
 

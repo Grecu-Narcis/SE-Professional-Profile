@@ -13,7 +13,7 @@ namespace Iss.Tests.Service
 {
     public class AdAccountServiceTest
     {
-        //string id, string nameOfCompany, string domainOfActivity, string siteUrl,
+        //string adAccountId, string nameOfCompany, string domainOfActivity, string siteUrl,
         //string password, string taxIdentificationNumber,
         //string headquartersLocation, string authorisingInstituion
         private AdAccount testingAccount = new AdAccount("1","name", "domain", "site", "password", "tax", "location", "institution");
