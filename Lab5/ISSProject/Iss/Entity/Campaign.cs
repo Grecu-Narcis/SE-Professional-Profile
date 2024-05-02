@@ -8,7 +8,7 @@ namespace Iss.Entity
 {
     public class Campaign
     {
-        public string id { get; set; }
+        public string campaignId { get; set; }
         public string campaignName { get; set; }
         public DateTime startDate { get; set; }
         public int duration { get; set; }
@@ -32,7 +32,7 @@ namespace Iss.Entity
 
         public Campaign(string id, string campaignName, DateTime startDate, int duration)
         {
-            this.id = id;
+            this.campaignId = id;
             this.campaignName = campaignName;
             this.startDate = startDate;
             this.duration = duration;

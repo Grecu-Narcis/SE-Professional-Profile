@@ -43,7 +43,7 @@ namespace Iss.Windows
             durationTextBox.Text = campaign.duration.ToString();
             startDatePicker.SelectedDate = campaign.startDate;
             availableAdSets = adSetService.getAdSetsThatAreNotInCampaign();
-            currentAdSets = adSetService.getAdSetsInCampaign(campaign.id);
+            currentAdSets = adSetService.getAdSetsInCampaign(campaign.campaignId);
             itemListBox2.SetValue(ItemsControl.ItemsSourceProperty, availableAdSets);
             itemListBox1.SetValue(ItemsControl.ItemsSourceProperty, currentAdSets);
         }
@@ -92,7 +92,7 @@ namespace Iss.Windows
 
             try
             {
-                Campaign newCampaign = new Campaign(campaign.id, nameTextBox.Text, startDatePicker.SelectedDate.Value, int.Parse(durationTextBox.Text));
+                Campaign newCampaign = new Campaign(campaign.campaignId, nameTextBox.Text, startDatePicker.SelectedDate.Value, int.Parse(durationTextBox.Text));
                 campaignService.updateCampaign(newCampaign);
                 foreach (AdSet adset in itemListBox1.Items)
                 {
