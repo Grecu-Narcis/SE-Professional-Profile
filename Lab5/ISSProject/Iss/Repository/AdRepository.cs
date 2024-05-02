@@ -27,10 +27,10 @@ namespace Iss.Repository
             databaseConnection.OpenConnection();
             string query = "INSERT INTO Ad(Name,Description,Url,AdAccountID,Photo) values (@name, @description, @url, @adAccountId,@photo)";
             SqlCommand command = new SqlCommand(query, databaseConnection.sqlConnection);
-            command.Parameters.AddWithValue("@name", ad.productName);
-            command.Parameters.AddWithValue("@description", ad.description);
-            command.Parameters.AddWithValue("@url", ad.websiteLink);
-            command.Parameters.AddWithValue("@photo", ad.photo);
+            command.Parameters.AddWithValue("@name", ad.ProductName);
+            command.Parameters.AddWithValue("@description", ad.Description);
+            command.Parameters.AddWithValue("@url", ad.WebsiteLink);
+            command.Parameters.AddWithValue("@photo", ad.Photo);
             command.Parameters.AddWithValue("@adAccountId", AdAcountId);
             adapter.InsertCommand = command;
             adapter.InsertCommand.ExecuteNonQuery();
@@ -124,11 +124,11 @@ namespace Iss.Repository
             databaseConnection.OpenConnection();
             string query = "UPDATE Ad SET Name = @name, Description = @description, Url = @url, Photo=@photo WHERE ID = @id";
             SqlCommand command = new SqlCommand(query, databaseConnection.sqlConnection);
-            command.Parameters.AddWithValue("@name", ad.productName);
-            command.Parameters.AddWithValue("@description", ad.description);
-            command.Parameters.AddWithValue("@url", ad.websiteLink);
-            command.Parameters.AddWithValue("@photo", ad.photo);
-            command.Parameters.AddWithValue("@id", ad.id);
+            command.Parameters.AddWithValue("@name", ad.ProductName);
+            command.Parameters.AddWithValue("@description", ad.Description);
+            command.Parameters.AddWithValue("@url", ad.WebsiteLink);
+            command.Parameters.AddWithValue("@photo", ad.Photo);
+            command.Parameters.AddWithValue("@id", ad.Id);
             adapter.UpdateCommand = command;
             adapter.UpdateCommand.ExecuteNonQuery();
             //MessageBox.Show(ad.id);
@@ -139,7 +139,7 @@ namespace Iss.Repository
         {
             string query = "DELETE FROM Ad WHERE ID = @Id";
             SqlCommand command = new SqlCommand(query, databaseConnection.sqlConnection);
-            command.Parameters.AddWithValue("@Id", this.getAdByName(ad.productName).id);
+            command.Parameters.AddWithValue("@Id", this.getAdByName(ad.ProductName).Id);
             adapter.DeleteCommand = command;
             databaseConnection.OpenConnection();
             adapter.DeleteCommand.ExecuteNonQuery();

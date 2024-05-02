@@ -36,10 +36,10 @@ namespace Iss.Windows
         {
             if (ad != null)
             {
-                textProductName.Text = ad.productName;
-                textDescription.Text = ad.description;
-                textLink.Text = ad.websiteLink;
-                selectedImagePath = ad.photo;
+                textProductName.Text = ad.ProductName;
+                textDescription.Text = ad.Description;
+                textLink.Text = ad.WebsiteLink;
+                selectedImagePath = ad.Photo;
                 string selectedImageTitle = System.IO.Path.GetFileName(selectedImagePath);
                 SelectedImageTitle.Text = selectedImageTitle;
                
@@ -64,13 +64,13 @@ namespace Iss.Windows
                 string description = textDescription.Text;
                 string link = textLink.Text;
                 
-                Ad oldAd = this.adService.getAdByName(ad.productName);
+                Ad oldAd = this.adService.getAdByName(ad.ProductName);
                 ad = oldAd;
 
                 // Create Ad object
                 Ad newAd = new Ad
                 (
-                    oldAd.id,
+                    oldAd.Id,
                     productName,
                     selectedImagePath,
                     description,

@@ -27,10 +27,10 @@ namespace Iss.Tests.Repository
             // Assert
             var addedAd = adRepository.getAdByName("TestProductName");
             Assert.NotNull(addedAd);
-            Assert.Equal("TestProductName", addedAd.productName);
-            Assert.Equal("test.jpg", addedAd.photo);
-            Assert.Equal("TestDescription", addedAd.description);
-            Assert.Equal("https://example.com", addedAd.websiteLink);
+            Assert.Equal("TestProductName", addedAd.ProductName);
+            Assert.Equal("test.jpg", addedAd.Photo);
+            Assert.Equal("TestDescription", addedAd.Description);
+            Assert.Equal("https://example.com", addedAd.WebsiteLink);
 
             // Act (Delete the ad)
             adRepository.deleteAd(ad);
@@ -49,12 +49,12 @@ namespace Iss.Tests.Repository
             // Create a new ad and add it to the database
             var ad = new Ad("TestProductName", "test.jpg", "TestDescription", "https://example.com");
             adRepository.addAd(ad);
-            ad.id = adRepository.getAdByName("TestProductName").id;
+            ad.Id = adRepository.getAdByName("TestProductName").Id;
 
             // Modify the ad
-            ad.photo = "updated_test.jpg";
-            ad.description = "Updated TestDescription";
-            ad.websiteLink = "https://updated-example.com";
+            ad.Photo = "updated_test.jpg";
+            ad.Description = "Updated TestDescription";
+            ad.WebsiteLink = "https://updated-example.com";
 
             // Act
             adRepository.updateAd(ad);
@@ -65,10 +65,10 @@ namespace Iss.Tests.Repository
 
             // Check if the ad was updated correctly
             Assert.NotNull(updatedAd);
-            Assert.Equal("TestProductName", updatedAd.productName);
-            Assert.Equal("updated_test.jpg", updatedAd.photo);
-            Assert.Equal("Updated TestDescription", updatedAd.description);
-            Assert.Equal("https://updated-example.com", updatedAd.websiteLink);
+            Assert.Equal("TestProductName", updatedAd.ProductName);
+            Assert.Equal("updated_test.jpg", updatedAd.Photo);
+            Assert.Equal("Updated TestDescription", updatedAd.Description);
+            Assert.Equal("https://updated-example.com", updatedAd.WebsiteLink);
 
             // Cleanup (Delete the ad)
             adRepository.deleteAd(updatedAd);
@@ -87,7 +87,7 @@ namespace Iss.Tests.Repository
             // Assert
             // Assert that result is not null and has the correct name
             Assert.NotNull(result);
-            Assert.Equal(adName, result.productName);
+            Assert.Equal(adName, result.ProductName);
         }
 
         [Fact]

@@ -33,13 +33,13 @@ namespace Iss.Windows
 
         private void populate()
         {
-            desctiptionTextBox.Text = ad.description;
-            productTitleTextBox.Text = ad.productName;
+            desctiptionTextBox.Text = ad.Description;
+            productTitleTextBox.Text = ad.ProductName;
             firmaTextBox.Text = User.User.getInstance().Name;
 
             BitmapImage bitmap = new BitmapImage();
             bitmap.BeginInit();
-            bitmap.UriSource = new Uri(ad.photo, UriKind.RelativeOrAbsolute);
+            bitmap.UriSource = new Uri(ad.Photo, UriKind.RelativeOrAbsolute);
             bitmap.EndInit();
             AdImage.Source = bitmap;
         }
@@ -51,10 +51,10 @@ namespace Iss.Windows
         
         private void loadMoreBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(ad.websiteLink))
+            if (!string.IsNullOrEmpty(ad.WebsiteLink))
             {
                 // Open URL in default browser
-                Process.Start(new ProcessStartInfo(ad.websiteLink) { UseShellExecute = true });
+                Process.Start(new ProcessStartInfo(ad.WebsiteLink) { UseShellExecute = true });
             }
             else
             {

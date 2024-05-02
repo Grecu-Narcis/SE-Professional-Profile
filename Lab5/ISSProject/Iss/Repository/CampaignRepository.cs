@@ -56,7 +56,7 @@ namespace Iss.Repository
             string query = "UPDATE AdSet SET CampaignID = @campaignID WHERE ID = @adSetID";
             SqlCommand command = new SqlCommand(query, DatabaseConnection.sqlConnection);
             command.Parameters.AddWithValue("@campaignID", campaignToAddAdSet.campaignId);
-            command.Parameters.AddWithValue("@adSetID", adSet.id);
+            command.Parameters.AddWithValue("@adSetID", adSet.Id);
             adapter.UpdateCommand = command;
             adapter.UpdateCommand.ExecuteNonQuery();
             DatabaseConnection.CloseConnection();
@@ -68,7 +68,7 @@ namespace Iss.Repository
             string query = "UPDATE AdSet SET CampaignID = NULL WHERE ID = @adSetID";
             SqlCommand command = new SqlCommand(query, DatabaseConnection.sqlConnection);
             command.Parameters.AddWithValue("@campaignID", campaignToDeleteAdSet.campaignId);
-            command.Parameters.AddWithValue("@adSetID", adSet.id);
+            command.Parameters.AddWithValue("@adSetID", adSet.Id);
             adapter.UpdateCommand = command;
             adapter.UpdateCommand.ExecuteNonQuery();
             DatabaseConnection.CloseConnection();

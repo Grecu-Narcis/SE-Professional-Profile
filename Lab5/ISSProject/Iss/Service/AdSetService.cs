@@ -18,7 +18,7 @@ namespace Iss.Service
 
             adSet = adSetRepository.getAdSetByName(adSet);
 
-            foreach (Ad ad in adSet.ads)
+            foreach (Ad ad in adSet.Ads)
             {
                 adSetRepository.addAdToAdSet(adSet, ad);
             }
