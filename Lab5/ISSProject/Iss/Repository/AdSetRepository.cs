@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Iss.Repository
 {
-    public class AdSetRepository
+    public class AdSetRepository: IAdSetRepository
     {
         DatabaseConnection DatabaseConnection = new DatabaseConnection();
         SqlDataAdapter adapter = new SqlDataAdapter();

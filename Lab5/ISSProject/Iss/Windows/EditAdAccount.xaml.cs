@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace Iss.Windows
 {
     /// <summary>
-    /// Interaction logic for EditAdAccount.xaml
+    /// Interaction logic for editAdAccount.xaml
     /// </summary>
     public partial class EditAdAccount : UserControl
     {

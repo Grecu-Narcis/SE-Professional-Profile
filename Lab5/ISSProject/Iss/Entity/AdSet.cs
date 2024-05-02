@@ -13,6 +13,14 @@ namespace Iss.Entity
         public List<Ad> ads { get;  set; }
         public string targetAudience { get; set; }
 
+        public AdSet(string id, string name, List<Ad> ads, string targetAudience)
+        {
+            this.id = id;
+            this.name = name;
+            this.ads = ads;
+            this.targetAudience = targetAudience;
+        }
+
         public AdSet(string id, string name, string targetAudience)
         {
             this.id = id;
@@ -24,14 +32,6 @@ namespace Iss.Entity
         {
             this.ads = ads;
             this.name = name;
-            this.targetAudience = targetAudience;
-        }
-
-        public AdSet(string id, string name, List<Ad> ads, string targetAudience)
-        {
-            this.id = id;
-            this.name = name;
-            this.ads = ads;
             this.targetAudience = targetAudience;
         }
 

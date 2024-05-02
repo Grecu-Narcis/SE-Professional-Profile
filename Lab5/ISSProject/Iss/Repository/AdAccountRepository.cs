@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace Iss.Repository
 {
-    public class AdAccountRepository
+    public class AdAccountRepository: IAdAccountRepository
     {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         SqlDataAdapter adapter = new SqlDataAdapter();
 
-        public AdAccount GetAdAccount(string nameOfCompany, string password)
+        public AdAccount getAdAccount(string nameOfCompany, string password)
         {
             AdAccount adAccount = null;
             databaseConnection.OpenConnection();
@@ -42,7 +42,7 @@ namespace Iss.Repository
             return adAccount;
         }   
 
-        public void AddAdAccount(AdAccount adAccount)
+        public void addAdAccount(AdAccount adAccount)
         {
             databaseConnection.OpenConnection();
             string query = "INSERT INTO AdAccount (NameOfCompany, DomainOfActivity, WebSiteUrl, Password, TaxIdentificationNumber, HeadquartersLocation, AuthorizingInstitution) VALUES (@nameOfCompany, @domainOfActivity, @webSiteUrl, @password, @taxIdentificationNumber, @headquartersLocation, @authorizingInstitution)";
@@ -58,7 +58,7 @@ namespace Iss.Repository
             databaseConnection.CloseConnection();
         }
 
-        public List<Ad> GetAdsForCurrentUser()
+        public List<Ad> getAdsForCurrentUser()
         {
             List<Ad> ads = new List<Ad>();
             DataSet dataSet = new DataSet();
@@ -126,7 +126,7 @@ namespace Iss.Repository
             databaseConnection.CloseConnection();
             return campaigns;   
         }
-        public void EditAdAccount(String nameOfCompany, String URL, String password, String location)
+        public void editAdAccount(String nameOfCompany, String URL, String password, String location)
         {
             databaseConnection.OpenConnection();
             string query = "UPDATE AdAccount SET NameOfCompany = @nameOfCompany, WebSiteUrl = @webSiteUrl, Password = @password, HeadquartersLocation = @headquartersLocation WHERE ID = @id";

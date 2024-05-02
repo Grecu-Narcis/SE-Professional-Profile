@@ -396,3 +396,37 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+ProfessionalProfile/.vs/ProfessionalProfile/DesignTimeBuild/.dtbcache.v2
+ProfessionalProfile/.vs/ProfessionalProfile/FileContentIndex/06dc1202-04d1-4885-8b8f-c97f7df6f0c5.vsidx
+ProfessionalProfile/.vs/ProfessionalProfile/FileContentIndex/18dabc22-f05b-43a6-a27d-66e7f1f58928.vsidx
+ProfessionalProfile/.vs/ProfessionalProfile/FileContentIndex/94b436e6-b175-4ff1-90d0-d205525b0d8b.vsidx
+ProfessionalProfile/.vs/ProfessionalProfile/FileContentIndex/ae09251b-d284-462d-848b-814bbf351eb2.vsidx
+ProfessionalProfile/.vs/ProfessionalProfile/FileContentIndex/b7f0977e-9df8-463f-abf2-d881becf7909.vsidx
+ProfessionalProfile/.vs/ProfessionalProfile/FileContentIndex/e959be02-129e-4dd5-9acf-ef4e8876c816.vsidx
+ProfessionalProfile/.vs/ProfessionalProfile/FileContentIndex/ebcb40a9-0d67-44c6-9cb5-b0701a1c25e0.vsidx
+ProfessionalProfile/.vs/ProfessionalProfile/v17/.futdcache.v2
+ProfessionalProfile/.vs/ProfessionalProfile/v17/.suo
+ProfessionalProfile/.vs/ProfessionalProfile/v17/DocumentLayout.json
+ProfessionalProfile/.vs/ProjectEvaluation/professionalprofile.metadata.v7.bin
+ProfessionalProfile/.vs/ProjectEvaluation/professionalprofile.projects.v7.bin
+ProfessionalProfile/obj/Debug/net8.0-windows/App.g.i.cs
+ProfessionalProfile/obj/Debug/net8.0-windows/GeneratedInternalTypeHelper.g.i.cs
+ProfessionalProfile/obj/Debug/net8.0-windows/MainWindow.g.i.cs
+ProfessionalProfile/obj/Debug/net8.0-windows/ProfessionalProfile.AssemblyInfo.cs
+ProfessionalProfile/obj/Debug/net8.0-windows/ProfessionalProfile.AssemblyInfoInputs.cache
+ProfessionalProfile/obj/Debug/net8.0-windows/ProfessionalProfile.assets.cache
+ProfessionalProfile/obj/Debug/net8.0-windows/ProfessionalProfile.GeneratedMSBuildEditorConfig.editorconfig
+ProfessionalProfile/obj/Debug/net8.0-windows/ProfessionalProfile_MarkupCompile.i.cache
+ProfessionalProfile/obj/Debug/net8.0-windows/profile page/ProfilePage.g.i.cs
+ProfessionalProfile/obj/ProfessionalProfile.csproj.nuget.dgspec.json
+ProfessionalProfile/obj/ProfessionalProfile.csproj.nuget.g.props
+ProfessionalProfile/obj/project.assets.json
+ProfessionalProfile/obj/project.nuget.cache
+*.v2
+ProfessionalProfile/.vs/ProfessionalProfile/DesignTimeBuild/.dtbcache.v2
+*.json
+*.cache
+*.json
+ProfessionalProfile/obj/ProfessionalProfile.csproj.nuget.g.props
+ProfessionalProfile/obj/project.assets.json
+ProfessionalProfile/obj/project.nuget.cache

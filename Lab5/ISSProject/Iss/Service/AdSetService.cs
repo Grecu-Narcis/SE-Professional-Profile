@@ -8,15 +8,35 @@ using System.Threading.Tasks;
 
 namespace Iss.Service
 {
-    public class AdSetService
+    public class AdSetService: IAdSetService
     {
-        private AdSetRepository adSetRepository = new AdSetRepository();
+        private IAdSetRepository adSetRepository;
+
+        public AdSetService(IAdSetRepository adSetRepository)
+        {
+            this.adSetRepository = adSetRepository;
+        }
+
+        public AdSetService()
+        {
+            this.adSetRepository = new AdSetRepository();
+        }
 
         public void addAdSet(AdSet adSet)
         {
             adSetRepository.addAdSet(adSet);
 
             adSet = adSetRepository.getAdSetByName(adSet);
+
+            if (adSet == null)
+            {
+                return;
+            }
+
+            if (adSet.ads == null)
+            {
+                return;
+            }
 
             foreach (Ad ad in adSet.ads)
             {

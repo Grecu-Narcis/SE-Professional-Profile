@@ -9,9 +9,14 @@ using Iss.User;
 
 namespace Iss.Service
 {
-    internal class RequestService
+    internal class RequestService: IRequestService
     {
-        private RequestRepository requestRepository;
+        private IRequestRepository requestRepository;
+
+        public RequestService(IRequestRepository requestRepository)
+        {
+            this.requestRepository = requestRepository;
+        }
 
         public RequestService()
         {
@@ -42,7 +47,13 @@ namespace Iss.Service
         public Request getRequestWithTitle(string title)
         {
             //parse the request list and find the request with given title
-            foreach (Request request in requestRepository.getRequestsList())
+
+            List < Request > requestsList = this.requestRepository.getRequestsList();
+
+            if(requestsList == null)
+                return null;
+
+            foreach (Request request in requestsList)
             {
                 if (request.collaborationTitle == title)
                     return request;

@@ -6,7 +6,7 @@ using System.Windows;
 
 namespace Iss.Repository
 {
-    internal class RequestRepository
+    public class RequestRepository: IRequestRepository
     {
         int influencerId;
         List<Request> requests = new List<Request>();
@@ -133,7 +133,7 @@ namespace Iss.Repository
             return this.requests;
         }
 
-        internal List<Request> getRequestsForAdAccount()
+        public List<Request> getRequestsForAdAccount()
         {
             DatabaseConnection databaseConnection = new DatabaseConnection();
             string query = "SELECT * FROM Request WHERE AdAccountID=@adAccountId AND AdAccountAccept=@adAccountAccept";
