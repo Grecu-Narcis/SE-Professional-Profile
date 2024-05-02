@@ -10,10 +10,17 @@ using System.Windows;
 
 namespace Iss.Repository
 {
-    internal class AdRepository
+    internal class AdRepository : IAdRepository
     {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         SqlDataAdapter adapter = new SqlDataAdapter();
+        string AdAcountId = User.User.getInstance().Id;
+
+        public AdRepository() { }
+        public AdRepository(string AdAcountId)
+        {
+            this.AdAcountId = AdAcountId;
+        }
 
         public void addAd(Ad ad)
         {
@@ -24,7 +31,7 @@ namespace Iss.Repository
             command.Parameters.AddWithValue("@description", ad.description);
             command.Parameters.AddWithValue("@url", ad.websiteLink);
             command.Parameters.AddWithValue("@photo", ad.photo);
-            command.Parameters.AddWithValue("@adAccountId", User.User.getInstance().Id);
+            command.Parameters.AddWithValue("@adAccountId", AdAcountId);
             adapter.InsertCommand = command;
             adapter.InsertCommand.ExecuteNonQuery();
             databaseConnection.CloseConnection();
@@ -42,6 +49,11 @@ namespace Iss.Repository
             DataSet dataSet = new DataSet();
             adapter.Fill(dataSet);
             List<Ad> ads = new List<Ad>();
+            if (dataSet.Tables[0].Rows.Count == 0)
+            {
+                // No result found, return null
+                return null;
+            }
             foreach (DataRow dataRow in dataSet.Tables[0].Rows)
             {
                 string id = dataRow["ID"].ToString();
@@ -61,7 +73,7 @@ namespace Iss.Repository
             databaseConnection.OpenConnection();
             string query = "SELECT * FROM Ad WHERE AdSetID IS NULL AND AdAccountID = @adAccountId";
             SqlCommand command = new SqlCommand(query, databaseConnection.sqlConnection);
-            command.Parameters.AddWithValue("@adAccountId", User.User.getInstance().Id);
+            command.Parameters.AddWithValue("@adAccountId", AdAcountId);
             adapter.SelectCommand = command;
             adapter.SelectCommand.ExecuteNonQuery();
             DataSet dataSet = new DataSet();
@@ -86,7 +98,7 @@ namespace Iss.Repository
             databaseConnection.OpenConnection();
             string query = "SELECT * FROM Ad WHERE AdAccountID = @adAccountId AND AdSetID = @id";
             SqlCommand command = new SqlCommand(query, databaseConnection.sqlConnection);
-            command.Parameters.AddWithValue("@adAccountId", User.User.getInstance().Id);
+            command.Parameters.AddWithValue("@adAccountId", AdAcountId);
             command.Parameters.AddWithValue("@id", id);
             adapter.SelectCommand = command;
             adapter.SelectCommand.ExecuteNonQuery();

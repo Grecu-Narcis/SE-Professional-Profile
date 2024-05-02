@@ -10,7 +10,11 @@ namespace Iss.Service
 {
     internal class AdService
     {
-        private AdRepository adRepository;
+        private IAdRepository adRepository;
+        public AdService(IAdRepository adRepository)
+        {
+            this.adRepository = adRepository;
+        }
 
         public AdService()
         {
