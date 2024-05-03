@@ -35,8 +35,6 @@ namespace Iss.Windows
             MainWindow mainWindow = Window.GetWindow(this) as MainWindow;
             mainWindow.homePage = new HomePage();
             this.Content = mainWindow.homePage;
-
-
         }
     }
 }

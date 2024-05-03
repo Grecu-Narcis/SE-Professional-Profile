@@ -136,7 +136,7 @@ namespace Iss.Windows
             Ads.Items.Clear();
             foreach (var ad in ads)
             {
-                if (ad.productName.Contains(searchAdBox.Text))
+                if (ad.ProductName.Contains(searchAdBox.Text))
                 {
                     Ads.Items.Add(ad);
                 }
@@ -152,7 +152,7 @@ namespace Iss.Windows
             AdSetss.Items.Clear();
             foreach (var adSet in adSets)
             {
-                if (adSet.name.Contains(searchAdSetBox.Text))
+                if (adSet.Name.Contains(searchAdSetBox.Text))
                 {
                     AdSetss.Items.Add(adSet);
                 }

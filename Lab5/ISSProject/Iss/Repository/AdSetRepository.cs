@@ -19,8 +19,8 @@ namespace Iss.Repository
             DatabaseConnection.OpenConnection();
             string query = "INSERT INTO AdSet(Name, TargetAudience, AdAccountID) values (@name, @targetAudience, @AdAccountID)";
             SqlCommand command = new SqlCommand(query, DatabaseConnection.sqlConnection);
-            command.Parameters.AddWithValue("@name", adSet.name);
-            command.Parameters.AddWithValue("@targetAudience", adSet.targetAudience);
+            command.Parameters.AddWithValue("@name", adSet.Name);
+            command.Parameters.AddWithValue("@targetAudience", adSet.TargetAudience);
             command.Parameters.AddWithValue("@AdAccountID", User.User.getInstance().Id);
             adapter.InsertCommand = command;
             adapter.InsertCommand.ExecuteNonQuery();
@@ -32,7 +32,7 @@ namespace Iss.Repository
             DatabaseConnection.OpenConnection();
             string query = "DELETE FROM AdSet WHERE ID=@id";
             SqlCommand command = new SqlCommand(query, DatabaseConnection.sqlConnection);
-            command.Parameters.AddWithValue("@id", adSet.id);
+            command.Parameters.AddWithValue("@id", adSet.Id);
             adapter.DeleteCommand = command;
             adapter.DeleteCommand.ExecuteNonQuery();
             DatabaseConnection.CloseConnection();
@@ -43,8 +43,8 @@ namespace Iss.Repository
             DatabaseConnection.OpenConnection();
             string query = "UPDATE AdSet SET Name=@Name, TargetAudience=@audience";
             SqlCommand command = new SqlCommand(query, DatabaseConnection.sqlConnection);
-            command.Parameters.AddWithValue("@name", adSet.name);
-            command.Parameters.AddWithValue("@audience", adSet.targetAudience);
+            command.Parameters.AddWithValue("@name", adSet.Name);
+            command.Parameters.AddWithValue("@audience", adSet.TargetAudience);
             adapter.UpdateCommand = command;
             adapter.UpdateCommand.ExecuteNonQuery();
             DatabaseConnection.CloseConnection();
@@ -57,7 +57,7 @@ namespace Iss.Repository
             DatabaseConnection.OpenConnection();
             string query = "SELECT * FROM AdSet WHERE Name = @name";
             SqlCommand command = new SqlCommand(query, DatabaseConnection.sqlConnection);
-            command.Parameters.AddWithValue("@name", adSet.name);
+            command.Parameters.AddWithValue("@name", adSet.Name);
             adapter.SelectCommand = command;
             adapter.SelectCommand.ExecuteNonQuery();
             adapter.Fill(dataSet);
@@ -66,7 +66,7 @@ namespace Iss.Repository
             {
                 DataRow dataRow = dataSet.Tables[0].Rows[0];
                 string id = dataRow["ID"].ToString();
-                adSet.id = id;
+                adSet.Id = id;
             }
 
             DatabaseConnection.CloseConnection();
@@ -78,8 +78,8 @@ namespace Iss.Repository
             DatabaseConnection.OpenConnection();
             string query = "UPDATE Ad SET AdSetID = @adSetID WHERE ID = @adID";
             SqlCommand command = new SqlCommand(query, DatabaseConnection.sqlConnection);
-            command.Parameters.AddWithValue("@adSetID", adSet.id);
-            command.Parameters.AddWithValue("@adID", ad.id);
+            command.Parameters.AddWithValue("@adSetID", adSet.Id);
+            command.Parameters.AddWithValue("@adID", ad.Id);
             adapter.UpdateCommand = command;
             adapter.UpdateCommand.ExecuteNonQuery();
             DatabaseConnection.CloseConnection();
@@ -90,8 +90,8 @@ namespace Iss.Repository
             DatabaseConnection.OpenConnection();
             string query = "UPDATE Ad SET AdSetID = NULL WHERE ID = @adID";
             SqlCommand command = new SqlCommand(query, DatabaseConnection.sqlConnection);
-            command.Parameters.AddWithValue("@adSetID", adSet.id);
-            command.Parameters.AddWithValue("@adID", ad.id);
+            command.Parameters.AddWithValue("@adSetID", adSet.Id);
+            command.Parameters.AddWithValue("@adID", ad.Id);
             adapter.UpdateCommand = command;
             adapter.UpdateCommand.ExecuteNonQuery();
             DatabaseConnection.CloseConnection();

@@ -1,4 +1,5 @@
 ﻿using Iss.Entity;
+using Iss.Repository;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,22 +10,30 @@ using System.Threading.Tasks;
 
 namespace Iss.Repository
 {
-    public class InfluencerRepository
+    /// <summary>
+    /// Represents a repository for managing influencers in a database.
+    /// </summary>
+    public class InfluencerRepository : IInfluencerRepository
     {
-        DatabaseConnection databaseConnection = new DatabaseConnection();
-        SqlDataAdapter adapter = new SqlDataAdapter();
+        private DatabaseConnection databaseConnection = new DatabaseConnection();
+        private SqlDataAdapter databaseDataAdapter = new SqlDataAdapter();
+
+        /// <summary>
+        /// Retrieves a list of influencers from the database.
+        /// </summary>
+        /// <returns>A list of <see cref="Influencer"/> objects representing influencers.</returns>
 
         public List<Influencer> GetInfluencers()
         {
             List<Influencer> influencers = new List<Influencer>();
             DataSet dataSet = new DataSet();
             string query = "SELECT * FROM Influencer";
-            SqlCommand command = new SqlCommand(query, databaseConnection.sqlConnection);
-            databaseConnection.OpenConnection();
-            adapter.SelectCommand = command;
-            adapter.SelectCommand.ExecuteNonQuery();
-            adapter.Fill(dataSet);
-            
+            SqlCommand command = new SqlCommand(query, this.databaseConnection.sqlConnection);
+            this.databaseConnection.OpenConnection();
+            this.databaseDataAdapter.SelectCommand = command;
+            this.databaseDataAdapter.SelectCommand.ExecuteNonQuery();
+            this.databaseDataAdapter.Fill(dataSet);
+
             foreach (DataRow row in dataSet.Tables[0].Rows)
             {
                 string id = row["ID"].ToString();
@@ -34,6 +43,7 @@ namespace Iss.Repository
                 Influencer influencer = new Influencer(id, name, followers, price);
                 influencers.Add(influencer);
             }
+
             return influencers;
         }
     }
