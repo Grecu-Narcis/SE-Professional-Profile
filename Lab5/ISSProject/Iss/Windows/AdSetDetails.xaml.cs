@@ -33,8 +33,8 @@ namespace Iss.Windows
             InitializeComponent();
 
             this.adSet = adSet;
-            nameTextBox.Text = adSet.Name;
-            selectionComboBox.Text = adSet.TargetAudience;
+            nameTextBox.Text = adSet.name;
+            selectionComboBox.Text = adSet.targetAudience;
 
 
             list2 = AdService.getAdsThatAreNotInAdSet();
@@ -44,8 +44,8 @@ namespace Iss.Windows
 
         public void populateCurrentAds()
         {
-            id = AdSetService.getAdSetByName(adSet).Id;
-            adSet.Id = id;
+            id = AdSetService.getAdSetByName(adSet).adSetId;
+            adSet.adSetId = id;
             list1 = AdService.GetAdsFromAdSet(id);
             itemListBox1.SetValue(ItemsControl.ItemsSourceProperty, list1);
         }
@@ -77,7 +77,7 @@ namespace Iss.Windows
 
                 try
                 {
-                AdSet newAdSet = new AdSet(adSet.Id, name, targetAudience);
+                AdSet newAdSet = new AdSet(adSet.adSetId, name, targetAudience);
                 AdSetService.updateAdSet(newAdSet);
                 foreach (Ad ad in itemListBox1.Items)
                 {

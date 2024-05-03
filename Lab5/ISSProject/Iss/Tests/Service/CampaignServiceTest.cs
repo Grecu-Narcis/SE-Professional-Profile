@@ -18,7 +18,7 @@ namespace Iss.Tests.Service
                                         campaignName: "New Campaign",
                                         startDate: DateTime.Now,
                                         duration: 50);
-        private AdSet testingAdSet = new AdSet(id: "1",
+        private AdSet testingAdSet = new AdSet(adSetId: "1",
                                     name: "New AdSet",
                                     targetAudience: "Gen Z");
 

@@ -70,7 +70,7 @@ namespace Iss.Windows
         private void PopulateAccountDetails()
         {
             // Get the user's account details
-            AdAccount userAccount = adAccountService.GetAccount();
+            AdAccount userAccount = adAccountService.getAccount();
 
             // Populate the text fields
             if (userAccount != null)

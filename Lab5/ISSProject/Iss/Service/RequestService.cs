@@ -9,24 +9,29 @@ using Iss.User;
 
 namespace Iss.Service
 {
-    internal class RequestService
+    internal class RequestService: IRequestService
     {
-        private RequestRepository requestRepository;
+        private IRequestRepository requestRepository;
+
+        public RequestService(IRequestRepository requestRepository)
+        {
+            this.requestRepository = requestRepository;
+        }
 
         public RequestService()
         {
             this.requestRepository = new RequestRepository();
         }
 
-        public void addRequest(Request request)
+        public void addRequest(Request requestToAdd)
         {
-            this.requestRepository.addRequest(request);
+            this.requestRepository.addRequest(requestToAdd);
         }
 
   
-        public void deleteRequest(Request request)
+        public void deleteRequest(Request requestToDelete)
         {
-            this.requestRepository.deleteRequest(request);
+            this.requestRepository.deleteRequest(requestToDelete);
         }
 
         public int getInfluencerId()
@@ -41,8 +46,14 @@ namespace Iss.Service
 
         public Request getRequestWithTitle(string title)
         {
-            //parse the request list and find the request with given title
-            foreach (Request request in requestRepository.getRequestsList())
+            //parse the requestToDelete list and find the requestToDelete with given title
+
+            List < Request > requestsList = this.requestRepository.getRequestsList();
+
+            if(requestsList == null)
+                return null;
+
+            foreach (Request request in requestsList)
             {
                 if (request.collaborationTitle == title)
                     return request;
@@ -55,11 +66,11 @@ namespace Iss.Service
             return this.requestRepository.getRequestsForAdAccount();
         }
 
-        public void updateRequest(Request request, string newCompensation, string newContentRequirements)
+        public void updateRequest(Request requestToUpdate, string newCompensation, string newContentRequirements)
         {
-            request.compensation = newCompensation;
-            request.contentRequirements = newContentRequirements;
-            this.requestRepository.updateRequest(request);
+            requestToUpdate.compensation = newCompensation;
+            requestToUpdate.contentRequirements = newContentRequirements;
+            this.requestRepository.updateRequest(requestToUpdate);
         }
     }
 }

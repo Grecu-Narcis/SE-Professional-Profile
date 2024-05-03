@@ -8,7 +8,7 @@ namespace Iss.Entity
 {
     public class AdAccount
     {
-        public string id {  get; set; }
+        public string adAccountId {  get; set; }
         public string nameOfCompany { get; set; }
         public string domainOfActivity { get; set; }
         public string siteUrl { get; set; }
@@ -18,16 +18,16 @@ namespace Iss.Entity
         public string authorisingInstituion { get; set; }
 
         List<IOneTimePayment> oneTimePayments = new List<IOneTimePayment>();
-        List<Ad> ads = new List<Ad>();
+        /*List<Ad> ads = new List<Ad>();
         List<AdSet> adSets = new List<AdSet>(); 
         List<Campaign> campaigns = new List<Campaign>();
         List<Collaboration> collaborations = new List<Collaboration>();
         List<Request> requests = new List<Request>();
-        ISubscription? subscription;
+        ISubscription? subscription;*/
 
         public AdAccount(string id, string nameOfCompany, string domainOfActivity, string siteUrl, string password, string taxIdentificationNumber, string headquartersLocation, string authorisingInstituion)
         {
-            this.id = id;
+            this.adAccountId = id;
             this.nameOfCompany = nameOfCompany;
             this.domainOfActivity = domainOfActivity;
             this.siteUrl = siteUrl;

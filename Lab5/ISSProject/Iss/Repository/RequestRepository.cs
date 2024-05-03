@@ -6,7 +6,7 @@ using System.Windows;
 
 namespace Iss.Repository
 {
-    internal class RequestRepository
+    public class RequestRepository: IRequestRepository
     {
         int influencerId;
         List<Request> requests = new List<Request>();
@@ -30,9 +30,9 @@ namespace Iss.Repository
             return influencerId;
         }
 
-        public void addRequest(Request request)
+        public void addRequest(Request requestToAdd)
         {
-            // Add the request to the database
+            // Add the requestToAdd to the database
 
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
@@ -51,14 +51,14 @@ namespace Iss.Repository
             SqlCommand command = new SqlCommand(query, databaseConnection.sqlConnection);
             command.Parameters.AddWithValue("@AdAccountID", User.User.getInstance().Id);
             command.Parameters.AddWithValue("@InfluencerID", influencerId);
-            command.Parameters.AddWithValue("@collaborationTitle", request.collaborationTitle);
-            command.Parameters.AddWithValue("@AdOverview", request.adOverview);
-            command.Parameters.AddWithValue("@contentRequirements", request.contentRequirements);
-            command.Parameters.AddWithValue("@compensation", request.compensation);
-            command.Parameters.AddWithValue("@influencerAccept", request.influencerAccept);
-            command.Parameters.AddWithValue("@adAccountAccept", request.adAccountAccept);
-            command.Parameters.AddWithValue("@startDate", request.startDate);
-            command.Parameters.AddWithValue("@endDate", request.endDate);
+            command.Parameters.AddWithValue("@collaborationTitle", requestToAdd.collaborationTitle);
+            command.Parameters.AddWithValue("@AdOverview", requestToAdd.adOverview);
+            command.Parameters.AddWithValue("@contentRequirements", requestToAdd.contentRequirements);
+            command.Parameters.AddWithValue("@compensation", requestToAdd.compensation);
+            command.Parameters.AddWithValue("@influencerAccept", requestToAdd.influencerAccept);
+            command.Parameters.AddWithValue("@adAccountAccept", requestToAdd.adAccountAccept);
+            command.Parameters.AddWithValue("@startDate", requestToAdd.startDate);
+            command.Parameters.AddWithValue("@endDate", requestToAdd.endDate);
             adapter.InsertCommand = command;
             adapter.InsertCommand.ExecuteNonQuery();
             databaseConnection.CloseConnection();
@@ -113,15 +113,15 @@ namespace Iss.Repository
         }
 
 
-        public void deleteRequest(Request request)
+        public void deleteRequest(Request requestToDelete)
         {
-            // Delete the request from the database
+            // Delete the requestToAdd from the database
             DatabaseConnection databaseConnection = new DatabaseConnection();
             SqlDataAdapter adapter = new SqlDataAdapter();
             databaseConnection.OpenConnection();
             string query = "DELETE FROM Request WHERE CollaborationTitle=@collaborationTitle";
             SqlCommand command = new SqlCommand(query, databaseConnection.sqlConnection);
-            command.Parameters.AddWithValue("@collaborationTitle", request.collaborationTitle);
+            command.Parameters.AddWithValue("@collaborationTitle", requestToDelete.collaborationTitle);
             adapter.DeleteCommand = command;
             adapter.DeleteCommand.ExecuteNonQuery();
             databaseConnection.CloseConnection();
@@ -133,7 +133,7 @@ namespace Iss.Repository
             return this.requests;
         }
 
-        internal List<Request> getRequestsForAdAccount()
+        public List<Request> getRequestsForAdAccount()
         {
             DatabaseConnection databaseConnection = new DatabaseConnection();
             string query = "SELECT * FROM Request WHERE AdAccountID=@adAccountId AND AdAccountAccept=@adAccountAccept";
@@ -179,20 +179,20 @@ namespace Iss.Repository
             return requests;
         }
 
-        public void updateRequest(Request request)
+        public void updateRequest(Request requestToUpdate)
         {
             //update only compensation, content requirements and acceptance status
             DatabaseConnection databaseConnection = new DatabaseConnection();
             SqlDataAdapter adapter = new SqlDataAdapter();
             databaseConnection.OpenConnection();
-            // update the request in the database with the new compensation, content requirements and acceptance status
+            // update the requestToAdd in the database with the new compensation, content requirements and acceptance status
             string query = "UPDATE Request SET CompensationPackage=@compensation, ContentRequirements=@contentRequirements, InfluencerAccept=@influencerAccept, AdAccountAccept=@adAccountAccept WHERE CollaborationTitle=@collaborationTitle";
             SqlCommand command = new SqlCommand(query, databaseConnection.sqlConnection);
-            command.Parameters.AddWithValue("@compensation", request.compensation);
-            command.Parameters.AddWithValue("@contentRequirements", request.contentRequirements);
-            command.Parameters.AddWithValue("@influencerAccept", request.influencerAccept);
-            command.Parameters.AddWithValue("@adAccountAccept", request.adAccountAccept);
-            command.Parameters.AddWithValue("@collaborationTitle", request.collaborationTitle);
+            command.Parameters.AddWithValue("@compensation", requestToUpdate.compensation);
+            command.Parameters.AddWithValue("@contentRequirements", requestToUpdate.contentRequirements);
+            command.Parameters.AddWithValue("@influencerAccept", requestToUpdate.influencerAccept);
+            command.Parameters.AddWithValue("@adAccountAccept", requestToUpdate.adAccountAccept);
+            command.Parameters.AddWithValue("@collaborationTitle", requestToUpdate.collaborationTitle);
             command.ExecuteNonQuery();
             databaseConnection.CloseConnection();
         }
