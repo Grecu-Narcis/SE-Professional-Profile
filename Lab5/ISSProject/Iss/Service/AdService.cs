@@ -21,9 +21,9 @@ namespace Iss.Service
             this.adRepository = new AdRepository();
         }
 
-        public void addAd(Ad ad)
+        public void addAd(Ad adToAdd)
         {
-            this.adRepository.addAd(ad);
+            this.adRepository.addAd(adToAdd);
         }
 
         public List<Ad> getAdsThatAreNotInAdSet()
@@ -31,9 +31,9 @@ namespace Iss.Service
             return this.adRepository.getAdsThatAreNotInAdSet();
         }
 
-        public void updateAd(Ad ad)
+        public void updateAd(Ad adToUpdate)
         {
-            this.adRepository.updateAd(ad);
+            this.adRepository.updateAd(adToUpdate);
         }
 
         public Ad getAdByName(string adName)
@@ -41,14 +41,14 @@ namespace Iss.Service
             return this.adRepository.getAdByName(adName);   
         }
 
-        public void deleteAd(Ad ad)
+        public void deleteAd(Ad adToDelete)
         {
-            this.adRepository.deleteAd(ad);
+            this.adRepository.deleteAd(adToDelete);
         }
 
-        public List<Ad> GetAdsFromAdSet(string id)
+        public List<Ad> GetAdsFromAdSet(string adSetId)
         {
-            return this.adRepository.getAdsForAdSet(id);
+            return this.adRepository.getAdsForAdSet(adSetId);
         }
     }
 }

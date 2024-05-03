@@ -22,15 +22,15 @@ namespace Iss.Repository
             this.AdAcountId = AdAcountId;
         }
 
-        public void addAd(Ad ad)
+        public void addAd(Ad adToAdd)
         {
             databaseConnection.OpenConnection();
             string query = "INSERT INTO Ad(Name,Description,Url,AdAccountID,Photo) values (@name, @description, @url, @adAccountId,@photo)";
             SqlCommand command = new SqlCommand(query, databaseConnection.sqlConnection);
-            command.Parameters.AddWithValue("@name", ad.productName);
-            command.Parameters.AddWithValue("@description", ad.description);
-            command.Parameters.AddWithValue("@url", ad.websiteLink);
-            command.Parameters.AddWithValue("@photo", ad.photo);
+            command.Parameters.AddWithValue("@name", adToAdd.productName);
+            command.Parameters.AddWithValue("@description", adToAdd.description);
+            command.Parameters.AddWithValue("@url", adToAdd.websiteLink);
+            command.Parameters.AddWithValue("@photo", adToAdd.photo);
             command.Parameters.AddWithValue("@adAccountId", AdAcountId);
             adapter.InsertCommand = command;
             adapter.InsertCommand.ExecuteNonQuery();
@@ -93,13 +93,13 @@ namespace Iss.Repository
             return ads;
         }
 
-        public List<Ad> getAdsForAdSet(string id)
+        public List<Ad> getAdsForAdSet(string adSetId)
         {
             databaseConnection.OpenConnection();
             string query = "SELECT * FROM Ad WHERE AdAccountID = @adAccountId AND AdSetID = @id";
             SqlCommand command = new SqlCommand(query, databaseConnection.sqlConnection);
             command.Parameters.AddWithValue("@adAccountId", AdAcountId);
-            command.Parameters.AddWithValue("@id", id);
+            command.Parameters.AddWithValue("@id", adSetId);
             adapter.SelectCommand = command;
             adapter.SelectCommand.ExecuteNonQuery();
             DataSet dataSet = new DataSet();
@@ -119,27 +119,27 @@ namespace Iss.Repository
             return ads;
         }
 
-        public void updateAd(Ad ad)
+        public void updateAd(Ad adToUpdate)
         {
             databaseConnection.OpenConnection();
             string query = "UPDATE Ad SET Name = @name, Description = @description, Url = @url, Photo=@photo WHERE ID = @id";
             SqlCommand command = new SqlCommand(query, databaseConnection.sqlConnection);
-            command.Parameters.AddWithValue("@name", ad.productName);
-            command.Parameters.AddWithValue("@description", ad.description);
-            command.Parameters.AddWithValue("@url", ad.websiteLink);
-            command.Parameters.AddWithValue("@photo", ad.photo);
-            command.Parameters.AddWithValue("@id", ad.id);
+            command.Parameters.AddWithValue("@name", adToUpdate.productName);
+            command.Parameters.AddWithValue("@description", adToUpdate.description);
+            command.Parameters.AddWithValue("@url", adToUpdate.websiteLink);
+            command.Parameters.AddWithValue("@photo", adToUpdate.photo);
+            command.Parameters.AddWithValue("@id", adToUpdate.id);
             adapter.UpdateCommand = command;
             adapter.UpdateCommand.ExecuteNonQuery();
             //MessageBox.Show(ad.id);
             databaseConnection.CloseConnection();
         }
 
-        public void deleteAd(Ad ad)
+        public void deleteAd(Ad adToDelete)
         {
             string query = "DELETE FROM Ad WHERE ID = @Id";
             SqlCommand command = new SqlCommand(query, databaseConnection.sqlConnection);
-            command.Parameters.AddWithValue("@Id", this.getAdByName(ad.productName).id);
+            command.Parameters.AddWithValue("@Id", this.getAdByName(adToDelete.productName).id);
             adapter.DeleteCommand = command;
             databaseConnection.OpenConnection();
             adapter.DeleteCommand.ExecuteNonQuery();

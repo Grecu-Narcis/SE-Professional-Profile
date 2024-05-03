@@ -9,11 +9,11 @@ namespace Iss.Repository
 {
     public interface IAdRepository
     {
-        public void addAd(Ad ad);
+        public void addAd(Ad adToAdd);
         public Ad getAdByName(string adName);
         public List<Ad> getAdsThatAreNotInAdSet();
-        public List<Ad> getAdsForAdSet(string id);
-        public void updateAd(Ad ad);
-        public void deleteAd(Ad ad);
+        public List<Ad> getAdsForAdSet(string adSetId);
+        public void updateAd(Ad adToUpdate);
+        public void deleteAd(Ad adToDelete);
     }
 }
