@@ -8,50 +8,30 @@ using System.Threading.Tasks;
 
 namespace Iss.Service
 {
-    public class AdSetService: IAdSetService
+    public class AdSetService
     {
-        private IAdSetRepository adSetRepository;
+        private AdSetRepository adSetRepository = new AdSetRepository();
 
-        public AdSetService(IAdSetRepository adSetRepository)
+        public void addAdSet(AdSet adSet)
         {
-            this.adSetRepository = adSetRepository;
-        }
+            adSetRepository.addAdSet(adSet);
 
-        public AdSetService()
-        {
-            this.adSetRepository = new AdSetRepository();
-        }
+            adSet = adSetRepository.getAdSetByName(adSet);
 
-        public void addAdSet(AdSet adSetToAdd)
-        {
-            adSetRepository.addAdSet(adSetToAdd);
-
-            adSetToAdd = adSetRepository.getAdSetByName(adSetToAdd);
-
-            if (adSetToAdd == null)
+            foreach (Ad ad in adSet.Ads)
             {
-                return;
-            }
-
-            if (adSetToAdd.ads == null)
-            {
-                return;
-            }
-
-            foreach (Ad ad in adSetToAdd.ads)
-            {
-                adSetRepository.addAdToAdSet(adSetToAdd, ad);
+                adSetRepository.addAdToAdSet(adSet, ad);
             }
         }
 
-        public void addAdToAdSet(AdSet adSet, Ad adToAdd)
+        public void addAdToAdSet(AdSet adSet, Ad ad)
         {
-            this.adSetRepository.addAdToAdSet(adSet, adToAdd);
+            this.adSetRepository.addAdToAdSet(adSet, ad);
         }
 
-        public void removeAdFromAdSet(AdSet adSet, Ad adToRemove)
+        public void removeAdFromAdSet(AdSet adSet, Ad ad)
         {
-            this.adSetRepository.removeAdFromAdSet(adSet, adToRemove);
+            this.adSetRepository.removeAdFromAdSet(adSet, ad);
         }
 
 
@@ -70,14 +50,14 @@ namespace Iss.Service
             return adSetRepository.getAdSetByName(adSet);
         }
 
-        public void updateAdSet(AdSet adSetToUpdate)
+        public void updateAdSet(AdSet adSet)
         {
-            this.adSetRepository.updateAdSet(adSetToUpdate);
+            this.adSetRepository.updateAdSet(adSet);
         }
 
-        public void deleteAdSet(AdSet adSetToDelete)
+        public void deleteAdSet(AdSet adSet)
         {
-            this.adSetRepository.deleteAdSet(adSetToDelete);
+            this.adSetRepository.deleteAdSet(adSet);
         }
     }
 }

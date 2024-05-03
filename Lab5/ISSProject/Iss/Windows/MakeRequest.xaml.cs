@@ -27,7 +27,7 @@ namespace Iss.Windows
         public MakeRequest(Influencer influencer, Ad selectedAd)
         {
             InitializeComponent();
-            adOverview.Text = selectedAd.description;
+            adOverview.Text = selectedAd.Description;
             compensation.Text = influencer.collaborationPrice.ToString();
         }
 

@@ -33,9 +33,9 @@ namespace Iss.Windows
 
         private void PopulateInfluencers()
         {
-            List<Influencer> influencers = InfluencerService.GetInfluencers();
+            List<Influencer> currentInfluencers = InfluencerService.GetInfluencers();
             influencerListBox.Items.Clear();
-            foreach (var influencer in influencers)
+            foreach (var influencer in currentInfluencers)
             {
                 influencerListBox.Items.Add(influencer);
             }
@@ -43,9 +43,9 @@ namespace Iss.Windows
 
         private void PopulateAds()
         {
-            List<Ad> ads = AdAccountService.getAdsForCurrentUser();
+            List<Ad> currentAds = AdAccountService.getAdsForCurrentUser();
             adListBox.Items.Clear();
-            foreach (var ad in ads)
+            foreach (var ad in currentAds)
             {
                 adListBox.Items.Add(ad);
             }
@@ -53,9 +53,9 @@ namespace Iss.Windows
 
         private void searchInfluencerButton_Click(object sender, RoutedEventArgs e)
         {
-            List<Influencer> influencers = InfluencerService.GetInfluencers();
+            List<Influencer> currentInfluencers = InfluencerService.GetInfluencers();
             influencerListBox.Items.Clear();
-            foreach (Influencer influencer in influencers)
+            foreach (Influencer influencer in currentInfluencers)
             {
                 if (influencer.influencerName.Contains(searchInfluencerBox.Text))
                 {
@@ -66,11 +66,11 @@ namespace Iss.Windows
 
         private void searchAdTextButton_Click(object sender, RoutedEventArgs e)
         {
-            List<Ad> ads = AdAccountService.getAdsForCurrentUser();
+            List<Ad> currentAds = AdAccountService.getAdsForCurrentUser();
             adListBox.Items.Clear();
-            foreach (Ad ad in ads)
+            foreach (Ad ad in currentAds)
             {
-                if (ad.productName.Contains(searchAdTextBox.Text))
+                if (ad.ProductName.Contains(searchAdTextBox.Text))
                 {
                     adListBox.Items.Add(ad);
                 }
@@ -89,6 +89,5 @@ namespace Iss.Windows
                 mainWindow.contentContainer.Content = makeRequest;
             }
         }
-
     }
 }

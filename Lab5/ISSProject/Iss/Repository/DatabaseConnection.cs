@@ -10,7 +10,7 @@ namespace Iss.Repository
 {
     public class DatabaseConnection : IDatabaseConnection
     {
-        public static string ConnectionString = "Data Source = DESKTOP-R01UH5Q\\SQLEXPRESS; Initial Catalog = db_ISS; Integrated Security = True; TrustServerCertificate=True;";
+        public static string ConnectionString = "Data Source = NARCIS\\SQLEXPRESS02; Initial Catalog = db_ISS; Integrated Security = True; TrustServerCertificate=True;";
 
         public SqlConnection sqlConnection { get; private set; } =  new SqlConnection(ConnectionString);
 
